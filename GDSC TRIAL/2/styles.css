@@ -1,0 +1,78 @@
+header {
+  text-align: center;
+
+}
+header h1 {
+  color: blue;
+  font-family: sans-serif;
+  margin-bottom: -8px;
+  
+}
+header img{
+  height: 200px;
+  width: 250px;
+
+}
+
+main {
+  /* margin-top: 90px; */
+  width: 850px;
+  background-color: rgb(8, 8, 102);
+  color: white;
+  padding: 10px 10px;
+  font-family: sans-serif;
+  border-radius: 6%;
+  margin: 10px auto;
+  
+
+}
+.h1-eugene {
+  color: rgb(54, 187, 121);
+}
+
+main p {
+  font-weight: bold;
+}
+main ul {
+  color: yellow;
+  font-weight: bold;
+  
+}
+main a {
+  color: whitesmoke;
+  background-color: yellowgreen;
+  text-decoration: none;
+  padding: 5px 4px;
+  border-radius: 5px;
+  }
+    
+  .button-AFRIYIE :hover{
+color: black;
+  }
+ 
+
+  footer {
+    justify-content: center;
+  }
+
+footer button{
+  font-weight: bolder;
+  font-size: 20px;
+  color:red;
+  background-color: yellow;
+border-color: brown;
+  border-radius: 5px;
+  font-weight: 800px;
+  
+  
+}
+
+footer button :hover{
+  color: brown;
+  background-color: greenyellow;
+}
+
+footer h4 {
+  text-align: center;
+  margin-top: 4px;
+}

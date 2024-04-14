@@ -1,0 +1,31 @@
+num1 = float(input("Enter your 1st number "))
+num2 = float(input("Enter your 2nd number "))
+num3 = float(input("Enter your 3rd number "))
+num4 = float(input("Enter your 4th number "))
+num5 = float(input("Enter your 5th number "))
+num6 = float(input("Enter your 6th number "))
+num7 = float(input("Enter your 7th number "))
+num8 = float(input("Enter your 8th number "))
+num9 = float(input("Enter your 9th number "))
+num10 = float(input("Enter your 10th number "))
+
+Sum = (num1+num2+num3+num4+num4+num5+num6+num7+num8+num9+num10)
+print = ("The sum of your numbers are: ", Sum ) 
+
+Average = Sum/10
+
+print( "The average of your numbers is:", Average)
+
+Difference = ((num1+num2+num3+num4+num4+num5)-(num6+num7+num8+num9+num10))
+
+print("The Difference between your first 5 and the second 5 numbers is:",Difference )
+
+Multiply1 = (num1*num2*num3*num4*num5)
+
+Multiply2 = (num6*num7*num8*num9*num10)
+
+Division=Multiply1/Multiply2
+print("The division of your first 5 numbers and the second 5 numbers is:",Division)
+
+
+

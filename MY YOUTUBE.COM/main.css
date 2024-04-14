@@ -1,0 +1,159 @@
+
+body{
+  padding-left: 90px;
+  padding-top: 80px;
+  padding-bottom: 50px;
+
+}
+
+
+
+main{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+
+}
+@media  (max-width:1075px){
+  main{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+}
+@media  (max-width:1050px){
+  main{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+}
+@media  (max-width: 780px){ 
+  main{
+    grid-template-columns:1fr 1fr;
+  }
+  
+}
+@media  (max-width: 550px){
+  main{
+    grid-template-columns:1fr ;
+  }
+  
+}
+/* .video-preview{
+ width: 300px;
+
+} */
+
+.video-time{
+  position: absolute;
+  bottom: 7px;
+  right: 5px;
+  background-color: black;
+  color: white;
+  padding: 3px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.thumbnail{
+  position: relative;
+}
+.thumbnail-img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.author-pic{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+
+.video-details{
+  display: flex;
+  margin-top: 10px;
+}
+
+
+p{
+  margin: 0;
+}
+
+.video-info{
+  margin-left: 10px;
+}
+
+.video-description{
+  font-size: 17px;
+
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.video-period{
+  font-size: 17px;
+  color: rgb(96 96 96);
+}
+
+header p{
+  position: absolute;
+}
+
+header button{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header button .tooltip{
+  bottom: -50px;
+  background-color: rgb(143, 133, 133);
+  white-space: nowrap;
+  padding: 10px 10px;
+  font-size: 15px;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+
+header button:hover .tooltip{
+  opacity: 1;
+}
+
+.youtube-logo{
+  position: relative;
+}
+
+
+.youtube-logo .tooltip{
+  right: -50px;
+ padding: 3px;
+  border: 1px solid black;
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s;
+}
+
+.youtube-logo:hover .tooltip{
+  opacity: 1;
+
+}
+
+.notification-num{
+  opacity: 1 ;
+  top: 0;
+  left: -1px;
+  background-color: rgb(202, 16, 16);
+  padding: 3px;
+  font-size: 10px;
+  color: white;
+  border-radius: 4px;
+
+}
+

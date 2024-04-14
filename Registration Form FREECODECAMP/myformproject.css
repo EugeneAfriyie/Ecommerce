@@ -1,0 +1,103 @@
+body{
+    background-color: rgb(20, 20, 63);
+    color: rgb(255, 255, 255);
+    width: 50%;
+    margin: auto;
+}
+label{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+fieldset{
+    margin-bottom: 20px;
+}
+
+#title {
+    text-align: center;
+    margin: 0;
+    color: rgb(85, 76, 22);
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+p{
+    margin: 0%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.personal-info{
+ 
+}
+
+.first-input{
+    width: 80%;
+    height: 30px;
+    font-size: 15px;
+    display: block;
+    background-color: white;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+#number{
+    width: 20%;
+}
+
+#dropdown{
+    height: 30px;
+    width: 50%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+option{
+    font-size: 17px;
+}
+
+legend{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.label-level,.label-checkbox{
+    display: block;
+    margin-bottom: 20px;
+}
+
+#textarea {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#dropdown-textarea{
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+#textarea::placeholder{
+    font-size: 17px;
+}
+
+#submit{
+    padding: 10px 30px;
+    font-size: 25px;
+   font-weight: 700;
+   color: blueviolet;
+}
+
+.terms a{
+    color: white;
+    text-decoration: none;
+
+}

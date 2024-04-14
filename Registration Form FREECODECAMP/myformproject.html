@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUGENE PROJECT MEMBERSHIP FORM</title>
+    <link rel="stylesheet" href="./myformproject.css">
+</head>
+<body>
+    <h1 id="title">EUGENE PROJECT MEMBERSHIP FORM</h1>
+    <p id="description">Join Us Let Make A Difference</p>
+
+    <form action="survey-form" id="survey-form">
+
+    <fieldset class="first-details">
+        
+            <label for="name" id="name-label" class="personal-info">Enter Your Full Name
+                <input type="text" id="name" class="first-input" required placeholder="Enter Your Name Here"></label>
+
+        <label for="email" id="email-label" class="personal-info">Enter Your Valid Email
+            <input type="email" name="email" id="email" class="first-input" required placeholder="Enter Your Email Here"></label>
+
+            
+        <label for="number" id="number-label" class="personal-info">Select Your Date Of Birth
+            <input type="date" id="date"  class="first-input" placeholder="Select Your Age" required>
+        </label>
+        
+        <label for="password" id="password-label" class="personal-info">Enter Your New Password
+            <input type="password" name="password" id="email" class="first-input" required placeholder="Enter your Password"></label>
+
+            
+        <label for="password" id="password-label" class="personal-info">Confirm Your Password
+            <input type="password" name="password" id="email" class="first-input" required placeholder="Enter your Password"></label>
+
+     </fieldset>
+
+
+        <fieldset class="select-dropdown">
+            <label for="dropdown">Select Your Specialiazation
+                <select name="dropdown" id="dropdown" required>
+                    <option value="dropdown">Select your status</option>
+                    <option value="dropdown">Backend</option>
+                    <option value="dropdown">Frontend</option>
+                    <option value="dropdown">Mobile App</option>
+                    <option value="dropdown">Machine Learning and AI</option>
+                    <option value="dropdown">Other</option>
+                </select>
+
+                <label for="textarea" class="label-textarea">Specify If You Chose Other
+                    <textarea name="textarea" id="dropdown-textarea" cols="30" rows="1.5" placeholder="Enter your Specialiazation"></textarea>
+                </label>
+
+            </label>
+        </fieldset>
+
+        <fieldset class="radio">
+
+            <legend>Select Your Current Level (REQUIRED)</legend>
+            <label for="Level" class="label-level">
+                <input id="level-100" type="radio" name="Level" value="level-100" class="level" checked /> LEVEL 100</label>
+            
+            
+            <label for="Level" class="label-level">
+                <input id="level-200" type="radio" name="Level" value="level-200" class="level" checked /> LEVEL 200</label>
+            
+        
+            <label for="Level" class="label-level">
+                <input id="level-300" type="radio" name="Level" value="level-300" class="level" checked /> LEVEL 300</label>
+
+            <label for="Level" class="label-level">
+                <input id="level-400" type="radio" name="Level" value="level-400" class="Level" checked /> LEVEL 400</label>
+
+        </fieldset>
+
+        <fieldset class="checkbox">
+            
+            <legend class="legend">Tick All Skills You Have</legend>
+            
+            <label for="checkbox" class="label-checkbox"><input type="checkbox" value="skill-1">HTML and CSS
+            </label>
+
+            <label for="checkbox" class="label-checkbox"><input type="checkbox" value="skill-2">Javascript
+            </label>
+            
+            <label for="checkbox" class="label-checkbox"><input type="checkbox" value="skill-3">Python
+            </label>
+
+            <label for="checkbox" class="label-checkbox"><input type="checkbox" value="slill-4">Java
+            </label>
+
+            <label for="textarea" class="label-textarea">Enter Your Other Skils
+                <textarea name="textarea" id="dropdown-textarea" cols="30" rows="1.5" placeholder="Enter Your Skills"></textarea>
+            </label>
+        </fieldset>
+
+        <fieldset class="textarea">
+            
+            <label for="textarea" class="label-textarea">Let Me Know Your Suggestion
+                <textarea name="textarea" id="textarea" cols="50" rows="15" placeholder="Enter Your Suggestion Here"></textarea>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <label for="term and conditions" class="terms">
+                <input type="checkbox" class="terms-checkbox" required>
+                <a href="#">I Have Read and Accept the Terms and Conditions</a>
+            </label>
+        </fieldset>
+        <div class="submit">
+            <button type="submit" id="submit">
+                Submit
+            </button>
+        </div>
+
+    </form>
+
+
+
+
+
+
+</body>
+</html>

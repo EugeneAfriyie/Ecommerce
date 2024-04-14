@@ -1,0 +1,62 @@
+body {
+   background-image: url(EUGENE.jpg);
+
+}
+
+main{ color: #ffffff;
+margin-top: 200px;
+margin-left: 40px;
+}
+main .h1-1 {
+opacity: 0.5;
+font-size: 40px;
+margin-bottom: -55px;
+margin-left: 50px;
+}
+
+main .h2-2 {
+  font-size: 90px;
+  margin-bottom: -80px;
+  margin-left: 50px;
+}
+
+main .h3-3 {
+  padding-top: 0px;
+  font-size: 90px;
+  margin-bottom: -80px;
+  margin-left: 50px;
+}
+
+main .h4-4{
+  font-size: 90px;
+  margin-bottom: -50;
+  padding-bottom: 0px;
+  margin-left: 50px;
+  cursor: pointer
+}
+
+main .h5-5{
+  margin-top: -50px;
+  font-size: px;
+  background:linear-gradient(to right,
+    rgb(55, 105, 212),
+    rgb(73, 73, 173),
+    rgb(35, 35, 204),
+    rgb(4, 17, 207)
+  );
+  border-radius: 10px;
+  margin-left: 50px;
+  font-weight: 900;
+  
+  width: 200px;
+  padding: 20px 70px 20px 70px;
+  color: white;
+  text-decoration: none;
+  
+}
+  
+
+main .h5-5 :active{
+  background-color: blue;
+}
+

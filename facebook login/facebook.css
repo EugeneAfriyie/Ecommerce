@@ -1,0 +1,152 @@
+body{
+background-color: whitesmoke
+
+}
+
+
+  
+
+
+.sec-1{
+
+  margin-top: 150px;
+  display: flex;
+
+}
+
+
+.left-sec{
+
+  width: 55%;
+  padding: 0 auto;
+  display: inline-block;
+}
+
+.right-sec{
+
+  width: 45%;
+}
+
+.right-content{
+  width: 75%;
+
+  padding: inset auto;
+  background-color: white;
+  height: 370px;
+  border-radius: 20px;
+}
+
+.right-main-content{
+  width: 92%;
+  margin-left: 4%;
+  margin-top: 20px;
+  
+ 
+}
+
+.left-div{
+  display: inline-block;
+margin-left: 220px;
+margin-top: 90px;
+}
+
+.facebook{
+  font-size: 60px;
+  margin: 0;
+  color: blue;
+  margin-bottom: 15px;
+}
+
+.paragraph{
+  font-size: 27px;
+  color: rgb(69, 99, 69);
+  margin: 0;
+}
+
+.input{
+
+  width: 96%;
+  margin-top: 20px;
+  height: 50px;
+  border: 1px solid hsla(0, 0%, 50%, 0.397);
+  box-shadow: 1px 1px 1px ;
+  border-radius: 10px;
+  padding-left: 15px;
+
+}
+
+.input:active {
+ border-color: blue;
+}
+
+.input:hover {
+ border: 2px solid blue;
+
+}
+
+.input::placeholder{
+  font-size: 16px;
+  padding-left: 0px;
+}
+
+button{
+  width: 100%;
+  margin-top: 20px;
+padding: 15px 0;
+color: white;
+font-size: 20px;
+font-weight: 600;
+background-color: rgb(29, 29, 190);
+border-radius: 10px;
+border: none;
+cursor: pointer;
+}
+
+button:hover{
+  opacity: 0.8;
+}
+button:active {
+  background-color: blue;
+   
+   }
+
+.forgot{
+  margin-top: 20px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.forgot:active {
+ color: red;
+   
+   }
+
+
+.new-account{
+  color:white;
+  background-color: rgb(15, 110, 15);
+  text-decoration: none;
+ padding: 10px 10px;
+ font-size: 17px;
+ border-radius: 5px;
+ cursor: pointer;
+ margin-left: 29%;
+ margin-top: 5px;
+}
+
+.new-account:hover {
+  background-color: green;
+   }
+.new-account:active {
+  background-color: rgba(0, 128, 0, 0.892);
+   }
+
+.section-last{
+  font-size: 17px;
+ margin-top: 40px;
+ text-align: center;
+ width: 75%;
+}
+
+

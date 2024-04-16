@@ -1,3 +1,11 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+
+
 .blog{
   width: 100%;
   margin: auto;
@@ -100,7 +108,7 @@ li{
     display: grid;
     grid-template-columns: 190px 1fr;
     column-gap: 20px;
-    border: 1px solid red;
+ 
   }
 
   .main2a-pic img{
@@ -108,9 +116,7 @@ li{
     height: 100%;
   }
 
-  .content2a{
-    border: 1px solid green;
-  }
+ 
   .content2a img {
     display: inline-block;
     border-radius: 40px;

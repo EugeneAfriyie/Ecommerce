@@ -1,5 +1,5 @@
 body{
-background-color: whitesmoke
+  background-color: rgb(238, 235, 235);
 
 }
 
@@ -116,6 +116,11 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.forgot{
+  color: blue;
+font-weight: 500;
 }
 .forgot:active {
  color: red;

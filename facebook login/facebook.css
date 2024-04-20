@@ -1,11 +1,16 @@
-body{
-  background-color: rgb(238, 235, 235);
- 
 
+*{margin: 0;
+  padding: 0;
+   box-sizing: border-box;
+    text-decoration: none;
 }
 
 
-  
+
+
+body{
+  background-color: rgb(238, 235, 235);
+ }
 
 
 .sec-1{

@@ -90,6 +90,19 @@
     margin-left: 30px ;    
 }
 
+.range{
+-webkit-appearance: none;
+outline: none;
+
+ background-color: brown;
+
+
+}
+
+/* .range::-webkit-slider-thumb{
+    -webkit-appearance: none;  
+} */
+
 .range-info{
     font-size: 14px;
     margin-left: 30px;

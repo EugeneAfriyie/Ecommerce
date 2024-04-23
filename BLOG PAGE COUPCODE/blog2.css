@@ -22,6 +22,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 6%;
 
  
 }
@@ -31,12 +32,13 @@ nav img{
 
 .nav-images{
   margin-right: 8rem;
+  flex-shrink: 0;
 }
 
 .nav-contents{
   display: flex;
   align-items: center;
-  margin-left: 7rem;
+
 }
 
 a{
@@ -45,10 +47,19 @@ a{
 }
 
 li{
-  margin-right: 25px;
+  margin-right: 1em;
   color: white;
- 
+  list-style: none;
 }
+
+li a:hover{
+color: red;
+background-color: white;
+padding: 0.3em;
+border-radius: 0.2em;
+font-weight: 600;
+}
+
 .main{
   width: 90%;
   margin: auto;
@@ -67,6 +78,7 @@ li{
   width: 40px;
   height: 40px;
   border-radius: 20px;
+  object-fit: cover;
  }
 
 .on-pic1{
@@ -90,8 +102,13 @@ li{
   display: inline-block;
   border-radius: 5px;
   font-size: 17px;
+  cursor: pointer;
+}
 
-
+.category:hover{
+  background-color: rgb(223, 54, 24);
+  color: black;
+  padding: 0.2em;
 }
 
 
@@ -140,7 +157,15 @@ li{
     display: inline-block;
     padding: 5px 20px;
     color: white;
+    border-radius: 0.5em;
     margin: 10px 0 0 0;
+    cursor: pointer;
+  }
+
+  h6:hover{
+    background-color: rgb(223, 103, 24);
+    color: black;
+    padding: 0.2em;
   }
  .entertainment{
     font-weight: 700;
@@ -150,7 +175,17 @@ li{
     padding: 5px 20px;
     color: white;
     margin: 10px 0 0 0;
+    border-radius: 0.5em;
+    cursor: pointer;
   }
+
+  .entertainment:hover{
+    background-color: rgb(96, 134, 134);
+    color: black;
+    padding: 0.2em;
+
+  }
+
  .tech{
     font-weight: 700;
     font-size: 15px;
@@ -159,7 +194,16 @@ li{
     padding: 5px 20px;
     color: white;
     margin: 10px 0 0 0;
+    cursor: pointer;
+    border-radius: 0.5em;
   }
+
+  .tech:hover{
+    background-color: rgb(223, 103, 24);
+    color: black;
+    padding: 0.2em;
+  }
+
   p{
     margin: 10px 0;
     font-weight: 700;
@@ -184,13 +228,17 @@ li{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
+
+
 
 .botton1ba{
   margin-right: 100px;
   background-color: white;
   word-spacing: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
 }
 
 .botton1a span{
@@ -206,12 +254,14 @@ li{
   padding: 10px;
   color: rgb(0 0 0);
   font-weight: 900px;
+  cursor: pointer;
 }
 .botton2{
   height:200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   column-gap: 20px;
+  object-fit: cover;
 }
 
 
@@ -261,6 +311,18 @@ li{
 
 .author-name{
   color: #88a88b;
+}
+
+
+.text-1:hover{
+  color: yellow;
+  cursor: pointer;
+
+}
+.text-2:hover{
+  color: rgb(13, 182, 204);
+  cursor: pointer;
+
 }
 
 

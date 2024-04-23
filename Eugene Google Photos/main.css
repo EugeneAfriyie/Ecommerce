@@ -12,11 +12,12 @@ body{
   padding-top: 85px;
   padding-left: 260px;
   padding-right: 80px;
+  padding-bottom: 100px;
 }
 
 .highlight{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+
   gap: 1em;
 }
 
@@ -48,15 +49,18 @@ body{
 }
 
 .content{
-  dis
+  display: flex;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 3px;
+  flex-wrap: wrap;
 
 }
 
 .content-items{
   border: 1px solid black;
-  height: 200px;
-  width: 150px;
+  height: 230px;
+  max-width: 300px;
+  min-width: 200px;
 
 }
 

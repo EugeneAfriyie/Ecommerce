@@ -5,13 +5,14 @@
     font-family: Roboto sans-serif;
     color: rgb(51, 53, 52);
 }
-
+main{
+  background-color: whitesmoke;
+}
 
 
 body{
   padding-top: 85px;
   padding-left: 260px;
-  /* padding-right: 80px; */
   padding-bottom: 100px;
   width: 100%;
   margin-right: 0;
@@ -20,16 +21,12 @@ body{
 
 .highlight{
   display: flex;
-
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr; */
   margin-left: 30px;
   gap: 1em;
   padding-right: 50px;
 }
 
 .photo-preview{
-  border: 1px solid green;
   height: 15em;  
   position: relative;
   width:400px ;
@@ -40,9 +37,15 @@ body{
 .photo-preview img {
     width:100%;
     height: 100%;
-    object-fit:calc(0);
+    object-fit:cover;
     margin: 0;
 }
+
+#me img{
+  object-fit: cover;
+  object-position: top;
+}
+
 .photo-preview video {
     width:100%;
     height: 100%;
@@ -50,19 +53,55 @@ body{
     margin: 0;
 }
 
-.photo-preview p{
-    position: absolute;
-    bottom: 0.8em;
-    left:0.7em;
-    font-size: 1.7em;
-    color: white;
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: italic;
-    font-variation-settings:"wdth" 100;
+.position{
+  position: absolute;
+  bottom:0;
+  left:0;
+  right: 0;
+  padding-left: 10px;
+  padding-bottom: 20px;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    background:linear-gradient(to bottom,
+    rgb(128, 128, 128,0.1),
+    rgb(128, 128, 128,0.1)
+  );
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
    
 }
+.div{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right: 0;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    background:linear-gradient(to bottom,
+    rgb(0, 0, 0,0.05),
+    rgb(0, 0, 0,0.3)
+    )
+    ;
+    color: rgb(38, 0, 0);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+   
+}
+
+.photo-preview div p {
+  color: white;
+  margin: 0;
+
+}
+.over{
+  font-size: 18px;
+  margin: 0;
+}
+
+
 
 
 .content{
@@ -75,15 +114,9 @@ body{
 }
 
 .content-items{
-  border: 1px solid black;
   min-width: 150px;
   height: 200px;
   max-width: 200px;
-  /* min-width: 0px; */
-  /* max-width: 500px; */
- 
-
-
 }
 
 .photo-container{

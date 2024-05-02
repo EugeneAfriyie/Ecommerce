@@ -59,6 +59,7 @@
 }
 .sidebar-element:active{
     background-color: rgb(159, 208, 225);
+    /* background-color: rgb(159, 208, 25); */
 }
 
 .sidebar-element i{

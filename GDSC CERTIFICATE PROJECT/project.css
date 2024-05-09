@@ -13,9 +13,7 @@ body{
 
 .first-part{
     
-    height: 650px;
-    background-image: url(./photos/background.jpg);
-    background-size: cover;
+    
 }
     
 
@@ -41,7 +39,7 @@ header{
 
 nav{
     display: flex;
-    align-content: center;
+  
     align-items: center;
    
 }
@@ -98,7 +96,11 @@ header a{
 /* BODY CSS */
 
 main{
-    margin-left: 100px;
+    width: 95%;
+   margin: 0 auto;
+    height: 650px;
+    background-image: url(./photos/background.jpg);
+    background-size: cover;
     /* padding-top: 100px; */
   
    
@@ -107,7 +109,7 @@ main{
 .first-message{
     font-size: 30px;
     line-height: 120px;
-    margin-bottom: none;
+   padding-top: 100px;
     color: white;
     font-weight: 700;
 }
@@ -121,6 +123,7 @@ main{
 .button-1{
     font-size: 30px;
     padding: 20px 30px;
+    margin-top: 20px;
     border-radius: 35px;
     background-color:rgb(255, 208, 0);
     color: white;
@@ -178,7 +181,7 @@ main{
 
 .contact-form{
     width: 400px;
-    height: 500px;
+    height: 450px;
     background-color: blue;
    
     
@@ -247,9 +250,27 @@ main{
     width: 100%;
     display: flex;
     align-items: center;
-    margin: 20px 0 0 300px;
-    
+    margin: 20px 0 0 300px;   
    
+}
+@media (max-width:700px){
+    .section-3{
+        margin: 20px;
+        display: grid; 
+    }
+
+    .contact-form{
+        width: 100%;
+        height: 450px;
+        background-color: blue;
+       
+        
+    }
+    
+}
+
+.form-detais h2{
+    margin-top: 20px;
 }
 
 footer{
@@ -302,6 +323,17 @@ footer{
  height: 220px;
  margin: 0;
 
+}
+
+@media (max-width:700px){
+    .the-sec-3{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer{
+        height: 700px;
+    }
 }
 
 .footer-sec-1{

@@ -63,5 +63,10 @@
   .bb4 {
     width: 11%;
     height: 58%;
+    background-color: inherit;
+
+position: relative;
+left: 10%;
+    top: 0;
   }
       

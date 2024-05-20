@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 40px;
+    background-color: rgb(220, 220, 220,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+  
+}
+
+
+
+.nav-first-part{
+    width: 225px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    grid-template-columns: 1fr 0 1fr ;
+    font-size: 0.75rem;
+    font-family: sans-serif;
+   
+
+}
+
+.nav-box{
+    width: 150px;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+   
+}
+
+.logo-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+#logo-name:hover{
+    background-color: none;
+}
+
+#whatsapp-logo{
+    width: 25px;
+    height: 25px;
+}
+
+#whatsapp-name{
+    margin-left: 0.8em;
+    font-size: 0.9rem;
+}
+
+.logo-name i{
+    font-size: 25px;
+
+}
+#no-connection i{
+    font-size: 13px;
+    margin-right: 5px;
+
+}
+
+#no-connection{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.a-no-connection{
+    text-decoration: none;
+    color: inherit;
+}
+
+.short-border{
+    border-left: 1px solid rgba(218, 217, 217);
+    height: 15px;
+    margin-left:1.2em;
+    margin-right: 1em;
+
+    
+}
+.fa-window-minimize{
+    margin-bottom: 10px;
+}
+
+
+.nav-box-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+   
+}
+.nav-box .nav-box-content:hover{
+    background-color: gray;
+    border: 1px solid black;
+}

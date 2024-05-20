@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eugene Whatsapp Clone</title>
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./sidebar.css">
+    <link rel="stylesheet" href="./main.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-first-part">
+                <div class="logo-name nav-box-content">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+
+                    <p id="whatsapp-name">WhatsApp</p>
+
+                </div>
+                
+                <div class="short-border"></div>
+                <div id="no-connection" class=" nav-box-content">
+                    <i class="fa-solid fa-cloud"></i>
+                    <a class="a-no-connection" href="#">No connection</a>
+                </div>
+                
+            </div>
+
+            <section class="nav-box">
+                <div class="nav-box-content" id="minimise"><i class="fa-regular fa-window-minimize"></i></div>
+                <div class="nav-box-content"  id="maximise"><i class="fa-regular fa-square"></i></div>
+                <div class="nav-box-content"  id="close"><i class="fa-solid fa-xmark"></i></div>
+            </section>
+        </nav>       
+    </header>
+
+
+    <main>
+        <aside>
+            <section id="sidebar">
+                <div class="first-three-items">
+                    <a class="sidebar-items" >
+                        <i class="fa-regular fa-comment"></i>
+                        <p class="tooltip" >Chats</p>
+                        <p class="sidebar-counter">5</p>
+                    </a>
+                    <a class="sidebar-items">
+                        <i class="fa-solid fa-phone"></i>
+                        <p class="tooltip" >Calls</p>
+                    </a>
+                    <a class="sidebar-items">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <p class="tooltip" >Status</p>
+                    </a>
+                </div>
+                <div class="last-four-items">
+                    <div class="sidebar-items">
+                        <i class="fa-regular fa-star"></i>
+                        <p class="tooltip-1" >Starred messages</p>
+                    </div>
+                    <div class="sidebar-items">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <p class="tooltip-1" >Archived chats</p>
+                    </div>
+                    <div class="sidebar-items">
+                        <i class="fa-solid fa-gear"></i>
+                        <p class="tooltip" >Settings</p>
+                    </div>
+                    <div class="sidebar-items"><img src="./me.JPG" alt="" class="my-profile">
+                        <p class="tooltip" >Profile</p>
+                    </div>
+                    
+                </div>
+            </section>
+        </aside> 
+
+
+        <section class="main-page">
+            <div class="division" id="left-section">
+
+                   <div class="top-fixed">
+                    <div class="first-division">
+
+                        <p class="chats">Chats</p>
+
+                        <div class="first-division-button">
+                            <div class="div-buttons"><img src="./new message.png" width="20px"></div>
+                            <div class="div-buttons"><img src="./noun-filter-3629722.png" width="20px"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="search-area">
+                        <div class="search-icon"></div>
+
+                        <input type="search" id="input-search" placeholder="Search or start a new chat">
+                    </div>
+                   </div>
+
+                <div class="all-div">
+                    <div class="all-chats">
+
+                       
+                       
+                        <div class="chat-history-div">
+
+                            <div  id="chat-profile-pic">
+                                <img id="chat-pic" src="./Capture.PNG" alt="">
+                            </div>
+                            <div id="chat-account-preview">
+
+                                <div class="chat-account-details">
+                                    <p id="chat-account-name">UENR EXAMINATION TIPS📈</p>
+
+                                    <p id="last-message-date"  style="color: green; font-weight: 600;">
+                                        Today
+                                    </p>
+                                </div>
+                                
+                                <div class="last-message-content">
+                                    <p>+233 55 121 7383 joined using the group's invite link</p>
+
+                                    <p class="message-counter">4</p>
+
+                                </div>
+                            </div>
+                            
+
+
+                        </div>
+
+
+
+
+
+                        
+                        <div class="chat-history-div">
+
+                            <div  id="chat-profile-pic">
+                                <img id="chat-pic" src="./GDSC.PNG" alt="">
+                            </div>
+                            <div id="chat-account-preview">
+
+                                <div class="chat-account-details">
+                                    <p id="chat-account-name">GDSC | ITS Web Dev</p>
+
+                                    <p id="last-message-date">
+                                        12:21 AM
+                                    </p>
+                                </div>
+                                
+                                <div class="last-message-content">
+                                    <p><span class="sender-name">~Louis;</span>Waiting for this message.This may take a while.
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="chat-history-div">
+
+                            <div  id="chat-profile-pic">
+                                <img id="chat-pic" src="./0557342449.JPG" alt="">
+                            </div>
+                            <div id="chat-account-preview">
+
+                                <div class="chat-account-details">
+                                    <p id="chat-account-name">+233 55 734 2449</p>
+
+                                    <p id="last-message-date" style="color: green; font-weight: 600;">
+                                        Yesterday
+                                    </p>
+                                </div>
+                                
+                                <div class="last-message-content">
+                                    <p><span class="sender-name">Ok Bro</a></p>
+                                        <p class="message-counter">1</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-history-div">
+
+                            <div  id="chat-profile-pic">
+                                <img id="chat-pic" src="./sir.JPG" alt="">
+                            </div>
+                            <div id="chat-account-preview">
+
+                                <div class="chat-account-details">
+                                    <p id="chat-account-name">Snr William</p>
+
+                                    <p id="last-message-date">
+                                        5/12/2024
+                                    </p>
+                                </div>
+                                
+                                <div class="last-message-content">
+                                    <p><span class="sender-name">Well Noted Snr</a></p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="chat-history-div">
+
+                            <div  id="chat-profile-pic">
+                                <img id="chat-pic" src="./Coupcode.jpg" alt="">
+                            </div>
+                            <div id="chat-account-preview">
+
+                                <div class="chat-account-details">
+                                    <p id="chat-account-name">CoupCode Bootcamp Members</p>
+
+                                    <p id="last-message-date">
+                                        5/5/2024
+                                    </p>
+                                </div>
+                                
+                                <div class="last-message-content">
+                                    <p><span class="sender-name">Manuel<span class="semi-colon">:</span></span> National service opportunity at Amalitech
+                                        One of the leading tech companies in Ghana here
+                                        #Final Year students
+                                        
+                                        If you are interested and have a basic knowledge of programming (you know your datatypes and other related basic stuff)
+                                        DM asap let me guide you through the application.
+                                        Deadline is tomorrow 📌📌📌
+                                       
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        
+                        
+                      
+                      
+                        <div class="chat-history-div">
+
+                            <div  id="chat-profile-pic">
+                                <img id="chat-pic" src="./CO.PNG" alt="">
+                            </div>
+                            <div id="chat-account-preview">
+
+                                <div class="chat-account-details">
+                                    <p id="chat-account-name">Tech Bootcamp - Coupcode 👨🏽‍💻👨🏽‍💻</p>
+
+                                    <p id="last-message-date">
+                                        4/7/2024
+                                    </p>
+                                </div>
+                                
+                                <div class="last-message-content">
+                                    <p><span class="sender-name">~Vince;</span><em>This message was delected by admin Manuel</em></p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="chat-history-div">
+
+                            <div  id="chat-profile-pic">
+                                <img id="chat-pic" src="./micheal.JPG" alt="">
+                            </div>
+                            <div id="chat-account-preview">
+
+                                <div class="chat-account-details">
+                                    <p id="chat-account-name">MIcheal</p>
+
+                                    <p id="last-message-date">
+                                        2/5/2024
+                                    </p>
+                                </div>
+                                
+                                <div class="last-message-content">
+                                    <p><span class="sender-name" style="color: rgb(10, 146, 10); font-weight: 600;">Draft:</span></a>❤️</p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="chat-history-div">
+
+                            <div  id="chat-profile-pic">
+                                <img id="chat-pic" src="./mummy.JPG" alt="">
+                            </div>
+                            <div id="chat-account-preview">
+
+                                <div class="chat-account-details">
+                                    <p id="chat-account-name">Mummy❤️</p>
+
+                                    <p id="last-message-date">
+                                        5/5/2024
+                                    </p>
+                                </div>
+                                
+                                <div class="last-message-content">
+                                    <p><span class="sender-name">You;</span></a> <em>You delected this message</em></p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="chat-history-div">
+
+                            <div  id="chat-profile-pic">
+                                <img id="chat-pic" src="./me.JPG" alt="">
+                            </div>
+                            <div id="chat-account-preview">
+
+                                <div class="chat-account-details">
+                                    <p id="chat-account-name">Bernard</p>
+
+                                    <p id="last-message-date">
+                                        5/13/2024
+                                    </p>
+                                </div>
+                                
+                                <div class="last-message-content">
+                                    <p>How you dey bro</p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        
+                        <div class="chat-history-div">
+
+                            <div  id="chat-profile-pic">
+                                <img id="chat-pic" src="./me.JPG" alt="">
+                            </div>
+                            <div id="chat-account-preview">
+
+                                <div class="chat-account-details">
+                                    <p id="chat-account-name">+233 55 734 2449</p>
+
+                                    <p id="last-message-date">
+                                        5/5/2024
+                                    </p>
+                                </div>
+                                
+                                <div class="last-message-content">
+                                    <p><span class="sender-name">No Tension;</span>Found eeeeeeeee
+                                        ————————————————
+                                        
+                                        
+                                        You can also call <a href="#">+233 50 553 5550.</a></p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="chat-history-div">
+
+                            <div  id="chat-profile-pic">
+                                <img id="chat-pic" src="./me.JPG" alt="">
+                            </div>
+                            <div id="chat-account-preview">
+
+                                <div class="chat-account-details">
+                                    <p id="chat-account-name">+233 55 734 2449</p>
+
+                                    <p id="last-message-date">
+                                        5/5/2024
+                                    </p>
+                                </div>
+                                
+                                <div class="last-message-content">
+                                    <p><span class="sender-name">No Tension;</span>Found eeeeeeeee
+                                        ————————————————
+                                        
+                                        
+                                        You can also call <a href="#">+233 50 553 5550.</a></p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                     
+                                                
+                       
+                    
+                    </div>
+                </div>
+                   
+
+            </div>
+
+
+
+
+
+
+            <div class="division"  id="right-section">
+                    <div class="right-top-div">
+
+                        <div class="right-page-profile-pic">
+                            <img src="./Coupcode.jpg" alt="">
+                        </div>
+
+                        <div class="right-account-details">
+
+                            <p class="right-account-name">
+                                CoupCode Bootcamp Members
+                            </p>
+                           <div class="overflow"> <p class="right-page-details">
+                            J O S H, Manuel, Lambelt Css, Lucid, Micheal Tod, Snr jerry, Eugene, ~@~, ~x L
+                        </p></div>
+                        </div>
+
+                        <div class="right-page-search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            
+
+
+
+
+
+
+                            
+
+                        </div>
+                     
+                </div>
+                
+
+                <div class="right-page-content">
+
+                    <div class="right-inner-content">
+
+                        <div class="inner-profile-pic">
+                            <img src="./Coupcode.jpg" alt="">
+                        </div>
+
+                        <div class="inner-message-content">
+                            <div class="inner-message-sender">
+                                <p>Eugene</p>
+                                <p class="right-sender-number">
+                                    +233 50 765 9441
+                                </p>
+                            </div>
+                            <div class="inner-message-details">
+                                <p>National service opportunity at Amalitech <br> 
+                                    One of the leading tech companies in Ghana here <br>
+                                    #Final Year students <br> <br>
+                                    
+                                    If you are interested and have a basic knowledge of programming <br>(you know your datatypes and other related basic stuff) <br>
+
+                                    DM asap let me guide you through the application. <br>
+                                    Deadline is tomorrow 📌📌📌</p>
+                                    <p class="absolute">❤️</p>
+                            </div>
+                            <div class="inner-message-time">
+                                7:25 PM
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="right-inner-content">
+
+                        <div class="inner-profile-pic">
+                           
+                        </div>
+
+                        <div class="inner-message-content">
+                            <div class="inner-message-sender">
+                                <p style="color: gray; font-weight: normal;"><em>Forwarded</em></p>
+                            </div>
+                            <div class="inner-message-details">
+                                <a style="font-size: 1rem;" href="#">https://amalitech.org/nss/?fbclid=IwZXh0bgNhZW0CMTAAAR3ydzyWwVL_xfi6TL1WZfXtEw6hjj1SEZK7G1r4XoHm60maGPLgB8UPoKI_aem_AYY_UdlWf7PAWp4FhUIH_rfhlTUqeoThc0XnlTk6GV6U1g_EJlHnTUbGJNRIDwgUexQduUINazHjwMGa4m7NcR7b</a>
+                                <p class="absolute">❤️</p>
+                            </div>
+                            <div class="inner-message-time">
+                                7:22 PM
+                            </div>
+                        </div>
+
+                    </div>
+                  
+
+                    <div class="right-inner-content">
+
+                        <div class="inner-profile-pic">
+                            <img src="./Coupcode.jpg" alt="">
+                        </div>
+
+                        <div class="inner-message-content">
+                            <div class="inner-message-sender">
+                                <p style="color: rgb(3, 209, 185);">~CODED</p>
+                                <p class="right-sender-number">
+                                    +233 50 765 9441
+                                </p>
+                                
+                            </div>
+                            <div class="inner-message-details">
+                                <p style="text-align: center; font-size: 3.5rem;">🤲🏾</p>
+                                <p class="absolute">❤️</p>
+                            </div>
+                            <div class="inner-message-time">
+                                7:24 PM
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="right-inner-content">
+
+                        <div class="inner-profile-pic">
+                            <img src="./Coupcode.jpg" alt="">
+                        </div>
+
+                        <div class="inner-message-content">
+                            <div class="inner-message-sender">
+                                <p>Manuel</p>
+                                <p class="right-sender-number">
+                                    +233 24 576 7665
+                                </p>
+                            </div>
+                            <div class="inner-message-details">
+                                <p>National service opportunity at Amalitech <br> 
+                                    One of the leading tech companies in Ghana here <br>
+                                    #Final Year students <br> <br>
+                                    
+                                    If you are interested and have a basic knowledge of programming <br>(you know your datatypes and other related basic stuff) <br>
+
+                                    DM asap let me guide you through the application. <br>
+                                    Deadline is tomorrow 📌📌📌</p>
+
+                                    <p class="absolute">❤️🔥 <span class="emoji-number"> 2</span></p>
+                            </div>
+                            <div class="inner-message-time">
+                                7:25 PM
+                            </div>
+                        </div>
+
+                    </div>
+                            
+                </div>
+                <footer class="right-page-footer">
+                    <p>Only <span class="admins">admins</span> can send messages</p>
+                </footer>
+             </div> 
+
+            </section>
+      
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+
+
+#sidebar{
+    background-color: rgb(220, 220, 220,0.4);
+    height: 93vh;
+    width: 50px;
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+.first-three-items{
+    position: relative;
+    height: 110px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.sidebar-items{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: relative;
+    /* border: 1px solid green; */
+  
+}
+
+aside p{
+    position: absolute;
+  }
+
+ .sidebar-items .tooltip{
+
+    top: -50px;
+
+    font-size: 0.8rem;
+    background-color: rgb(227, 224, 224);
+    padding: 0.6em 0.8em;
+    border-radius: 5px;
+    box-shadow: 0.9px 0.9px 10px rgb(0, 0, 0,0.5);
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+ .sidebar-items .tooltip-1{
+
+    top: -50px;
+    left: 10px;
+
+    font-size: 0.8rem;
+    background-color: rgb(227, 224, 224);
+    padding: 0.6em 0.8em;
+    border-radius: 5px;
+    box-shadow: 0.9px 0.9px 10px rgb(0, 0, 0,0.5);
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+ .sidebar-items:hover .tooltip{
+    opacity: 1;
+}
+ .sidebar-items:hover .tooltip-1{
+    opacity: 1;
+}
+
+.sidebar-items:hover{
+    background-color: rgb(200, 200, 200);
+}
+
+.sidebar-items:active{
+    border-left: 3px solid green;
+
+}
+
+/* 
+ */
+
+.last-four-items{
+    height: 147px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.my-profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}

@@ -200,9 +200,5 @@ body {
   background-color: var(--building-color1);
 }
 
-.fb3-window {
-  width: 25%;
-  height: 80%;
-  background-color: var(--window-color1);
-}
+feMorphology
 

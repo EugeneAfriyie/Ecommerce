@@ -3,13 +3,14 @@
 header{
     height: 60px;
     width: 100%;
-    background-color: #fff;
-    margin-top: 20px;
+    background-color: #fff; color: #000;
     display: flex;
     align-items: center;
     padding-left: 100px;
     position: fixed;
     left: 0;
+    top: 0;
+    z-index: 2;
 
 }
 

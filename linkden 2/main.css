@@ -4,9 +4,9 @@
     margin: 0;
     border: none;
 
-    /* font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
-    font-style: normal; */
+    font-style: normal;
 
     /* font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -15,9 +15,9 @@
   font-variation-settings:
     "wdth" 100; */
     
-    font-family: "Ubuntu", sans-serif;
+    /* font-family: "Ubuntu", sans-serif;
   font-weight: 300;
-  font-style: normal;
+  font-style: normal; */
 
     
 }
@@ -26,7 +26,10 @@ body{
     background-color: rgba(153, 153, 153, 0.329);
     padding-left: 100px;
     padding-right: 120px;
-    background-color: rgba(211, 211, 211, 0.589);
+   
+    background-color: rgba(211, 211, 211, 0.309);
+
+    padding-bottom: 1000px;
 }
 
 a{
@@ -35,18 +38,18 @@ a{
 }
 
 main{
+  margin-top: 70px;
   height: 100vh;
   display: grid;
   grid-template-columns:220px 1fr 300px ;
   gap: 25px;
 }
 
-.sec-1{
-  border: 1px solid red;
-}
-.sec-2{
-  border: 1px solid orange;
-}
-.sec-3{
-  border: 1px solid blue;
-}
+
+
+
+
+
+
+
+

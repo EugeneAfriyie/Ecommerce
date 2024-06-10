@@ -15,7 +15,7 @@
   }
   .div-2-contents{
    
-    padding:0 10px 10px 0;
+    padding:0 10px 10px 10px;
     display: grid;
     font-size: 13px;
     margin: 0;

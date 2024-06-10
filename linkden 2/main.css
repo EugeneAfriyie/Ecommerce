@@ -22,14 +22,23 @@
     
 }
 
+#page{
+    width: 1320px;
+    padding-left: 100px;
+    
+
+    margin: auto;
+
+}
+
 body{
     background-color: rgba(153, 153, 153, 0.329);
-    padding-left: 100px;
-    padding-right: 120px;
+    
    
     background-color: rgba(211, 211, 211, 0.309);
 
-    padding-bottom: 1000px;
+
+  
 }
 
 a{
@@ -41,7 +50,7 @@ main{
   margin-top: 70px;
   height: 100vh;
   display: grid;
-  grid-template-columns:220px 1fr 300px ;
+  grid-template-columns:220px 550px 300px ;
   gap: 25px;
 }
 

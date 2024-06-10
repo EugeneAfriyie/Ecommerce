@@ -1,4 +1,4 @@
-.sec-3{
+/* .sec-3{
     border: 1px solid blue;
     background-color: #fff;
     display: grid;
@@ -6,7 +6,7 @@
   } 
 
 
-
+                
 .sec-3-first-div{
     border: 1px solid green;
     display: grid;
@@ -50,7 +50,7 @@
     border: 1px solid red;
     margin: 0;
     padding: 0;
-    /* gap: 10px; */
+     gap: 10px;
 }
 
 .feed-info{
@@ -138,8 +138,8 @@
 
 .sec-3-second-div{
     background-color: red;
-}
+} */
 
 
 
-
+ 

@@ -1,0 +1,342 @@
+.sec-3{
+ 
+   
+   
+
+   
+}
+
+.sec-3-full-info{
+
+    height: 381px;
+    padding: 15px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    background-color: #fff;
+    box-shadow: 0px 0px 0.5px 1px rgb(220, 220, 220);
+    margin-bottom: 20px;
+   
+    
+
+}
+
+
+.div-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+    font-weight: 600;
+}
+
+.add-feed{
+    font-weight: inherit;
+    color: rgba(35, 33, 33, 0.723);
+}
+
+.error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: inherit;
+    background-color: black;
+    color: white;
+    width: 10px;
+    height: 12px;
+    border-radius: 2px;
+    font-size: 12px;
+
+}
+
+.div-feed-details{
+    /* border:1px solid green; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.feed-info{
+   
+    display: flex;
+    gap: 10px;
+   
+}
+
+.feed-profile-pic{
+  
+    width: 25%;
+    height: 70%;
+
+}
+
+.feed-profile-pic img {
+    width: 100%;
+    border-radius: 25%;
+    
+}
+
+.feed-profile-details{
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+ 
+  
+}
+
+.feed-name{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(58, 57, 57);
+}
+
+.feed-account-info{
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
+    line-height: 15px;
+  
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+  
+  
+
+}
+
+
+
+.middle-dot{
+    font-size: 20px;
+    font-weight: 900;
+
+  
+}
+
+.feed-follow-option p{
+    border: 1px solid black;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-weight: 600;
+    color: rgb(89, 87, 87);
+}
+
+.feed-follow-option p:hover{
+    background-color: rgba(173, 168, 168, 0.126);
+
+}
+
+.div-feed-footer p{
+    display: inline-block;
+  
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.div-feed-footer p:hover{
+    background-color: rgba(128, 128, 128, 0.241);
+}
+
+
+
+
+
+
+
+/* ADS DIV CSS */
+
+
+
+#sec-3-div-2{
+    height: 274px;
+    background-color: white;
+    padding: 10px 10px 30px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0.5px 1px rgb(220, 220, 220);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 50px;
+
+    position: sticky;
+    top: 0; 
+   
+  
+
+
+  
+
+
+}
+
+.ads p{
+    
+
+   
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #777;
+}
+
+.ad-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ad-profile-details{
+  
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.profile-pic-ad{
+    width: 70px;
+    height: 70px;
+
+   
+
+ 
+
+}
+
+.profile-pic-ad img{
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ object-position: top;
+ border-radius: 50%;
+
+
+}
+
+
+.jobs-ad{
+    width: 70px;
+    height: 70px;
+  ;
+    
+}
+
+.jobs-ad img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.ad-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ad-text p {
+    text-align: center;
+    font-weight: 400;
+    color: #878484;
+    
+}
+
+#see-openings{
+    border: 1px solid blue;
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: blue;  
+}
+
+
+
+/* SEC-3 FOOTER CSS */
+
+.sec-3-footer{
+
+    height: 150px;
+    padding:0 20px;
+}
+
+.sec-3-footer-inner-div{
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+
+    
+}
+
+.sec-3-footer-entities{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.sec-3-footer-inner-div p{
+    display: flex;
+    gap: 20px;
+    
+}
+.sec-3-footer-inner-div a{
+    font-size: 12px;
+    color: rgb(120, 115, 115);
+    font-weight: 400;
+   
+
+}
+
+.sec-3-footer-copyright{
+    display: flex;
+    font-size: 14px;
+    gap:3px;
+  
+
+}
+
+
+
+#linked{
+   
+    color: blue;
+    font-weight: 500;
+
+}
+
+#in{
+    width: 15px;
+    height: 15px;
+    color: white;
+    background-color: blue;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+#copyright{
+    color: black;
+    font-size: 13px;
+}

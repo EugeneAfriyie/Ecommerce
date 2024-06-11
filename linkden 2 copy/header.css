@@ -1,0 +1,204 @@
+
+
+header{
+    height: 60px;
+    width: 100%;
+    background-color: #fff; color: #000;
+    display: flex;
+    align-items: center;
+    padding-left: 115px;
+    padding-right: 115px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+}
+
+nav{
+    height: 100%px;
+    width: 1150px;
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+ 
+    margin: auto;
+}
+
+.header-sec-1{
+    /* border: 1px solid red; */
+    
+    height: 40px;
+    display: flex;
+    gap: 8px;
+   
+    margin-right: 100px;
+
+    
+}
+
+.in-blue{
+   
+    width: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 37px;
+    background-color:rgb(8, 63, 184);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 3px;
+
+}
+.header-search-bar{
+    
+    width: 280px;
+    display: flex;
+    /* padding-right: 100px; */
+}
+
+.header-search-bar button{
+    width: 40px;
+    background-color: rgba(131, 194, 219, 0.206);
+    height: 100%;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 5px;
+
+   
+}
+.header-search-bar input{
+
+    background-color: rgba(131, 194, 219, 0.206);
+    height: 100%;
+    flex: 1;
+}
+
+.header-search-bar input::placeholder{
+    font-size: 14px;
+    font-family: monospace;
+}
+
+
+
+
+
+
+
+.header-sec-2{
+
+    height: 60PX;
+    flex: 1;
+    display: flex;
+  
+
+   
+}
+.header-sec-2 p{
+    font-size: 12px;
+
+    
+}
+
+.header-sec-2a{
+
+    height: 60px;
+    width: 480px;
+    display: flex;
+    
+
+}
+.header-sec-2a-div{
+  
+    flex: 1;
+   
+   
+    
+}
+
+.header-sec-2a-div:active{
+    border-bottom: 2px solid black;
+    
+ 
+
+}
+
+.header-sec-content{
+   
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    padding-top: 10px;
+    position: relative;
+
+    color: rgb(100, 98, 98);
+}
+
+
+#counter{
+    background-color: rgb(196, 62, 62);
+    padding: 2px 5px;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    font-size: 10px;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+.header-sec-content:active{
+    color: black;
+}
+
+.header-profile-pic{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    
+}
+
+.header-sec-2b{
+ 
+    height: 60px;
+    width: 345px;
+    display: flex;
+    gap: 20px;
+    padding-left: 10px;
+}
+
+.header-sec-2b-content{
+    height: 50px;
+    font-size: 22px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+
+.header-sec-2b-content img{
+    width: 20px;
+}
+
+.header-sec-2b-content:last-child{
+    
+    text-decoration: underline;
+    color: rgb(185, 143, 70);
+    padding-top: 15px;
+}
+
+
+.vertical-line{
+    border-left: 1px solid rgb(223, 218, 218);
+
+}
+
+
+

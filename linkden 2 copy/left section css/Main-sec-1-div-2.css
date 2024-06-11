@@ -1,0 +1,68 @@
+.sec-1-div-2{
+   background-color: #fff;
+   border-radius: 10px;
+   box-shadow: 0px 0px 0.5px 1px rgb(220, 220, 220);    
+ 
+  }
+
+  .div-2-content{
+   
+    margin: 10px 10px 40px 10px ;
+    display: grid;
+    gap: 10px;
+    font-size: 13px;
+
+  }
+  .div-2-contents{
+   
+    padding:0 10px 10px 10px;
+    display: grid;
+    font-size: 13px;
+    margin: 0;
+ 
+  }
+ 
+
+  .space-inbetween{
+    display: flex;
+    gap: 10px;
+  }
+
+  .blue{
+    color: rgba(0, 89, 253, 0.74);
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .margin{
+    margin-left: 25px;
+  }
+
+  .fa-plus{
+    color: black;
+    font-size: 16px;
+  }
+
+  .discover-more{
+    width: 220px;
+   
+   
+    padding: 10px;
+    text-align: center;
+   margin-top:-10px ;
+ 
+   font-weight: 500;
+   color: black;
+   font-size: 15px;
+   border-top: 1px solid rgba(128, 128, 128, 0.159);
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   margin-top: 0px;
+
+  }
+
+  .discover-more:hover{
+    background-color: #9999994c;
+  }

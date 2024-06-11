@@ -83,6 +83,8 @@ nav{
 
 
 
+
+
 .header-sec-2{
 
     height: 60PX;
@@ -130,8 +132,22 @@ nav{
     justify-content: space-between;
     font-size: 20px;
     padding-top: 10px;
+    position: relative;
 
     color: rgb(100, 98, 98);
+}
+
+
+#counter{
+    background-color: rgb(196, 62, 62);
+    padding: 2px 5px;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    font-size: 10px;
+    position: absolute;
+    top: 5px;
+    right: 20px;
 }
 
 .header-sec-content:active{

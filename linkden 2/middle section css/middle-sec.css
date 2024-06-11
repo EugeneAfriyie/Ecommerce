@@ -119,8 +119,10 @@ gap: 15px;
 
 .sec-2-main-page{
     /* border: 1px solid green; */
-    height: 100vh;
+    
     background-color: #fff;
+    height: auto;
+  
 }
 
 
@@ -157,6 +159,7 @@ gap: 15px;
     /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
+    gap: 5px;
     
 }
 
@@ -170,10 +173,18 @@ gap: 15px;
 .main-name{
     font-weight: 500;
     color: rgb(85, 82, 82);
+    display: flex;align-items: center;
+    gap: 5px;
+}
+
+.main-name span{
+    font-size: 15px;
+    font-weight: 400;
+    color: gray;
 }
 
 .main-profile-details{
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 500;
     color: rgb(85, 82, 82);
 }
@@ -182,7 +193,7 @@ gap: 15px;
     display: flex;
     align-content: center;
     gap: 5px;
-    font-size: 11px;
+    font-size: 12px;
  
     color: #666;
    
@@ -194,14 +205,20 @@ gap: 15px;
 }
 
 .dot{
-    font-size: 4px;
+    font-size: 3px;
     display: flex;
     align-items: center;
 }
 
 .sec-3-text-post{
     padding: 10px;
+    line-height: 20px;
 
+}
+
+.sec-3-text-post span{
+   
+    margin-right: 220px;
 }
 
 .sec-3-text-post p{
@@ -212,11 +229,75 @@ gap: 15px;
 }
 
 .sec-2-photo-post{
-    padding: 10px;
-    max-height: 500px;
+    /* padding: 10px; */
+    /* max-height: 600px; */
+    margin: auto;
     /* border: 1px solid red; */
 }
 
 .sec-2-photo-post img{
-    height: 400px;
+    
+    width: 100%;
+   
+}
+.flyers{
+    height: 500px;
+    width: 100%;
+   
+}
+
+.reaction{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    padding-left: 50px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.like{
+    position: absolute;
+    left: 32px;
+    color: blue;
+
+}
+.fa-face-smile{
+    position: absolute;
+    left: 15px;
+    color: yellowgreen;
+}
+.fa-heart{
+    position: absolute;
+    left: 24px;
+    color: red;
+
+    
+}
+
+.reaction-box{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.reaction-box p{
+   gap: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+}
+
+.reaction-box p:first-child i{
+    color: blue;
+}
+
+.reaction-box i{
+    font-size: 20px;
 }

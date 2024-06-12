@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variabls</title>
+</head>
+<body>
+<button onclick="
+    console.log(`Cart quantity: ${cartQuantity}`)
+    ">Show Quantity</button>
+
+<button onclick="
+cartQuantity = cartQuantity + 1;
+if (cartQuantity > 10){
+    console.log('Cart is full')
+}
+else {
+    console.log(`Cart Quantity: ${cartQuantity}`)
+}
+">Add to cart</button>
+
+<button onclick="cartQuantity = cartQuantity - 1;
+if (cartQuantity < 0){
+    console.log('Cart is empty')
+}
+else {
+    console.log(`Cart Quantity: ${cartQuantity}`)
+}">Remove from  cart</button>
+<br> <hr>
+
+<button onclick="
+cartQuantity = cartQuantity + 2;
+if (cartQuantity > 10){
+    console.log('Cart is full')
+}
+else {
+    console.log(`Cart Quantity: ${cartQuantity}`)
+}">+2</button>
+
+<button onclick="cartQuantity = cartQuantity + 3;
+if (cartQuantity > 10){
+    console.log('Cart is full')
+}
+else {
+    console.log(`Cart Quantity: ${cartQuantity}`)
+}">+3</button>
+
+<button onclick="cartQuantity = cartQuantity - 2;
+if (cartQuantity < 0){
+    console.log('Cart is empty')
+}
+else {
+    console.log(`Cart Quantity: ${cartQuantity}`)
+}">-2</button>
+
+<button onclick="cartQuantity = cartQuantity - 3;
+if (cartQuantity < 0){
+    console.log('Cart is empty')
+}
+else {
+    console.log(`Cart Quantity: ${cartQuantity}`)
+}">-3</button>
+<br><hr>
+
+<button onclick="cartQuantity = cartQuantity * 0;
+console.log(`Cart was Reset
+cart Quantity: ${cartQuantity}`)">Reset cart</button>
+   
+   
+   
+   <script>
+        let cartQuantity = 0;
+
+        if (cartQuantity < 0){
+    console.log('Cart is empty')
+}
+
+else if (cartQuantity > 10){
+    console.log('cart ius Empty')
+}
+else {
+    console.log(`Cart Quantity: ${cartQuantity}`)
+}
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcultor</title>
+</head>
+<body>
+
+<p>
+
+    <button onclick="
+         doCalculation(' 1 ');
+        ">1</button>
+
+    <button onclick="
+         doCalculation(' 2 ');
+        ">2</button>
+
+        <button onclick="
+        doCalculation(' 3 ');
+        ">3</button>
+
+    <button onclick="
+     doCalculation(' + ');
+  
+    ">+</button>
+
+    <button onclick="
+     doCalculation(' * 0');
+   
+    ">C</button>
+
+</p>
+<p>
+
+    <button onclick="
+        doCalculation(' 4 ');
+        ">4</button>
+
+    <button onclick="
+        doCalculation(' 5 ');
+        ">5</button>
+
+    <button onclick="
+        doCalculation(' 6 ');
+    ">6</button>
+
+    <button onclick="
+        doCalculation(' - ');
+
+    ">-</button>
+
+</p>
+
+ <p>
+
+    <button onclick="
+     doCalculation(' 7 ');
+    ">7</button>
+
+<button onclick="
+        doCalculation(' 8 ');
+    ">8</button>
+
+    <button onclick="
+        doCalculation(' 9 ');
+
+    ">9</button>
+
+    <button onclick="
+        doCalculation(' / ');
+
+    ">/</button>
+
+</p>
+
+<p>
+
+    <button onclick=" 
+        doCalculation(' * ');
+
+    ">*</button>
+
+    <button onclick="
+        doCalculation(' 0 ');
+
+    ">0</button>
+
+    <button onclick="
+        doCalculation(' . ');
+
+    // calculation += '.'
+    // console.log(calculation)
+ 
+    ">.</button>
+
+    <button onclick="
+    eval(calculation);
+    console.log(eval(calculation))
+    ">=</button>
+</p>
+    
+    
+
+
+
+
+    <script>
+        let calculation = '';
+        function doCalculation (Number){
+            calculation += Number
+            console.log(calculation)
+        }
+       
+
+    </script>
+</body>
+</html>

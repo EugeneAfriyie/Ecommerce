@@ -23,8 +23,9 @@
 }
 
 #page{
-    width: 1320px;
-    padding-left: 100px;
+    max-width: 1130px;
+    min-width: 930px;
+    /* padding: 0 100px; */
   
 
     margin: auto;
@@ -34,9 +35,12 @@
 
 
 body{
-
+  padding-top: 70px;
     padding-bottom: 2000px;
     background-color: rgba(211, 211, 211, 0.309);
+    /* padding: 0 100px; */
+  
+  
 
 
   
@@ -52,8 +56,10 @@ main{
   margin-top: 70px;
   height: 100vh;
   display: grid;
-  grid-template-columns:220px 550px 300px ;
+  grid-template-columns:220px 1fr 300px ;
+ 
   gap: 25px;
+  margin: auto;
 }
 
 

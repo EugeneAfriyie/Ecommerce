@@ -3,6 +3,13 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+   
+    
+   
+
+    
+    border: 1px solid red;
+    
 }
 
 #new-post{
@@ -12,9 +19,7 @@
     padding: 10px;
     position: sticky;
     top: 200px;
-  
     background-color: red;
-  
     z-index: 2222;
   }
 

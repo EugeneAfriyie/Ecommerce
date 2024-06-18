@@ -116,8 +116,10 @@ nav{
     
 }
 
-.header-sec-2a-div:active{
+.header-sec-2a-div:focus{
     border-bottom: 2px solid black;
+ 
+ 
     
  
 
@@ -150,8 +152,10 @@ nav{
     right: 20px;
 }
 
-.header-sec-content:active{
+.header-sec-content p:active{
     color: black;
+    background-color: red;
+    font-size: 50px;
 }
 
 .header-profile-pic{

@@ -37,11 +37,11 @@ THE RESULT IS ${result}`);
     
     if (guessNumber < 0.5){
         computermove = 'HEAD';
-        result = ('YOU LOSE')
+        result = 'YOU LOSE'
     }
     else {
         computermove = ('TAIL')
-        result = '(YOU WIN)'
+        result = 'YOU WIN'
     }
 
 
@@ -51,5 +51,25 @@ THE RESULT IS ${result}`);
 
     
     ">Tail</button>
+
+    <script>
+
+        function Moves(){
+            let computermove = '';
+    let guessNumber = Math.random();
+    console.log(guessNumber)
+    let result = '';
+    
+    if (guessNumber < 0.5){
+        computermove = 'HEAD';
+    }
+    else {
+        computermove = ('TAIL')
+    }
+
+        }
+
+        
+    </script>
 </body>
 </html>

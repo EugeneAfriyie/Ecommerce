@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Coin-Flip Game</p>
+    <button onclick="
+    playGame('Head'); 
+    ">Head</button>
+
+    <button  onclick="
+    playGame('Tail');    
+    ">Tail</button>
+
+    <button onclick="
+        // score = {
+        //     Wins:0,
+        //     Losses:0
+        // }
+
+        localStorage.removeItem('Score');
+    ">Reset Button</button>
+    <script>
+        let computermove = '';
+
+        let score = JSON.parse(localStorage.getItem('score')) || {
+        Wins: 0,
+        Losses:0
+        };
+   
+
+
+            
+       
+
+        function Moves(){
+        computermove = '';
+        let guessNumber = Math.random();
+        console.log(guessNumber)
+
+        
+        if (guessNumber < 0.5){
+            computermove = 'head';
+        }
+        else {
+            computermove = ('tail')
+        }
+
+        return computermove;
+            };
+
+
+        function playGame(playermove){
+            result = '';
+
+            computermove = Moves();
+            
+
+            if (playermove === 'Head'){
+                if (computermove === "head"){
+                result = 'You Win'
+            }
+            else {
+                result = 'You Lose'
+            }
+
+            }
+
+            else if (playermove === 'Tail'){
+
+                if (computermove === 'head'){
+                    result = 'You Lose'
+                }
+                else{
+                    result ='You Win'
+                }
+            }
+
+            if (result === 'You Win'){
+                score.Wins += 1
+            }
+            else if (result === 'You Lose'){
+                score.Losses += 1
+                
+            }
+
+            score.numGames = score.Wins + score.Losses
+
+            localStorage.setItem('Score',  JSON.stringify(score));
+            console.log(score);
+
+           
+
+        
+
+            alert (`You chose ${playermove}. The coin showed ${computermove} THE RESULT IS ${result}
+            Wins: ${score.Wins}  Losese:${score.Losses}  Games Played ${score.numGames}`);
+             
+            
+        };
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coin-Flip Game</title>
 </head>
 <body>
     <p>Coin-Flip Game</p>
@@ -16,12 +16,10 @@
     ">Tail</button>
 
     <button onclick="
-        // score = {
-        //     Wins:0,
-        //     Losses:0
-        // }
+    score.Wins = 0;
+    score.Losses = 0;
 
-        localStorage.removeItem('Score');
+        localStorage.removeItem('Score')
     ">Reset Button</button>
     <script>
         let computermove = '';
@@ -89,15 +87,15 @@
 
             score.numGames = score.Wins + score.Losses
 
-            localStorage.setItem('Score',  JSON.stringify(score));
-            console.log(score);
+            localStorage.setItem( 'score', JSON.stringify(score));
 
+      console.log(score);
            
 
         
 
             alert (`You chose ${playermove}. The coin showed ${computermove} THE RESULT IS ${result}
-            Wins: ${score.Wins}  Losese:${score.Losses}  Games Played ${score.numGames}`);
+Wins: ${score.Wins}  Losese:${score.Losses}  Games Played ${score.numGames}`);
              
             
         };

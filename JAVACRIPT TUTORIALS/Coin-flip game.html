@@ -8,48 +8,102 @@
 <body>
     <p>Coin-Flip Game</p>
     <button onclick="
-    let computermove = '';
-    let guessNumber = Math.random();
-    console.log(guessNumber)
-    let result = '';
+    playGame('Head');
+
+
+//     let computermove = '';
+//     let guessNumber = Math.random();
+//     console.log(guessNumber)
+//     let result = '';
     
-    if (guessNumber < 0.5){
-        computermove = 'Head';
-        result = ('You WIn')
-    }
-    else {
-        computermove = ('Tail')
-        result = '(YOU LOSE)'
-    }
+//     if (guessNumber < 0.5){
+//         computermove = 'Head';
+//         result = ('You WIn')
+//     }
+//     else {
+//         computermove = ('Tail')
+//         result = '(YOU LOSE)'
+//     }
 
 
 
-    alert (`You chose Head. The coin showed ${computermove} 
-THE RESULT IS ${result}`);
+//     alert (`You chose Head. The coin showed ${computermove} 
+// THE RESULT IS ${result}`);
 
     
     ">Head</button>
     <button  onclick="
-    let computermove = '';
-    let guessNumber = Math.random();
-    console.log(guessNumber)
-    let result = '';
+        playGame('Tail');
+
+//     let computermove = '';
+//     let guessNumber = Math.random();
+//     console.log(guessNumber)
+//     let result = '';
     
-    if (guessNumber < 0.5){
-        computermove = 'HEAD';
-        result = ('YOU LOSE')
-    }
-    else {
-        computermove = ('TAIL')
-        result = '(YOU WIN)'
-    }
+//     if (guessNumber < 0.5){
+//         computermove = 'HEAD';
+//         result = ('YOU LOSE')
+//     }
+//     else {
+//         computermove = ('TAIL')
+//         result = '(YOU WIN)'
+//     }
 
 
 
-    alert (`You chose TAIL. The coin showed ${computermove} 
-THE RESULT IS ${result}`);
+//     alert (`You chose TAIL. The coin showed ${computermove} 
+// THE RESULT IS ${result}`);
 
     
     ">Tail</button>
+
+
+<script>
+    
+
+
+    function pickcomputermove(){
+
+        let computermove = '';
+    let guessNumber = Math.random();
+    console.log(guessNumber)
+    
+    
+    if (guessNumber < 0.5){
+        computermove = 'Head';}
+        
+    else {
+        computermove = ('Tail') 
+    }
+
+    return computermove;
+    }
+
+    function playGame(playerMove){
+        let computermove = pickcomputermove();
+
+      if (playerMove === 'Head'){
+        if(computermove === 'Head'){
+            result = 'You Win'
+        }
+
+        else  {
+            result = 'You Lose'
+        }
+      }
+
+      else{
+        if (computermove === 'Head'){
+            result = 'You Lose'
+        }
+        else {
+            result = "You Win"
+        }
+      }
+
+      alert (`You chose ${playerMove}. The coin showed ${computermove} THE RESULT IS ${result}`);
+    }
+
+</script>
 </body>
 </html>

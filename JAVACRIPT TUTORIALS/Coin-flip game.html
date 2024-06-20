@@ -57,8 +57,24 @@
     
     ">Tail</button>
 
+    <button onclick="
+    score ={
+        Wins: 0,
+        Losses: 0
+    }
+    localStorage.removeItem('Score');
+    ">Reset Game</button>
+
 
 <script>
+    
+    let score = JSON.parse(localStorage.getItem('Score')) ||
+    {
+        Wins: 0,
+        Losses: 0                                                                                                                                         
+    }
+
+    
     
 
 
@@ -101,7 +117,19 @@
         }
       }
 
-      alert (`You chose ${playerMove}. The coin showed ${computermove} THE RESULT IS ${result}`);
+      if (result = 'You win'){
+        score.Wins += 1
+      }
+      else  {
+        score.Losses += 1
+      }
+
+      localStorage.setItem('Score', JSON.stringify(score));
+
+
+
+      alert (`You chose ${playerMove}. The coin showed ${computermove} THE RESULT IS ${result}
+Wins: ${score.Wins}    Losses:${score.Losses}   Games Played: ${score.Losses + score.Wins}` );
     }
 
 </script>

@@ -21,6 +21,11 @@ onclick="
    playGame('Scissors');
 ">Scissors</button>
 
+
+<p class="js-final-outcome"></p>
+<p class="js-final-score"></p>
+<p class="js-score"></p>
+
 <button onclick="
    score.Wins = 0;
    score.Losses = 0;
@@ -33,6 +38,7 @@ onclick="
 <script>
 
    
+
 let score = JSON.parse(localStorage.getItem('score')) || {
    
          Wins: 0,
@@ -40,6 +46,13 @@ let score = JSON.parse(localStorage.getItem('score')) || {
          Tie: 0
         
 };
+
+
+
+document.querySelector('.js-final-score').innerHTML = ` Game Result: ${result} `;
+
+   // document.querySelector('.score').innerHTML = ` Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Tie}`;
+
 
 
       // if (!score){ 
@@ -149,8 +162,12 @@ let score = JSON.parse(localStorage.getItem('score')) || {
       else if(result === 'You tie'){
          score.Tie += 1;
       }
+      
+      
 
       localStorage.setItem( 'score', JSON.stringify(score));
+
+   
 
       console.log(score);
 
@@ -165,6 +182,24 @@ let score = JSON.parse(localStorage.getItem('score')) || {
          console.log(playerMove)
          alert(`You picked ${playerMove}.Computer picked ${computermove}.${result}
 Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Tie}`)
+
+
+
+
+   function gameUpdate () {
+      
+      document.querySelector('.js-final-outcome').innerHTML = ` You Picked: ${playerMove}  - Computer Picked; ${computermove} `;
+
+document.querySelector('.js-final-score').innerHTML = ` Game Result: ${result} `;
+
+
+document.querySelector('.js-score').innerHTML = ` Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Tie}`;
+   }
+
+   gameUpdate();
+ 
+   
+
 
          }
 

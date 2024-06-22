@@ -22,10 +22,6 @@ onclick="
 ">Scissors</button>
 
 
-<p class="js-final-outcome"></p>
-<p class="js-final-score"></p>
-<p class="js-score"></p>
-
 <button onclick="
    score.Wins = 0;
    score.Losses = 0;
@@ -46,14 +42,6 @@ let score = JSON.parse(localStorage.getItem('score')) || {
          Tie: 0
         
 };
-
-
-
-document.querySelector('.js-final-score').innerHTML = ` Game Result: ${result} `;
-
-   // document.querySelector('.score').innerHTML = ` Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Tie}`;
-
-
 
       // if (!score){ 
       //   score ={
@@ -186,18 +174,6 @@ Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Tie}`)
 
 
 
-   function gameUpdate () {
-      
-      document.querySelector('.js-final-outcome').innerHTML = ` You Picked: ${playerMove}  - Computer Picked; ${computermove} `;
-
-document.querySelector('.js-final-score').innerHTML = ` Game Result: ${result} `;
-
-
-document.querySelector('.js-score').innerHTML = ` Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Tie}`;
-   }
-
-   gameUpdate();
- 
    
 
 

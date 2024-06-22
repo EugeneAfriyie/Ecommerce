@@ -31,7 +31,7 @@
         Losses:0
         };
 
-        document.querySelector('.score').innerHTML = ` Wins: ${result} Losses: ${score.Losses} Ties: ${score.Tie}`;
+        document.querySelector('.score').innerHTML = ` Wins: ${resu} Losses: ${score.Losses} Ties: ${score.Tie}`;
      
 
      
@@ -94,7 +94,7 @@
 
             localStorage.setItem( 'score', JSON.stringify(score));
 
-               document.querySelector('.score').innerHTML = ' Wins:' score.Wins} 'Losses:' score.Losses 'Ties:' score.Tie ;
+               document.querySelector('.score').innerHTML = ` Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Tie}`;
 
       console.log(score);
 

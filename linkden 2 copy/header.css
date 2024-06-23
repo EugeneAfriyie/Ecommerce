@@ -6,8 +6,8 @@ header{
     background-color: #fff; color: #000;
     display: flex;
     align-items: center;
-    padding-left: 115px;
-    padding-right: 115px;
+    /* padding-left: 115px;
+    padding-right: 115px; */
     position: fixed;
     left: 0;
     top: 0;
@@ -23,6 +23,7 @@ nav{
     align-items: center;
  
     margin: auto;
+    border: 1px solid red;
 }
 
 .header-sec-1{
@@ -54,6 +55,7 @@ nav{
     
     width: 280px;
     display: flex;
+    border:1px solid red
     /* padding-right: 100px; */
 }
 

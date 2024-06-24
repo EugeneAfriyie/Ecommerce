@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Projects</title>
+</head>
+<body>
+
+    <p>Youtube subsribe Button</p>
+    <Button onclick="
+    subscribeButton();
+    
+
+
+    " class="js-subscribe">Subscribed</Button>
+
+
+
+<p>Amazon Shipping Calculator</p>
+<input type="text" placeholder="cost of order" class="js-cost-input" onkeydown="
+
+keyboardEvent (event);
+">
+
+<button onclick="
+ calculateTotal();
+">Calculate</button>
+
+<p class="cost-display"></p>
+    
+
+
+
+<input type="text" placeholder="Type here to display" class="input-word" onkeyup="
+ document.querySelector('.typing').innerHTML = document.querySelector('.input-word').value
+">
+<p class="typing"></p>
+
+
+<!-- <input placeholder="Type something" class="js-input"
+      onkeyup="
+        const inputElement = document.querySelector('.js-input');
+        document.querySelector('.js-message')
+          .innerHTML = inputElement.value;
+      ">
+
+    <p class="js-message"></p> -->
+<script>
+
+        function keyboardEvent(event){
+            if (event.key === 'Enter'){
+            calculateTotal();
+}
+
+        };
+
+        function calculateTotal(){
+            const inputElement=document.querySelector('.js-cost-input');
+           let cost =Number (inputElement.value);
+            cost = Math.round(cost);
+
+           if (cost > 0 && cost < 40){
+            cost += 10
+            document.querySelector('.cost-display').innerHTML = `$${cost}`;
+
+           }
+           else if (cost <= 0){
+            alert(`Input value amount`)
+            document.querySelector('.cost-display').innerHTML = '';
+            document.querySelector('.cost-display').innerHTML = 'Input must be greater than 0';
+           }
+
+           else if (cost > 40){
+            document.querySelector('.cost-display').innerHTML = `$${cost}`;
+           }
+
+           else if(cost = String){
+            alert('Input Valid amount')
+            document.querySelector('.cost-display').innerHTML = 'Input a valid amount';
+
+            
+           }
+      
+        };
+
+
+
+        function subscribeButton(){
+            const subscribeElem = document.querySelector('.js-subscribe');
+
+            if (subscribeElem.innerText === 'Subscribed'){
+                subscribeElem.innerText = 'Subscribe'
+            }
+
+            else {
+                subscribeElem.innerText ='Subscribed'
+            }
+        }
+    </script>
+</body>
+</html>

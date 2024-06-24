@@ -8,98 +8,147 @@
 <body>
 
 <button onclick="
-    console.log(`Cart quantity: ${cartQuantity}`)
+    allCart('Show Quanlity');
     ">Show Quantity</button>
 
-<button onclick="
-cartQuantity = cartQuantity + 1;
-if (cartQuantity > 10){
-    console.log('Cart is full')
-}
-else {
-    console.log(`Cart Quantity: ${cartQuantity}`)
-}
+<button class="cart-button" onclick="
+    allCart('Add to cart');
 ">Add to cart</button>
 
+
+
+<button class="cart-button" onclick="
+    allCart('+1');
+    ">+1</button>
+
+<button class="cart-button" onclick="
+    allCart('+2');
+    ">+2</button>
+
 <button onclick="
-cartQuantity = cartQuantity - 1;
-if (cartQuantity < 0){
-    console.log('Cart is empty')
-}
-else {
-    console.log(`Cart Quantity: ${cartQuantity}`)
-}">Remove from  cart</button>
+    allCart('Remove from cart');
+
+">Remove from  cart</button>
 
 
-<button onclick="
-cartQuantity = cartQuantity + 2;
-if (cartQuantity > 10){
-    console.log('Cart is full')
-}
-else {
-    console.log(`Cart Quantity: ${cartQuantity}`)
-}">+2</button>
-
-<button onclick="cartQuantity = cartQuantity + 3;
-if (cartQuantity > 10){
-    console.log('Cart is full')
-}
-else {
-    console.log(`Cart Quantity: ${cartQuantity}`)
-}">+3</button>
 
 
-<button onclick="cartQuantity = cartQuantity * 0;
-console.log(`Cart was Reset
-cart Quantity: ${cartQuantity}`)">Reset cart</button>
 
-<button onclick="cartQuantity = cartQuantity - 2;
-if (cartQuantity < 0){
-    console.log('Cart is empty')
-}
-else {
-    console.log(`Cart Quantity: ${cartQuantity}`)
-}">-2</button>
+<button class="cart-button" onclick="
+    allCart('Reset cart');
+">Reset cart</button>
 
-<button onclick="cartQuantity = cartQuantity - 3;
-if (cartQuantity < 0){
-    console.log('Cart is empty')
-}
-else {
-    console.log(`Cart Quantity: ${cartQuantity}`)
-}">-3</button>
+<button class="cart-button" onclick="
+    allCart('-2');
+    ">-2</button>
+
+<button class="cart-button" onclick="
+    allCart('-3');
+">-3</button>
 
 
-<p class="js-cart-display"></p>
+<p class="js-cart-display" style="margin: 20px 0 0 0;"></p>
+<p class="js-cart-display-2" style="margin: 0;"></p>
 
 
    
    
    
    <script>
-        let cartQuantity = 0;
+       
+        let cartQuantity =  JSON.parse(localStorage.getItem('storage'));
+        fullUpdate();
+       
+       
+        console.log(`Cart quantity: ${cartQuantity}`)
+
+        function fullUpdate(){
+            if (cartQuantity >= 10){
+                cartQuantity = 10;
+            document.querySelector('.js-cart-display').innerHTML = `Cart Quantity: ${cartQuantity}`;
+            document.querySelector('.js-cart-display-2').innerHTML = 'Cart is full';
+            }
+
+            else if (cartQuantity <= 0){
+                cartQuantity = 0;
+            document.querySelector('.js-cart-display').innerHTML = `Cart Quantity: ${cartQuantity}`;
+            document.querySelector('.js-cart-display-2').innerHTML = 'Cart is Empty';
+            }
+
+            else{
+                document.querySelector('.js-cart-display').innerHTML = `Cart Quantity: ${cartQuantity}`;
+                document.querySelector('.js-cart-display-2').innerHTML = '';
+            }
+        }
+
+       
 
         function allCart (cartButton){
 
-
+         
         if(cartButton === 'Show Quanlity'){
+
+            document.querySelector('.js-cart-display').innerHTML = `Cart Quantity: ${cartQuantity}`;
             console.log(`Cart quantity: ${cartQuantity}`)
         }
         
         else if(cartButton === 'Add to cart'){
-            cartQuantity = cartQuantity + 1;
-           if (cartQuantity > 10){
-                console.log('Cart is full')
-            }
-            else {
-                console.log(`Cart Quantity: ${cartQuantity}`)
-            }
+            cartQuantity += 1;
+            console.log(`Cart quantity: ${cartQuantity}`)
         }
 
-    
+        else if(cartButton === '+1'){
+            cartQuantity += 1;
+            console.log(`Cart quantity: ${cartQuantity}`)
+        }
+        
+        else if(cartButton === 'Remove from cart'){
+            cartQuantity -=1;
+            console.log(`Cart quantity: ${cartQuantity}`)
+        }
+
+        else if(cartButton === '+2'){
+            cartQuantity += 2;
+            console.log(`Cart quantity: ${cartQuantity}`)
+        }
+
+        else if(cartButton === '+3'){
+            cartQuantity += 3;
+            console.log(`Cart quantity: ${cartQuantity}`)
+        }
+
+        else if(cartButton === 'Reset cart'){
+            cartQuantity =  0;
+            document.querySelector('.js-cart-display').innerHTML =
+             `Cart was Reset;`;
+            document.querySelector('.js-cart-display-2').innerHTML =
+            `Cart Quantity: ${cartQuantity}`;;
             
 
-    
+            console.log(`Cart was Reset
+            cart Quantity: ${cartQuantity}`)
+        }
+
+        
+
+        else if(cartButton === '-2'){
+            cartQuantity -= 2;
+            console.log(`Cart quantity: ${cartQuantity}`)
+        }
+
+        else if(cartButton === '-3'){
+            cartQuantity -= 3;
+            console.log(`Cart quantity: ${cartQuantity}`)
+        }
+  
+            
+      
+        fullUpdate();
+
+        localStorage.setItem('storage',JSON.stringify(cartQuantity));
+
+
+        
 
 
 

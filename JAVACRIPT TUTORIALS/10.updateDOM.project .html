@@ -4,26 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom Projects</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+        .subscribe-button{
+            border: none;
+            padding: 10px 15px;
+            background-color: black;
+            color: white;
+            font-weight: 700;
+            border-radius: 20px;
+            font-size:15px;
+            cursor:pointer;
+            margin:10px 0 50px 0
+            
+        }
+
+        .subscribed-button{
+            background-color: rgb(204, 200, 200);
+            color: black;
+        }
+
+        .cost-input{
+            font-size: 15px;
+            padding: 10px ;
+            font-weight: 600;
+            border: none;
+            /* border: 3px solid gray; */
+            
+            border-radius: 5px;
+            outline: 1px solid gray;
+            margin-bottom: 10px;
+
+        }
+
+        .calculate-button{
+            font-size: 15px;
+            padding: 13px ;
+            background-color: green;
+            color: white;
+            font-weight: 600;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
 
-    <p>Youtube subsribe Button</p>
+    <p>Youtube subscribe Button</p>
     <Button onclick="
     subscribeButton();
     
 
 
-    " class="js-subscribe">Subscribed</Button>
+    " class="js-subscribe subscribe-button">Subscribe</Button>
 
 
 
 <p>Amazon Shipping Calculator</p>
-<input type="text" placeholder="cost of order" class="js-cost-input" onkeydown="
+<input type="text" placeholder="cost of order" class="js-cost-input cost-input" onkeydown="
 
 keyboardEvent (event);
 ">
 
-<button onclick="
+<button class="calculate-button" onclick="
  calculateTotal();
 ">Calculate</button>
 
@@ -89,12 +145,16 @@ keyboardEvent (event);
         function subscribeButton(){
             const subscribeElem = document.querySelector('.js-subscribe');
 
-            if (subscribeElem.innerText === 'Subscribed'){
-                subscribeElem.innerText = 'Subscribe'
+            if (subscribeElem.innerText === 'Subscribe'){
+                subscribeElem.innerText = 'Subscribed';
+                subscribeElem.classList.add('subscribed-button');
+
             }
 
             else {
-                subscribeElem.innerText ='Subscribed'
+                subscribeElem.innerText ='Subscribe'
+                subscribeElem.classList.remove('subscribed-button');
+
             }
         }
     </script>

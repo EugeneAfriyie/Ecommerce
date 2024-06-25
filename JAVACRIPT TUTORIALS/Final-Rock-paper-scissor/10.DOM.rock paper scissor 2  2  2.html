@@ -4,36 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper scissors</title>
+    <script src="./10.DOM.rock paper scissor 2  2  2.js"></script>
+    <link rel="stylesheet" href="./10.DOM.rock paper scissor 2  2  2.css">
+
+   
 </head>
 <body>
-<p>Rock Paper scissors</p>
+<p class="title">Rock Paper Scissors</p>
 
-<button onclick="
+<button class="move-button" onclick="
 playGame('Rock');
-">Rock</button>
+"><img class="move-icon" src="./rock-paper-scissors photos/rock-emoji.png" alt="rock-emoji"></button>
 
-<button
+<button class="move-button"
 onclick="
  playGame('Paper');
-">Paper</button>
+"><img class="move-icon" src="./rock-paper-scissors photos/paper-emoji.png" alt="rock-emoji"></button>
 
-<button onclick="
+<button class="move-button" onclick="
    playGame('Scissors');
-">Scissors</button>
-
-<p class="js-score"> </p>
-<p class="js-outcome"> </p>
-<p class="js-result"> </p>
+"><img class="move-icon" src="./rock-paper-scissors photos/scissors-emoji.png" alt="rock-emoji"></button>
 
 
-<button onclick="
+<p class="js-outcome">
+</p>
+<p class="js-result result"></p>
+
+<p class="js-score score"> </p>
+
+
+<button class="reset-button" onclick="
    score.Wins = 0;
    score.Losses = 0;
    score.Tie =0;
    localStorage.removeItem('score')
    gameUpdate();
 
-" >Reset</button>
+" >Reset Score</button>
 
 
 <script>
@@ -48,9 +55,19 @@ let score = JSON.parse(localStorage.getItem('score')) || {
         
 };
 
+
+
+
 function gameUpdate(){
 
 document.querySelector('.js-score').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Tie} `;
+
+document.querySelector('.js-result').innerHTML = `Game Result: ${result} `;
+
+document.querySelector('.js-outcome').innerHTML =`  You 
+<img class="move-icon" src="./rock-paper-scissors photos/${playerMove}-emoji.png" alt="rock-emoji">
+<img class="move-icon" src="./rock-paper-scissors photos/${computermove}-emoji.png" alt="rock-emoji">
+Computer `;
 
 
 
@@ -170,9 +187,7 @@ document.querySelector('.js-score').innerHTML = `Wins: ${score.Wins} Losses: ${s
 
       localStorage.setItem( 'score', JSON.stringify(score));
 
-      document.querySelector('.js-result').innerHTML = `Game Result: ${result} `;
-
-      document.querySelector('.js-outcome').innerHTML = `You Picked: ${playerMove} Computer picked: ${computermove}  `;
+  
 
       
       gameUpdate();
@@ -183,7 +198,7 @@ document.querySelector('.js-score').innerHTML = `Wins: ${score.Wins} Losses: ${s
       
       
 
-
+return playerMove;
 
 
 

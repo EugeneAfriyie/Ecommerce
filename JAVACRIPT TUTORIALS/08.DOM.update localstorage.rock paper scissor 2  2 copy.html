@@ -48,9 +48,18 @@ let score = JSON.parse(localStorage.getItem('score')) || {
         
 };
 
+
+
+
+// const computermove = pickComputermove();
+// const playerMove =    playGame();
+
+
 function gameUpdate(){
+   
 
 document.querySelector('.js-score').innerHTML = `Wins: ${score.Wins} Losses: ${score.Losses} Ties: ${score.Tie} `;
+
 
 
 
@@ -184,7 +193,7 @@ document.querySelector('.js-score').innerHTML = `Wins: ${score.Wins} Losses: ${s
       
 
 
-
+      return playerMove;
 
 
 

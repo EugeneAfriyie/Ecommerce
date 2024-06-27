@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python documentation</title>
+        <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <aside>
+        <nav id="navbar">
+            <header>
+                Table of contents
+            </header>
+           <li> <a href="#What’s_New_In_Python_3.12" class="nav-link">What’s New In Python 3.12</a></li>
+
+            <li><a href="#Summary_–_Release_highlights" class="nav-link">Summary – Release highlight</a></li>
+
+           <li> <a href="#New_Features" class="nav-link">New Features</a></li>
+
+            <li><a href="#PEP_701:_Syntactic_formalization_of_f-strings" class="nav-link">PEP 701: Syntactic formalization of <br>f-strings</a></li>
+
+           <li> <a href="#PEP_684:_A_Per-Interpreter_GIL" class="nav-link">PEP 684: A Per-Interpreter GIL</a></li>
+
+        </nav>
+    </aside>
+
+
+
+
+    <main id="main-doc">
+
+        <section id="What’s_New_In_Python_3.12" class="main-section">
+            <header>What’s New In Python 3.12</header>
+            <p>This article explains the new features in Python 3.12, compared to 3.11. Python 3.12 was released on October 2, 2023. For full details, see the <a href="#"> changelog.</a></p>
+            <p class="p-orange"><span class="orange">See also <a href="#">PEP 693</a></span> – Python 3.12 Release Schedule</p>
+        </section>
+
+
+        <section id="Summary_–_Release_highlights" class="main-section">
+            <header>Summary – Release highlight</header>
+            <p>Python 3.12 is the latest stable release of the Python programming language, with a mix of changes to the language and the standard library. The library changes focus on cleaning up deprecated APIs, usability, and correctness. Of note, the distutils package has been removed from the standard library. Filesystem support in os and <a href="#">pathlib</a> has seen a number of improvements, and several modules have better performance.</p>
+            
+
+            <p>The language changes focus on usability, as <a href="#">f-strings</a> have had many limitations removed and ‘Did you mean …’ suggestions continue to improve. The new <a href="#">type parameter syntax</a> and <a href="#"> type</a> statement improve ergonomics for using <a href="#">generic types</a> and <a href="#">type aliases</a> with static type checkers.</p>
+
+            
+        <p>New syntax features:</p>
+
+        <ul>
+            <li>PEP 695, type parameter syntax and the type statement</li>
+        </ul>
+
+        <p>Interpreter improvements:</p>
+        <ul>
+            <li>
+                PEP 684, a unique per-interpreter GIL
+            </li>
+            <li>
+                PEP 669, low impact monitoring
+            </li>
+            <li>
+                Improved ‘Did you mean …’ suggestions for NameError, ImportError, and SyntaxError exceptions
+            </li>
+        </ul>
+        </section>
+
+        <section id="New_Features" class="main-section">
+            <header>New Features</header>
+            <h3>PEP 695: Type Parameter Syntax</h3>
+
+            <p>TGeneric classes and functions under PEP 484 were declared using a verbose syntax that left the scope of type parameters unclear and required explicit declarations of variance.</p>
+            <p><span>PEP 695</span> introduces a new, more compact and explicit way to create generic classes and <a href="#">functions:</a></p>
+          
+
+            <pre >
+                <code>
+def max[T](args: Iterable[T]) -> T:
+                            ...
+        
+class list[T]:
+        def __getitem__(self, index: int, /) -> T:
+                                ...
+        
+        def append(self, element: T) -> None:
+                </code>
+            </pre>
+
+            <p>In addition, the PEP introduces a new way to declare type aliases using the type statement, which creates an instance of TypeAliasType:</p>
+
+            <pre>
+                <code>
+type Point = tuple[float, float]
+              </code>
+           </pre>
+
+            </section>
+
+        <section id="PEP_701:_Syntactic_formalization_of_f-strings" class="manin-section">
+                <header>PEP 701: Syntactic formalization of f-strings</header>
+
+                <p><a href="#">PEP 701 </a>lifts some restrictions on the usage of f-strings. Expression components inside f-strings can now be any valid Python expression, including strings reusing the same quote as the containing f-string, multi-line expressions, comments, backslashes, and unicode escape sequences. Let’s cover these in detail:</p>
+
+                <ul><li>Quote reuse: in Python 3.11, reusing the same quotes as the enclosing f-string raises a SyntaxError, forcing the user to either use other available quotes (like using double quotes or triple quotes if the f-string uses single quotes). In Python 3.12, you can now do things like this:</li></ul>
+               
+                <pre>
+                    <code>
+                        songs = ['Take me back to Eden', 'Alkaline', 'Ascensionism']
+                        f"This is the playlist: {", ".join(songs)}"
+                       <samp>'This is the playlist: Take me back to Eden, Alkaline, Ascensionism'</samp>
+                    </code>
+                </pre>
+
+                <p>Note that before this change there was no explicit limit in how f-strings can be nested, but the fact that string quotes cannot be reused inside the expression component of f-strings made it impossible to nest f-strings arbitrarily. In fact, this is the most nested f-string that could be written:</p>
+
+                <pre>
+                    <code>f"""{f'''{f'{f"{1+1}"}'}'''}"""</code>
+                    <samp>2</samp>
+                </pre>
+
+        </section>
+
+
+        <section id="PEP_684:_A_Per-Interpreter_GIL" class="manin-section">
+            <header>PEP 684: A Per-Interpreter GIL</header>
+            <p><a href="$">PEP 684</a> introduces a per-interpreter GIL, so that sub-interpreters may now be created with a unique GIL per interpreter. This allows Python programs to take full advantage of multiple CPU cores. This is currently only available through the C-API, though a Python API is anticipated for 3.13.</p>
+
+            <p>Use the new Py_NewInterpreterFromConfig() function to create an interpreter with its own GIL:</p>
+            
+            <pre>
+                <code>
+                    PyInterpreterConfig config = {
+                        .check_multi_interp_extensions = 1,
+                        .gil = PyInterpreterConfig_OWN_GIL,
+                    };
+                    PyThreadState *tstate = NULL;
+                    PyStatus status = Py_NewInterpreterFromConfig(&tstate, &config);
+                    if (PyStatus_Exception(status)) {
+                        return -1;
+                    }
+                    /* The new interpreter is now active in the current thread. */
+                </code>
+            </pre>
+
+            <p>For further examples how to use the C-API for sub-interpreters with a per-interpreter GIL, see Modules/_xxsubinterpretersmodule.c.</p>
+
+            <p>(Contributed by Eric Snow in gh-104210, etc.)</p>
+
+        </section>
+
+
+
+
+
+
+    </main>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main id="main-doc">
+        
+        <section  id="What’s_New_In_Python_3.13" class="main-section">
+           <header id="header">
+           What’s New In Python 3.13 
+           </header>
+
+           <div class="paragraph">
+                    <p id="paragragh">This article explains the new features in <em>Python 3.13</em>, compared to 3.12.
+
+                <p id="paragragh">  <b>For full details</b>, 
+                    <a href="https://docs.python.org/3.13/whatsnew/changelog.html#changelog">see the changelog.</a></p>
+                </p>
+                <li>kofi</li>
+                <li>kofi</li>
+                <li>kofi</li>
+                <li>kofi</li>
+                <li>kofi</li>
+                <li>kofi</l>
+
+              <pre>
+                <code>uyeyy(dhdhhd)</code>
+                <p>dfgdgfddffdfdf</p>
+              </pre>
+              <pre>
+                <code>uyeyy(dhdhhd)</code>
+                <p>dfgdgfddffdfdf</p>
+              </pre>
+              <pre>
+                <code>uyeyy(dhdhhd)</code>
+                <p>dfgdgfddffdfdf</p>
+              </pre>
+           
+                    
+      
+        
+        </div>
+
+            <div id="note">
+                <p id="pargragh">
+                   <span id="span"> Note </span>Prerelease users should be aware that this document is currently in draft form. It will be updated substantially as <i>Python 3.13</i> moves towards release, so it’s worth checking back even after reading earlier versions.
+                </p>
+            </div>
+        </section>
+
+        <section id="Summary_–_Release_highlights" class="main-section">
+           <header id="header">
+            <h3 class="header-2" id="Summary_–_Release_highlights">Summary – Release highlights</h1>
+           </header>
+
+           <div class="paragraph">
+            <p id="paragragh">Important deprecations, removals or restrictions:
+            </p>
+        </div>
+
+        <div id="description">
+            <li id="li"><a id="archor" href="https://docs.python.org/3.13/whatsnew/3.13.html#whatsnew313-pep594">PEP 594:</a> The remaining 19 “dead batteries” have been removed from the standard library: <em> aifc, audioop, cgi, cgitb, chunk, crypt, imghdr, mailcap, msilib, nis, nntplib, ossaudiodev, pipes, sndhdr, spwd, sunau, telnetlib, uu and xdrlib.</em> </li>
+
+            <li id="li"><a href="https://docs.python.org/3.13/whatsnew/3.13.html#whatsnew313-pep604">PEP 604:</a><em id="em"> (“Annual Release Cycle for Python”)</em> has been updated:</li>
+        </div>
+
+            <div id="note">
+                <p id="pargragh">
+                   <span id="span"> Note </span>Prerelease users should be aware that this document is currently in draft form. It will be updated substantially as Python 3.13 moves towards release, so it’s worth checking back even after reading earlier versions.
+                </p>
+            </div>
+        </section>
+
+        <section id="Other_Language_Changes¶" class="main-section">
+           <header id="header">
+            <h3 class="header-2" id="Other_Language_Changes¶">Other Language Changes¶</h1>
+           </header>
+
+
+        <div id="description">
+            <li id="li">Allow the count argument of str.replace() to be a keyword. (Contributed by Hugo van Kemenade in gh-106487.)</li>
+
+            <li id="li">Compiler now strip indents from docstrings. This will reduce the size of bytecode cache (e.g. .pyc file). For example, cache file size for sqlalchemy.orm.session in SQLAlchemy 2.0 is reduced by about 5%. This change will affect tools using docstrings, like doctest. (Contributed by Inada Naoki in gh-81283.)</li>
+
+            <li id="li">The compile() built-in can now accept a new flag, ast.PyCF_OPTIMIZED_AST, which is similar to ast.PyCF_ONLY_AST except that the returned AST is optimized according to the value of the optimize argument. (Contributed by Irit Katriel in gh-108113).</li>
+
+            <li id="li">multiprocessing, concurrent.futures, compileall: Replace os.cpu_count() with os.process_cpu_count() to select the default number of worker threads and processes. Get the CPU affinity if supported. (Contributed by Victor Stinner in gh-109649.)</li>
+
+            <li id="li">os.path.realpath() now resolves MS-DOS style file names even if the file is not accessible. (Contributed by Moonsik Park in gh-82367.)</li>
+
+
+        </div>
+
+            <div id="note">
+                <p id="pargragh">
+                   <span id="span"> Note </span>Prerelease users should be aware that this document is currently in draft form. It will be updated substantially as Python 3.13 moves towards release, so it’s worth checking back even after reading earlier versions.
+                </p>
+            </div>
+        </section>
+
+        <section id="Support_For_Mobile_Platforms¶" class="main-section">
+           <header id="header">
+            <h3 class="header_2" id="Support_For_Mobile_Platforms¶">Support For Mobile Platforms¶</h1>
+           </header>
+        </div>
+
+        <div id="description">
+            <li id="li">iOS is now a PEP 11 supported platform. arm64-apple-ios (iPhone and iPad devices released after 2013) and arm64-apple-ios-simulator (Xcode iOS simulator running on Apple Silicon hardware) are now tier 3 platforms.
+                <br><br>
+                x86_64-apple-ios-simulator (Xcode iOS simulator running on older x86_64 hardware) is not a tier 3 supported platform, but will be supported on a best-effort basis
+                <br> <br>
+
+                See <span>PEP 730</span>: for more details.
+            </li>
+        </div>
+        </section>
+
+        <section  id="New_Features¶" class="main-section">
+            <header id="header">
+             <h1 id="New_Features¶">New Features¶</h1>
+             <h3 id="header-2">Improved Error Messages¶</h1>
+            </header>
+ 
+            <div class="paragraph">
+             <p id="paragragh">This article explains the new features in Python 3.13, compared to 3.12.
+ 
+           <p id="paragragh">  For full details, 
+             <a href="https://docs.python.org/3.13/whatsnew/changelog.html#changelog">see the changelog.</a></p>
+         </p>
+         </div>
+         
+         <div id="description">
+            <li id="li">The interpreter now colorizes error messages when displaying tracebacks by default. This feature can be controlled via the new PYTHON_COLORS environment variable as well as the canonical NO_COLOR and FORCE_COLOR environment variables. See also Controlling color. (Contributed by Pablo Galindo Salgado in gh-112730.)
+
+            </li>
+            <li id="li">A common mistake is to write a script with the same name as a standard library module. When this results in errors, we now display a more helpful error message:
+
+            </li>
+        </div>
+ 
+             <div id="note">
+                 <p id="pargragh">
+                    python random.py
+                    Traceback (most recent call last):
+                    File "/home/random.py", line 1, in <module>
+                        import random; print(random.randint(5))
+                        ^^^^^^^^^^^^^
+                    File "/home/random.py", line 1, in <module>
+                        import random; print(random.randint(5))
+                                            ^^^^^^^^^^^^^^
+                    AttributeError: module 'random' has no attribute 'randint' (consider renaming '/home/random.py' since it has the same name as the standard library module named 'random' and the import system gives it precedence)
+                 </p>
+             </div>
+         </section>
+
+</body>
+</html> -->
+

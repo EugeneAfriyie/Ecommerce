@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo-Array-Loop</title>
+    <title>Todo-list</title>
 
 
     <style>
@@ -13,17 +13,11 @@
     </style>
 </head>
 <body>
-<h1>Todo List</h1>
 
-<input type="text" class="input-todo">
-<button onclick="
-addTodo();
-
-
-">Add</button>
 <h1>Todo List 2</h1>
 
-<input type="text" class="input-todo-2">
+<input type="text" class="input-todolist">
+<input type="date" class="date-input">
 <button onclick="
 addTodo2();
 
@@ -33,12 +27,58 @@ addTodo2();
 <ol class="todo-display"></ol>
 
 <script>
-     const todoList2 = [];
+
+// const todoObject = todoList2[i];
+//          const name = todoObject.name;
+//          const dueDate = todoObject.dueDate;
+//          const {name}; = todoObject;
+//          const {dueDate}; = todoObject;
+//          const {name,dueDate}; = todoObject;
+
+
+    function renderTodoList(){
+        let todoListHtml = '';
+         for (let i = 0; i < todoList2.length; i++){
+         const todoObject = todoList2[i];
+        const {name, dueDate} = todoObject;
+         const html = `
+         <li>
+            ${name} ${dueDate}
+            <button onclick="todoList2.splice(${i}, 1);
+              renderTodoList();">delect</button>
+              </li> `;
+         todoListHtml += html;
+         }
+
+         console.log(todoListHtml)
+
+         document.querySelector('.todo-display').innerHTML = todoListHtml;
+        
+        
+        }
+
+    
+
+    const todoList2 = [{
+        name:'Good morning',
+        dueDate:'02/20/2024'
+
+    }];
     function addTodo2(){
+        const inputValue = document.querySelector('input-todo-2');
+         const name = inputValue.value ;
        
-         let inputValue = document.querySelector('.input-todo-2').value ;
+
+         const inputate = document.querySelector('date-input');
+
+         const dueDate = inputDate.value ;
        
-         todoList2.push(inputValue);
+         todoList2.push({
+            // name:name,
+            // dueDate:dueDate;
+            name,
+            dueDate
+         });
          document.querySelector('.input-todo-2').value = '';
          console.log(todoList2);
 
@@ -47,26 +87,8 @@ addTodo2();
          renderTodoList();
         
         }
-
-
-    function renderTodoList(){
-        let todoListHtml = '';
-         for (let i = 0; i < todoList2.length; i++){
-         const todo = todoList2[i];
-         const html = `<li>${todo}</li>`;
-         todoListHtml += html;
-         }
-
-         console.log(todoListHtml)
-
-         document.querySelector('.todo-display').innerHTML = todoListHtml;
         
-        }
-
-    
-
-   
-     
+        renderTodoList();
 //  const todolist = [];
 //  let todoListHtml ='';
 
@@ -83,15 +105,7 @@ addTodo2();
 
 
 
-    const todoList = [];
-    function addTodo(){
-        document.querySelector('.input-todo').value;
-        todoList.push(document.querySelector('.input-todo').value );
-        console.log(todoList)
-        document.querySelector('.input-todo').value = '';
-
-   
-    }
+  
 </script>
 </body>
 </html>

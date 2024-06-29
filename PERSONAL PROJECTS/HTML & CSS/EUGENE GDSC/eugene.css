@@ -14,8 +14,14 @@ nav{
   width: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  
    
+}
+
+.navname{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
 
 .name{display: flex;
@@ -25,33 +31,35 @@ nav{
   outline: 0;
   font-weight: bolder;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .name a{
   color: aquamarine;
 }
-.navname{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
+
+.name img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+
 }
-.h{margin-right: 20px;}
+
+
+/* .h{margin-right: 20px;}
 .f{margin-right: 20px;}
 .c{margin-right: 20px;}
 .b{margin-right: 20px;}
-.t{margin-right: 20px;}
-
-.name img{width: 70px;
-height: 70px;}
-
-.name{color: black;}
+.t{margin-right: 20px;} */
 
 
+/* .profile{
+  display: flex;
+} */
 
 li{
   list-style: none;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 li a{

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-Array-Loop</title>
+
+
+    <style>
+        body{
+            padding-bottom: 200px;
+        }
+    </style>
+</head>
+<body>
+<h1>Todo List</h1>
+
+<input type="text" class="input-todo">
+<button onclick="
+addTodo();
+
+
+">Add</button>
+<h1>Todo List 2</h1>
+
+<input type="text" class="input-todo-2">
+<button onclick="
+addTodo2();
+
+
+">Add</button>
+
+<ol class="todo-display"></ol>
+
+<script>
+
+
+    function renderTodoList(){
+        let todoListHtml = '';
+         for (let i = 0; i < todoList2.length; i++){
+         const todo = todoList2[i];
+         const html = `<li>${todo}</li>`;
+         todoListHtml += html;
+         }
+
+         console.log(todoListHtml)
+
+         document.querySelector('.todo-display').innerHTML = todoListHtml;
+        
+        }
+
+    
+
+    const todoList2 = [];
+    function addTodo2(){
+       
+         let inputValue = document.querySelector('.input-todo-2').value ;
+       
+         todoList2.push(inputValue);
+         document.querySelector('.input-todo-2').value = '';
+         console.log(todoList2);
+
+       
+
+         renderTodoList();
+        
+        }
+
+//  const todolist = [];
+//  let todoListHtml ='';
+
+//  for (let i=0; i< todoList.length; i++){
+//      const todo = todoList[i];
+//      const html = `<li>${todo}</li>`;
+//      todoListHtml += html;
+//      document.querySelector('todo-display').innerHTML = todoListHtml
+//  }
+
+
+
+
+
+
+
+    const todoList = [];
+    function addTodo(){
+        document.querySelector('.input-todo').value;
+        todoList.push(document.querySelector('.input-todo').value );
+        console.log(todoList)
+        document.querySelector('.input-todo').value = '';
+
+   
+    }
+</script>
+</body>
+</html>

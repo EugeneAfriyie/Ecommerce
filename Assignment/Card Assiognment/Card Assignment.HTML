@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment</title>
+
+
+  <style>
+*{
+  padding: 0;
+  margin: 0;
+
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+    .card{
+      height: 250px;
+      width: 300px;
+      padding:20px;
+      background-color: rgba(255, 68, 0, 0.811);
+      border-radius: 10px;
+    }
+
+
+    .card:nth-child(2){
+      background-color:rgb(23, 155, 89);
+    }
+    .card:nth-child(3){
+      background-color: rgba(5, 168, 201, 0.839);
+    }
+    .inner-card{
+      height: 100%;
+
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 10px;
+      
+    
+    }
+
+    .main-text{
+      font-size: 1.3rem;
+      
+      
+
+    }
+
+    .main-text p{
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    p{
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    button{
+      background-color: black;
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: bold;
+      border: none;
+    }
+
+
+    button:first-child{
+      background-color: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="inner-card">
+      <p>29.06.2024</p>
+      <div class="main-text">
+        <em>“I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.”</em>
+       <p> ― Marilyn Monroee</p>  
+      </div>
+      <div class="bottom-element">
+       <button href="$">More</button>
+       <button href="$">Google</button>
+
+      </div>
+
+    </div>
+
+
+  </div>
+  <div class="card">
+    <div class="inner-card">
+      <p>29.06.2024</p>
+      <div class="main-text">
+        <em>“You've gotta dance like there's nobody watching,
+          Love like you'll never be hurt,
+          Sing like there's nobody listening,
+          And live like it's heaven on earth.”</em>
+        <p>― William W. Purkey </p>
+      </div>
+      <div class="bottom-element">
+       <button href="$">More</button>
+      
+
+      </div>
+
+    </div>
+
+
+  </div>
+  <div class="card">
+    <div class="inner-card">
+      <p>29.06.2024</p>
+      <div class="main-text">
+      <em>  “I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.”</em>
+        <p>― Maya Angelou</p>
+      </div>
+      <div class="bottom-element">
+       <button href="$">Google</button>
+
+      </div>
+
+    </div>
+
+
+  </div>
+  
+
+
+</body>
+</html>

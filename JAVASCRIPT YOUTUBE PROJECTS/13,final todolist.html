@@ -33,6 +33,20 @@ addTodo2();
 <ol class="todo-display"></ol>
 
 <script>
+     const todoList2 = [];
+    function addTodo2(){
+       
+         let inputValue = document.querySelector('.input-todo-2').value ;
+       
+         todoList2.push(inputValue);
+         document.querySelector('.input-todo-2').value = '';
+         console.log(todoList2);
+
+       
+
+         renderTodoList();
+        
+        }
 
 
     function renderTodoList(){
@@ -51,21 +65,8 @@ addTodo2();
 
     
 
-    const todoList2 = [];
-    function addTodo2(){
-       
-         let inputValue = document.querySelector('.input-todo-2').value ;
-       
-         todoList2.push(inputValue);
-         document.querySelector('.input-todo-2').value = '';
-         console.log(todoList2);
-
-       
-
-         renderTodoList();
-        
-        }
-
+   
+     
 //  const todolist = [];
 //  let todoListHtml ='';
 

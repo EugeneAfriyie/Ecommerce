@@ -23,7 +23,7 @@ body{
  }
 
 
- .reset-button{
+ .reset-button,.autp-play-button{
    padding: 6px 15px;
    font-size: 20px;
    font-weight: 700;

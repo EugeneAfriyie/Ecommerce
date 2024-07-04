@@ -23,7 +23,7 @@ body{
  }
 
 
- .reset-button,.autp-play-button{
+ .reset-button,.auto-play-button{
    padding: 6px 15px;
    font-size: 20px;
    font-weight: 700;
@@ -37,6 +37,11 @@ body{
  .reset-button:active{
    background-color: #18f14e;
  }
+
+ .auto-play-button:active{
+  background-color: #18f14e;
+}
+
 
  .result-win{
   color: rgb(214, 143, 12) ;

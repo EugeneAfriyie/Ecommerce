@@ -19,6 +19,8 @@ let intervalId;
  }
  */
 
+;
+
  function borderChange(){
 
 
@@ -39,7 +41,7 @@ let intervalId;
 
  function autoPlay(){
     if (!isAutoPlaying){
-      intervalId = setInterval(function(){
+      intervalId = setInterval(() => {
         const playerMove = pickComputerMove();
         playGame(playerMove);
       },1000);
@@ -51,6 +53,14 @@ let intervalId;
 
     }
  };
+
+
+ 
+ document.querySelector('.js-rock-button').addEventListener('click',() => {playGame('rock');});
+
+ document.querySelector('.js-paper-button').addEventListener('click',()=>{playGame('paper');});
+
+ document.querySelector('.js-scissor-button').addEventListener('click',()=>{playGame('rock');});
 
  function playGame(playerMove) {
    const computerMove = pickComputerMove();
@@ -86,7 +96,7 @@ let intervalId;
        result = 'You win.';
      }
    }
-
+ 
    if (result === 'You win.') {
      score.wins += 1;
    } else if (result === 'You lose.') {
@@ -116,17 +126,6 @@ let intervalId;
      document.querySelector('.js-result').classList.remove('result-win');
      document.querySelector('.js-result').classList.add('result-tie'); 
    }
-
-
-
-
-
-  
-
-
-
-
-
 
 
    localStorage.setItem('score', JSON.stringify(score));

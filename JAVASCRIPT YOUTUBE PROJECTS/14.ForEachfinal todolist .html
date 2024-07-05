@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-list</title>
+
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+         body{
+            margin-left: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #1a213c;
+            color: white;
+            min-height: 100vh;
+            padding: auto;
+        }
+
+        main{
+            width: 700px;
+            margin: auto;
+           
+          
+        }
+
+
+        .main-element{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            height: 50px;
+            gap: 5px;
+            margin-bottom: 10px;
+
+        }
+
+        .todo-grid{
+            display: grid;
+            grid-template-columns: 1px 1fr 1fr 1fr ;
+            align-items: center;
+            min-height: 50px;
+            max-width: auto;
+            gap: 5px;
+            
+        }
+
+        .list-style{
+            list-style:square;
+        }
+
+        .line{
+            
+            border-bottom: 2px solid rgba(128, 128, 128, 0.185);
+            width: 100%;
+        }
+
+        .remove-list{
+            height: 50px;
+            background-color: rgba(203, 10, 10, 0.772);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+ 
+         .todo-activity{
+            word-wrap: wrap;
+            max-width: 200px;
+            display: flex;
+            word-break: break-all;
+            font-size: 0.8rem;
+            font-weight: bold;
+           
+            
+        }  
+
+        .add-button{
+            background-color: green;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+        } 
+
+         input{
+            font-size: 17px;
+            font-style: italic;
+            text-wrap: wrap;
+           
+        } 
+
+        .todo-input{
+          
+        font-size: 17px;
+         padding: 5px;
+        }
+
+        ::placeholder{
+            font-size: 15px;
+            margin: auto;
+        }
+        .todo-input:focus{
+            outline: transparent;
+        }
+
+         .main-div{
+            display: grid;
+            gap: 10px;
+        }  
+    </style>
+</head>
+<body>
+<main>
+    
+<h1>Todo List 2</h1>
+
+<div class="main-element">
+    <textarea class="input-todolist todo-input" placeholder="what are we doing today?"  name="todo-input" id=""></textarea>
+<input type="date" class="date-input" required>
+<button type="submit" class="add-button js-add-button" onclick="
+addTodo();
+
+
+">Add To List</button>
+</div>
+
+<ol class="todo-display main-div"></ol>
+
+</main>
+
+<script>
+
+// const todoObject = todoList2[i];
+//          const name = todoObject.name;
+//          const dueDate = todoObject.dueDate;
+//          const {name}; = todoObject;
+//          const {dueDate}; = todoObject;
+//          const {name,dueDate}; = todoObject;
+
+
+document.querySelector('js-add-button').addEventListener('click',addTodo());
+
+
+    function renderTodoList()  {
+        let todoListHtml = '';
+         
+todoList.forEach( (value,index) =>{
+            const todoObject = todoList[index];
+              value = todoObject.todo
+            const dueDate = todoObject.date
+            const html = `<ol class=" todo-grid ">
+            <li class='list-style'></li>
+            <li class='todo-activity' > ${value} </li>
+            <p>${dueDate}</p> 
+            <button class='remove-list' onclick="todoList.splice(${index}, 1);
+              renderTodoList();">Delect From List</button> 
+              </ol>
+              <div class='line'></div>`;
+         todoListHtml += html;
+});
+
+         console.log(todoListHtml)
+
+         document.querySelector('.todo-display').innerHTML = todoListHtml;
+        
+        
+        }
+
+    // function renderTodoList(){
+    //     let todoListHtml = '';
+    //      for (let i = 0; i < todoList.length; i++){
+    //      const todoObject = todoList[i];
+    //         const todoActivity = todoObject.todo
+    //         const dueDate = todoObject.date
+    //         const html = `<ol class=" todo-grid ">
+    //         <li class='list-style'></li>
+    //         <li class='todo-activity' > ${todoActivity} </li>
+    //         <p>${dueDate}</p> 
+    //         <button class='remove-list' onclick="todoList.splice(${i}, 1);
+    //           renderTodoList();">Delect From List</button> 
+    //           </ol>
+    //           <div class='line'></div>`;
+    //      todoListHtml += html;
+    //      }
+
+    //      console.log(todoListHtml)
+
+    //      document.querySelector('.todo-display').innerHTML = todoListHtml;
+        
+        
+    //     }
+  
+    
+
+    const todoList = [
+ 
+    ];
+    function addTodo(){
+        const inputValue = document.querySelector('.input-todolist');
+         let todoActivity = inputValue.value ;
+       
+
+         const inputDate = document.querySelector('.date-input');
+         const dueDate = inputDate.value ;
+       
+         todoList.push({
+            todo: todoActivity,
+            date: dueDate
+         });
+
+         inputValue.value = '';
+         inputDate.value = '';
+        
+        //  console.log(todoList);   
+         
+         renderTodoList();
+        }
+        
+        renderTodoList();
+//  const todolist = [];
+//  let todoListHtml ='';
+
+//  for (let i=0; i< todoList.length; i++){
+//      const todo = todoList[i];
+//      const html = `<li>${todo}</li>`;
+//      todoListHtml += html;
+//      document.querySelector('todo-display').innerHTML = todoListHtml
+//  }
+
+
+
+
+
+
+
+  
+</script>
+</body>
+</html>

@@ -121,11 +121,7 @@
 <div class="main-element">
     <textarea class="input-todolist todo-input" placeholder="what are we doing today?"  name="todo-input" id=""></textarea>
 <input type="date" class="date-input" required>
-<button type="submit" class="add-button js-add-button" onclick="
-addTodo();
-
-
-">Add To List</button>
+<button type="submit" class="add-button js-add-button" >Add To List</button>
 </div>
 
 <ol class="todo-display main-div"></ol>
@@ -142,13 +138,24 @@ addTodo();
 //          const {name,dueDate}; = todoObject;
 
 
-document.querySelector('js-add-button').addEventListener('click',addTodo());
+
+
+document.querySelector('.js-add-button').addEventListener('click',()=>{
+    addTodo();
+});
+
+document.body.addEventListener('keydown',()=>{
+    if(event.key === 'Enter'){
+        addTodo();
+    }
+});
+
 
 
     function renderTodoList()  {
         let todoListHtml = '';
          
-todoList.forEach( (value,index) =>{
+            todoList.forEach( (value,index) =>{
             const todoObject = todoList[index];
               value = todoObject.todo
             const dueDate = todoObject.date
@@ -156,16 +163,31 @@ todoList.forEach( (value,index) =>{
             <li class='list-style'></li>
             <li class='todo-activity' > ${value} </li>
             <p>${dueDate}</p> 
-            <button class='remove-list' onclick="todoList.splice(${index}, 1);
+            <button class='remove-list js-delect-buttom' onclick="todoList.splice(${index}, 1);
               renderTodoList();">Delect From List</button> 
               </ol>
               <div class='line'></div>`;
          todoListHtml += html;
-});
+        });
 
          console.log(todoListHtml)
-
          document.querySelector('.todo-display').innerHTML = todoListHtml;
+
+        document.querySelector('.js-delect-buttom').forEach((delectButton, index) =>{
+            delectButton.addEventListener('click',()=>{
+                todoList.splice(0,todoList.length);
+              renderTodoList();})
+        });
+
+        document.body.addEventListener('keydown',()=>{
+            if(event.key === 'Backspace'){
+            todoList.splice(0,todoList.length);
+            }
+        });
+
+        
+   
+
         
         
         }
@@ -196,7 +218,7 @@ todoList.forEach( (value,index) =>{
   
     
 
-    const todoList = [
+    let todoList = [
  
     ];
     function addTodo(){
@@ -211,7 +233,7 @@ todoList.forEach( (value,index) =>{
             todo: todoActivity,
             date: dueDate
          });
-
+         
          inputValue.value = '';
          inputDate.value = '';
         

@@ -4,53 +4,50 @@
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="./10.DOM.rock paper scissor 2  2  2.css">
     <script src="./10.DOM.rock paper scissor 2  2  2.js"></script>
+   
   </head>
   <body>
-    <p>Rock Paper Scissors</p>
-    <button class="js-rock-button game-button"><img class="game-button-img" src="./rock-paper-scissors photos/rock-emoji.png" alt=""></button>
+<main>
+  <p>Rock Paper Scissors</p>
+  <button  class="js-button rock-buttom game-button"
 
-    <button class=" js-paper-button game-button" ><img class="game-button-img" src="./rock-paper-scissors photos/paper-emoji.png" alt=""></button>
+    ><img class="game-button-img" src="./rock-paper-scissors photos/rock-emoji.png" alt=""></button>
 
-    <button class="js-scissor-button game-button" ><img class="game-button-img" src="./rock-paper-scissors photos/scissors-emoji.png" alt=""></button>
+  <button class=" js-button paper-buttom game-button"><img class="game-button-img" src="./rock-paper-scissors photos/paper-emoji.png" alt=""></button>
 
-    <p class="js-moves"></p>
-    <p class="js-result "></p>
+  <button class="js-button scissor-buttom game-button"><img class="game-button-img" src="./rock-paper-scissors photos/scissors-emoji.png" alt=""></button>
 
-    <p class="js-score score-win">
-    <p class="js-score score-loss">
-    <p class="js-score score-tie">
-    <p class="js-score score-numgame">
+  <p class="js-moves"></p>
+  <p class="js-result "></p>
 
-
-    </p>
-
-    <button class="reset-button"  onclick="
-      score.wins = 0;
-      score.losses = 0;
-      score.ties = 0;
-      localStorage.removeItem('score');
-      updateScoreElement();
-    ">Reset Score</button>
-    <button class="auto-play-button" onclick="
-    autoPlay();
-    ">Auto Play</button>
-
-    
+  <p class="js-score score-win">
+  <p class="js-score score-loss">
+  <p class="js-score score-tie">
+  <p class="js-score score-numgame">
 
 
-<script>
-let score = JSON.parse(localStorage.getItem('score')) || {
+
+  </p>
+
+  <button class="reset-button reset-game-buttom">Reset Score</button>
+
+  <button class="auto-play-button autoplayGame-buttom" >Auto Play</button>
+
+<p class="comfirmation-message js-comfirmation-box"></p>
+</main>
+
+    <script>
+      
+      let score = JSON.parse(localStorage.getItem('score')) || {
    wins: 0,
    losses: 0,
    ties: 0
  };
 
-
-
  let isAutoPlaying = false;
 let intervalId;
 
- updateScoreElement();
+//  updateScoreElement();
 
  /*
  if (!score) {
@@ -61,6 +58,75 @@ let intervalId;
    };
  }
  */
+
+ function resetGame(){
+  score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement(); ;
+ };
+
+
+ document.querySelector('.rock-buttom').addEventListener('click', ()=>{
+  playGame('rock');
+ });
+
+ document.querySelector('.paper-buttom').addEventListener('click', ()=>{
+  playGame('paper');
+ });
+
+ document.querySelector('.scissor-buttom').addEventListener('click', ()=>{
+  playGame('scissors'); });
+
+ document.querySelector('.reset-game-buttom').addEventListener('click', ()=>{
+
+  //  document.querySelector('.js-comfirmation-box').innerHTML= 'Are you sure you want to reset the game <button class="comfirmation-box-yes">Yes</button><button>No</button>';
+
+  document.querySelector('.comfirmation-box-yes').addEventListener('click',()=>{
+    resetGame();
+  })
+  document.querySelector('.comfirmation-box-no').addEventListener('click',()=>{
+    document.querySelector('.js-comfirmation-box').innerHTML= '';
+   
+  })
+
+  setTimeout(function (){
+    document.querySelector('.js-comfirmation-box').innerHTML= '';
+    
+   },5000)
+   });
+
+  
+
+ document.querySelector('.autoplayGame-buttom').addEventListener('click', ()=>{ autoPlay();});
+
+ document.body.addEventListener('keydown', ()=>{ 
+  if (event.key === 'a'){
+    playGame('rock');
+  }
+  else if (event.key === 's'){
+    playGame('scissors');
+  }
+  else if (event.key === 'd'){
+    playGame('paper');
+  }
+  else if (event.key === 'Enter'){
+    autoPlay();
+  }
+
+  
+
+  else if (event.key === 'Backspace'){
+    document.querySelector('.js-comfirmation-box').innerHTML= 'Are you sure you want to reset the game <button class="comfirmation-box-yes">Yes</button><button>No</button>';
+
+    setTimeout(function (){
+    document.querySelector('.js-comfirmation-box').innerHTML= '';
+    
+   },5000)
+  }
+
+ });
 
  function borderChange(){
 
@@ -87,10 +153,12 @@ let intervalId;
         playGame(playerMove);
       },1000);
       isAutoPlaying = true;
+      document.querySelector('.autoplayGame-buttom').innerHTML= 'Stop Auto playing';
     
     }else {
       clearInterval(intervalId);
       isAutoPlaying = false;
+      document.querySelector('.autoplayGame-buttom').innerHTML= 'Auto Play';
 
     }
  };
@@ -137,6 +205,8 @@ let intervalId;
    } else if (result === 'You Tie.') {
      score.ties += 1;
    }
+
+   
 
 
 
@@ -186,14 +256,6 @@ let intervalId;
  return result;
  }
 
- document.querySelector('.js-reset-score').addEventListener('click', ()=>{resetGame();});
-
-document.querySelector('.js-rock-button').addEventListener('click',()=>{playGame('rock');});
-
-document.querySelector('.js-paper-button').addEventListener('click',()=>{playGame('paper');});
-
-document.querySelector('.js-scissor-button').addEventListener('click',()=>{playGame('rock');});
-
  function updateScoreElement() {
    numPlayed = score.wins + score.losses + score.ties;
 
@@ -221,6 +283,14 @@ document.querySelector('.js-scissor-button').addEventListener('click',()=>{playG
 
    return computerMove;
  }
-</script>
+
+
+
+ if ( document.querySelector('.reset-game-buttom').event.type === 'click'){
+  alert( 'Are you sure you want to reset the game <button class="comfirmation-box-yes">Yes</button><button>No</button>');
+
+ }
+  
+    </script>
   </body>
 </html>

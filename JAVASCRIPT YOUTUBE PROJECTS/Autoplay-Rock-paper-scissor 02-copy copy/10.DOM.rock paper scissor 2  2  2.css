@@ -3,6 +3,15 @@ body{
    color: white;
    font-weight: 700;
    font-size: 25px;
+   padding-left: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ button{
+  cursor: pointer;
+ 
  }
 
  .game-button{
@@ -12,6 +21,7 @@ body{
    background-color: transparent;
    border: 3px solid rgba(255, 255, 255, 0.444);
    transition: background-color 0.2s;
+   
  }
 
  .game-button:active{
@@ -32,7 +42,11 @@ body{
    box-shadow: inset 1px 1px 10px 5px rgb(214, 143, 12);
    transition: background-color 0.2s;
  
+   
+ 
  }
+
+ 
 
  .reset-button:active{
    background-color: #18f14e;
@@ -61,3 +75,32 @@ body{
   width: 100px;
   padding: 10px;
  }
+
+ .comfirmation-message{
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow:inset 1px 1px 20px 10px black;
+ }
+
+ .comfirmation-message button{
+  padding: 10px;
+  margin-right: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+
+}
+
+.comfirmation-message button:first-child:hover{
+background-color: red;
+color: white;
+}
+.comfirmation-message button:last-child:hover{
+background-color: green;
+color: white;
+}
+
+

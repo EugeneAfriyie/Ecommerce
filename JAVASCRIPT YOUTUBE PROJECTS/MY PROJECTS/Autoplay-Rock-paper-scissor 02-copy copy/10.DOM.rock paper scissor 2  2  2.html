@@ -33,7 +33,14 @@
 
   <button class="auto-play-button autoplayGame-buttom" >Auto Play</button>
 
-<p class="comfirmation-message js-comfirmation-box"></p>
+<div class="comfirmation-message js-comfirmation-box">
+  <p>Are you sure you want to reset the game</p> 
+  
+  <div>
+    <button class="comfirmation-box-yes">Yes</button>
+    <button class="comfirmation-box-no">No</button>
+  </div>
+  </div>
 </main>
 
     <script>
@@ -77,27 +84,26 @@ let intervalId;
  });
 
  document.querySelector('.scissor-buttom').addEventListener('click', ()=>{
-  playGame('scissors'); });
+  playGame('scissors'); 
+});
 
  document.querySelector('.reset-game-buttom').addEventListener('click', ()=>{
-
-  //  document.querySelector('.js-comfirmation-box').innerHTML= 'Are you sure you want to reset the game <button class="comfirmation-box-yes">Yes</button><button>No</button>';
-
-  document.querySelector('.comfirmation-box-yes').addEventListener('click',()=>{
-    resetGame();
-  })
-  document.querySelector('.comfirmation-box-no').addEventListener('click',()=>{
-    document.querySelector('.js-comfirmation-box').innerHTML= '';
-   
-  })
-
-  setTimeout(function (){
-    document.querySelector('.js-comfirmation-box').innerHTML= '';
-    
+   document.querySelector('.js-comfirmation-box').style.display = 'block';
+   setTimeout(function (){
+    document.querySelector('.js-comfirmation-box').style.display = 'none';
    },5000)
+
    });
 
-  
+   document.querySelector('.comfirmation-box-yes').addEventListener('click',()=>{
+    resetGame();
+    document.querySelector('.js-comfirmation-box').style.display = 'none';
+
+  });
+   document.querySelector('.comfirmation-box-no').addEventListener('click',()=>{
+    document.querySelector('.js-comfirmation-box').style.display = 'none';
+
+  });
 
  document.querySelector('.autoplayGame-buttom').addEventListener('click', ()=>{ autoPlay();});
 
@@ -113,6 +119,16 @@ let intervalId;
   }
   else if (event.key === 'Enter'){
     autoPlay();
+  }
+
+  else if (event.key === 'Backspace'){
+    document.querySelector('.js-comfirmation-box').style.display = 'block';
+   setTimeout(function (){
+    document.querySelector('.js-comfirmation-box').style.display = 'none';
+   },5000)
+  }
+  else if (event.key === 'Shift'){
+    document.querySelector('.js-comfirmation-box').style.display = 'none';
   }
 
   
@@ -286,10 +302,6 @@ let intervalId;
 
 
 
- if ( document.querySelector('.reset-game-buttom').event.type === 'click'){
-  alert( 'Are you sure you want to reset the game <button class="comfirmation-box-yes">Yes</button><button>No</button>');
-
- }
   
     </script>
   </body>

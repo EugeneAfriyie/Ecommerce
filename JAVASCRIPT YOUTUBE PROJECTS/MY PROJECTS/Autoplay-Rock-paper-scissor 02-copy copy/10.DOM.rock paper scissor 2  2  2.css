@@ -1,12 +1,21 @@
+*{
+  /* margin: 0; */
+}
+
+
 body{
    background-color: rgb(25, 25, 25);
    color: white;
    font-weight: 700;
    font-size: 25px;
-   padding-left: 50px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   /* padding: 100px 0; */
+ 
+ 
+ }
+
+ main{
+  width: 500px;
+  margin: auto;
  }
 
  button{
@@ -21,6 +30,7 @@ body{
    background-color: transparent;
    border: 3px solid rgba(255, 255, 255, 0.444);
    transition: background-color 0.2s;
+
    
  }
 
@@ -77,6 +87,14 @@ body{
  }
 
  .comfirmation-message{
+  display: none;
+  position: fixed;
+  width: 50%;
+  height: 150px;
+  z-index: 1;
+  text-align: center;
+  top: 20px;
+  left: 25%;
   background-color: white;
   color: black;
   padding: 10px;
@@ -86,15 +104,15 @@ body{
  }
 
  .comfirmation-message button{
-  padding: 10px;
+  padding: 10px 20px;
   margin-right: 5px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   border-radius: 10px;
 
 }
 
-.comfirmation-message button:first-child:hover{
+.comfirmation-message div button:first-child:hover{
 background-color: red;
 color: white;
 }

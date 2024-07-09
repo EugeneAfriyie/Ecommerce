@@ -1,4 +1,8 @@
-
+import {cart} from '..data.cart.js'
+    
+    
+    
+    
     let productHTML = '';
 products.forEach ((product) =>{
     
@@ -27,7 +31,8 @@ products.forEach ((product) =>{
 
           <div class="product-quantity-container">
             <select>
-              <option selected value="1">1</option>
+              <option selected value="0">0</option>
+              <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>

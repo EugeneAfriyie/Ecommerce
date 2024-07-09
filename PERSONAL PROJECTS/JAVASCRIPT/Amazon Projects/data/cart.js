@@ -1,1 +1,4 @@
+export {cart}
+
+
 const cart = [];

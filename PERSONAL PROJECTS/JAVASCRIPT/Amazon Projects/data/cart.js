@@ -18,8 +18,10 @@ export function addtoCart (button) {
       }else{
         cart.push({
           productId:productId,
-          quantity:1
+           
           });
+
+          
       }
 
   };

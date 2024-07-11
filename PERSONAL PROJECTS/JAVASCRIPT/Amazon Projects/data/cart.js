@@ -4,10 +4,10 @@ export {cart}
 let cart = JSON.parse(localStorage.getItem('cart')); 
 if (!cart){
   cart =[
-   
+  
 ];
 };
-
+console.log(cart);
 
 export function addtoCart (button) {
     const productId = button.dataset.productId;
@@ -27,6 +27,7 @@ export function addtoCart (button) {
            });          
       }
 
+   
 
       saveToStorage();
   };

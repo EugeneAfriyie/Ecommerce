@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    margin-top: 50px;
+    padding-bottom: 100px;
+
+
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+
+}
+
+header{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+
+
+}
+
+
+
+nav{
+    height: 50px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    
+}
+
+.page-name span{
+    color: yellow;
+}
+
+
+.last-section a{
+    background-color: rgba(139, 137, 137, 0.212);
+    padding: 10px;
+    
+}
+
+.last-section span{
+    color: rgb(133, 129, 129);
+    
+
+}
+
+main{
+   
+
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 50% 1fr;
+}
+
+.inner-container-1{
+    width: 80%;
+    color: white;
+    margin: auto;
+    padding-top: 150px;
+}
+
+.library{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+   }
+
+.inner-container-1 p{
+    color: rgba(245, 222, 179, 0.658);
+    line-height: 20px;
+}
+
+.inner-container-2{
+    width: 80%;
+    color: black;
+    margin: auto;
+    padding-top: 80px;
+
+}
+.course-card-div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+
+}
+
+.course-card{
+    background-color: black;
+    height: 250px;
+    color: white;
+    padding: 50px 20px;
+    font-size: 1rem;
+    
+}
+
+.inner-container-2 h4{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.course-card a{
+    text-decoration: none;
+    color: white;
+    
+}
+.course-card h5{
+   font-size: 1rem;
+   margin-top: 20px;
+   margin-bottom: 10px;
+}
+
+.top-section{
+    background-color: black;
+}
+.bottom-section{
+    background-color: white;
+}

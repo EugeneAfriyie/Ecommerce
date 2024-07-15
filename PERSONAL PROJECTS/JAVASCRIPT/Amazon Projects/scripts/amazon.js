@@ -32,9 +32,8 @@ products.forEach ((product) =>{
           </div>
 
           <div class="product-quantity-container">
-            <select>
-              <option selected value="0">0</option>
-              <option value="1">1</option>
+            <select class="js-quantity-selector-${product.id}">
+              <option selected  value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -49,7 +48,7 @@ products.forEach ((product) =>{
 
           <div class="product-spacer"></div>
 
-          <div class="added-to-cart">
+          <div class="added-to-cart js-added-to-cart-${product.id}">
             <img src="images/icons/checkmark.png">
             Added
           </div>            
@@ -83,6 +82,11 @@ products.forEach ((product) =>{
 
 document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
     button.addEventListener('click', () =>{
+      console.log(button);
+
+
+
+
       
       addtoCart(button);
 

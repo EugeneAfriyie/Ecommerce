@@ -8,14 +8,37 @@ body{
    color: white;
    font-weight: 700;
    font-size: 25px;
-   /* padding: 100px 0; */
- 
- 
+   /* padding: 100px 0; */ 
+ }
+
+ .display-div{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+ }
+
+ .game-element{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .settings{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
  }
 
  main{
-  width: 500px;
+  width: 700px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
  }
 
  button{
@@ -120,5 +143,24 @@ color: white;
 background-color: green;
 color: white;
 }
+
+.score-win{
+  border: 3px solid green;
+  padding: 10px;
+}
+.score-loss{
+  border: 3px solid red;
+  padding: 10px;
+}
+.score-tie{
+  border: 3px solid gold;
+  padding: 10px;
+}
+.score-numgame{
+  border: 3px solid rgb(128, 0, 107);
+  padding: 10px;
+}
+
+
 
 

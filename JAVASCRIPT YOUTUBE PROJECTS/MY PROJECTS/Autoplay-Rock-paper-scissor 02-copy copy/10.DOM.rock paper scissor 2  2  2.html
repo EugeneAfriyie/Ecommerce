@@ -9,29 +9,32 @@
   <body>
 <main>
   <p>Rock Paper Scissors</p>
-  <button  class="js-button rock-buttom game-button"
+  <div>
+    <button  class="js-button rock-buttom game-button"
 
     ><img class="game-button-img" src="./rock-paper-scissors photos/rock-emoji.png" alt=""></button>
 
   <button class=" js-button paper-buttom game-button"><img class="game-button-img" src="./rock-paper-scissors photos/paper-emoji.png" alt=""></button>
 
   <button class="js-button scissor-buttom game-button"><img class="game-button-img" src="./rock-paper-scissors photos/scissors-emoji.png" alt=""></button>
-
+  </div>
+<section class="game-element">
+  
   <p class="js-moves"></p>
   <p class="js-result "></p>
-
+ <div class="display-div">
   <p class="js-score score-win">
   <p class="js-score score-loss">
   <p class="js-score score-tie">
-  <p class="js-score score-numgame">
+  <p class="js-score score-numgame"></p>
 
-
-
-  </p>
-
+ </div>
+</section>
+<div class="settings">
   <button class="reset-button reset-game-buttom">Reset Score</button>
 
   <button class="auto-play-button autoplayGame-buttom" >Auto Play</button>
+</div>
 
 <div class="comfirmation-message js-comfirmation-box">
   <p>Are you sure you want to reset the game</p> 
@@ -100,6 +103,7 @@ let intervalId;
     document.querySelector('.js-comfirmation-box').style.display = 'none';
 
   });
+  
    document.querySelector('.comfirmation-box-no').addEventListener('click',()=>{
     document.querySelector('.js-comfirmation-box').style.display = 'none';
 
@@ -190,7 +194,7 @@ let intervalId;
        result = 'You win.';
        document.querySelector('.js-result').classList.add('result-win');
      } else if (computerMove === 'scissors') {
-       result = 'Tie.';
+       result = 'You Tie.';
      }
 
    } else if (playerMove === 'paper') {
@@ -276,9 +280,9 @@ let intervalId;
 
 
    document.querySelector('.score-win').innerHTML = `Wins: ${score.wins}.`;
-   document.querySelector('.score-loss').innerHTML = ` Losses: ${score.losses}.`;
-   document.querySelector('.score-tie').innerHTML = `Ties: ${score.ties}.`;
-   document.querySelector('.score-numgame').innerHTML = ` Games Played:   ${numPlayed} ; `;
+   document.querySelector('.score-loss').innerHTML = ` Losses: ${score.losses}`;
+   document.querySelector('.score-tie').innerHTML = `Ties: ${score.ties}`;
+   document.querySelector('.score-numgame').innerHTML = ` Games Played:   ${numPlayed}`;
 
      
  }

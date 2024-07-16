@@ -1,49 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="./10.DOM.rock paper scissor 2  2  2.css">
-    <script src="./10.DOM.rock paper scissor 2  2  2.js"></script>
-   
-  </head>
-  <body>
-<main>
-  <p>Rock Paper Scissors</p>
-  <button  class="js-button rock-buttom game-button"
 
-    ><img class="game-button-img" src="./rock-paper-scissors photos/rock-emoji.png" alt=""></button>
-
-  <button class=" js-button paper-buttom game-button"><img class="game-button-img" src="./rock-paper-scissors photos/paper-emoji.png" alt=""></button>
-
-  <button class="js-button scissor-buttom game-button"><img class="game-button-img" src="./rock-paper-scissors photos/scissors-emoji.png" alt=""></button>
-
-  <p class="js-moves"></p>
-  <p class="js-result "></p>
-
-  <p class="js-score score-win">
-  <p class="js-score score-loss">
-  <p class="js-score score-tie">
-  <p class="js-score score-numgame">
-
-
-
-  </p>
-
-  <button class="reset-button reset-game-buttom">Reset Score</button>
-
-  <button class="auto-play-button autoplayGame-buttom" >Auto Play</button>
-
-<div class="comfirmation-message js-comfirmation-box">
-  <p>Are you sure you want to reset the game</p> 
-  
-  <div>
-    <button class="comfirmation-box-yes">Yes</button>
-    <button class="comfirmation-box-no">No</button>
-  </div>
-  </div>
-</main>
-
-    <script>
       
       let score = JSON.parse(localStorage.getItem('score')) || {
    wins: 0,
@@ -84,37 +39,21 @@ let intervalId;
  });
 
  document.querySelector('.scissor-buttom').addEventListener('click', ()=>{
-  playGame('scissors'); 
-});
+  playGame('scissors'); });
 
  document.querySelector('.reset-game-buttom').addEventListener('click', ()=>{
-   document.querySelector('.js-comfirmation-box').style.display = 'block';
-   setTimeout(function (){
-    document.querySelector('.js-comfirmation-box').style.display = 'none';
-   },5000)
-
-   });
-
-   document.querySelector('.comfirmation-box-yes').addEventListener('click',()=>{
-    resetGame();
-    document.querySelector('.js-comfirmation-box').style.display = 'none';
-
-  });
-   document.querySelector('.comfirmation-box-no').addEventListener('click',()=>{
-    document.querySelector('.js-comfirmation-box').style.display = 'none';
-
-  });
+  resetGame(); });
 
  document.querySelector('.autoplayGame-buttom').addEventListener('click', ()=>{ autoPlay();});
 
  document.body.addEventListener('keydown', ()=>{ 
-  if (event.key === 'a'){
+  if (event.key === 'r'){
     playGame('rock');
   }
   else if (event.key === 's'){
     playGame('scissors');
   }
-  else if (event.key === 'd'){
+  else if (event.key === 'p'){
     playGame('paper');
   }
   else if (event.key === 'Enter'){
@@ -122,24 +61,7 @@ let intervalId;
   }
 
   else if (event.key === 'Backspace'){
-    document.querySelector('.js-comfirmation-box').style.display = 'block';
-   setTimeout(function (){
-    document.querySelector('.js-comfirmation-box').style.display = 'none';
-   },5000)
-  }
-  else if (event.key === 'Shift'){
-    document.querySelector('.js-comfirmation-box').style.display = 'none';
-  }
-
-  
-
-  else if (event.key === 'Backspace'){
-    document.querySelector('.js-comfirmation-box').innerHTML= 'Are you sure you want to reset the game <button class="comfirmation-box-yes">Yes</button><button>No</button>';
-
-    setTimeout(function (){
-    document.querySelector('.js-comfirmation-box').innerHTML= '';
-    
-   },5000)
+    resetGame();
   }
 
  });
@@ -161,6 +83,7 @@ let intervalId;
 
 
 
+
  function autoPlay(){
     if (!isAutoPlaying){
       intervalId = setInterval(function(){
@@ -168,12 +91,10 @@ let intervalId;
         playGame(playerMove);
       },1000);
       isAutoPlaying = true;
-      document.querySelector('.autoplayGame-buttom').innerHTML= 'Stop Auto playing';
     
     }else {
       clearInterval(intervalId);
       isAutoPlaying = false;
-      document.querySelector('.autoplayGame-buttom').innerHTML= 'Auto Play';
 
     }
  };
@@ -298,12 +219,5 @@ let intervalId;
 
    return computerMove;
  }
-
-
-
   
-    </script>
-
-    <script src="./10.DOM.rock paper scissor 2  2  2.js"></script>
-  </body>
-</html>
+    

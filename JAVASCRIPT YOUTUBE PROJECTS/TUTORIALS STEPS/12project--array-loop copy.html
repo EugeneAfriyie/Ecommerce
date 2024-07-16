@@ -21,6 +21,7 @@ addTodo();
 
 
 ">Add</button>
+<p class="in"></p>
 <h1>Todo List 2</h1>
 
 <input type="text" class="input-todo-2">
@@ -87,6 +88,7 @@ addTodo2();
         document.querySelector('.input-todo').value;
         todoList.push(document.querySelector('.input-todo').value );
         console.log(todoList)
+        document.querySelector('.input-todo').value = '';
         document.querySelector('.input-todo').value = '';
 
    

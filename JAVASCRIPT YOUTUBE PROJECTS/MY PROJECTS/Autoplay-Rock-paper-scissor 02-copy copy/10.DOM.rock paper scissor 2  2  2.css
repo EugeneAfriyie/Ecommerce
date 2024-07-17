@@ -11,12 +11,15 @@ body{
    /* padding: 100px 0; */ 
  }
 
+ 
+
  .display-div{
   display: flex;
   align-items: center;
   justify-content: left;
   gap: 10px;
  }
+ 
 
  .game-element{
   display: flex;
@@ -25,6 +28,8 @@ body{
   justify-content: center;
  }
 
+
+
  .settings{
   display: flex;
   align-items: center;
@@ -32,6 +37,20 @@ body{
   gap: 20px;
  }
 
+ .div-none{
+  display: none;
+ }
+
+ .two-p{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+ }
+ 
+.results{
+  text-align: center;
+}
  main{
   width: 700px;
   margin: auto;

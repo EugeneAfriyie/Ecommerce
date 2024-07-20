@@ -14,7 +14,7 @@ body{
     
 }
 
-/* 
+
 @media  (max-width:900px){
     body{
      display: flex;
@@ -43,7 +43,7 @@ body{
     }
 
   
-  } */
+  } 
 
 #main-doc{
     width: 68%;

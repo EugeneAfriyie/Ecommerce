@@ -4,8 +4,8 @@ import {
     updateQuantity
 } from '../data/cart.js';
 import {products} from '../data/products.js';
-// import { updatecartQuantity } from './amazon.js'
 import {formatCurrency} from './Utils/money.js';
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 
 

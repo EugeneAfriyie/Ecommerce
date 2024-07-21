@@ -42,9 +42,9 @@ export function addtoCart (button) {
     }, 2000);
 
    
-
+ 
       saveToStorage();
-  };
+  };  
 
 
   export function removeFromCart(productId){

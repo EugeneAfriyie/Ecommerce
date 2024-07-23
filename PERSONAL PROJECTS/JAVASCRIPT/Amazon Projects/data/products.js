@@ -1,5 +1,4 @@
 export {products}
-export {products}
 
 
 const products = [

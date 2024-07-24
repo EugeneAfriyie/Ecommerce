@@ -114,8 +114,8 @@ function renderOrderSummary(){
                         ${priceString} Shipping
                       </div>
                       </div>
-                    </div>`
-      })
+                    </div>  `;
+      });
 
           return html;
         };

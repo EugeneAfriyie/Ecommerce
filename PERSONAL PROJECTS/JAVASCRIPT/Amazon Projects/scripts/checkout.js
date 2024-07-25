@@ -10,7 +10,7 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import { deliveryOptions } from '../data/deliveryOptions.js';
 
 
-
+console.log(dayjs())
 function renderOrderSummary(){
     let cartSummaryHTML = '';
     cart.forEach((cartItem) => {

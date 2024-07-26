@@ -83,10 +83,6 @@ products.forEach ((product) =>{
 document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
     button.addEventListener('click', () =>{
       console.log(button);
-
-
-
-
       
       addtoCart(button);
 

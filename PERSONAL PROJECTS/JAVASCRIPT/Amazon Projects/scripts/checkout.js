@@ -203,10 +203,19 @@ function renderOrderSummary(){
           // const productId = option.dataset.productId;
           // const deliveryOptionId = option.dataset.deliveryOptionId;
           const {productId, deliveryOptionId} = option.dataset;
-          updateDeliveryOption(productId,deliveryOptionId);
+          let matchingItem;
+          cart.forEach(cartItem =>{
+            if(productId === cartItem.productId){
+              matchingItem = cartItem
+            }
+          });
+      
+          matchingItem.deliveryOptionId = deliveryOptionId;
+          saveToStorage();
           renderOrderSummary();
         });
       });
     }
 
     renderOrderSummary();
+    

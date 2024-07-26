@@ -32,7 +32,7 @@ export function addtoCart (button) {
       const quantity = Number(quantitySelector.value)
 
       if (matchingItem){
-        matchingItem.quantity+= quantity
+        matchingItem.quantity += quantity
       }else{
         cart.push({
           productId:productId,

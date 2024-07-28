@@ -16,7 +16,7 @@
     --color-grey-2: #dbe1e8;
     --color-grey-3: #6c7983;
     --color-grey-4: #454e56;
-    --color-grey-5: #12181b;
+    --color-grey-5: #2a2e35;
     --color-grey-6: #12181b;
     --br-sm-2:14px;
     --box-shadow-1:0 3px 15px rgba(0,0,0,0.3);
@@ -52,7 +52,7 @@ section{
     position: absolute;
     left: 0;
     top: 0;
-    padding: 3rem 18rem;
+    padding: 3rem 10rem;
 }
 
 .section{
@@ -122,43 +122,37 @@ section{
     justify-content: center;
     flex-direction: column;
     transform: translateY(-50%);
+}
 
 
-    .active-btn{
-        background-color: var(--color-secondary) !important;
-        transition: all .4s ease-in-out;
+.control{
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--color-grey-4);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin: .7rem 0;
+    box-shadow: var(--box-shadow-1);
+}
 
-        i{
-            color: var(--color-white) !important;
-        }
-
-      
-    }
-
-   
-
-
-    .control{
-        padding: 1rem;
-        cursor: pointer;
-        background-color: var(--color-grey-4);
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        margin: .7rem 0;
-        box-shadow: var(--box-shadow-1);
+.control i{
+    font-size: 1.2rem;
+    color: var(--color-grey-2);
+    pointer-events: none;
+}
 
 
-        i{
-            font-size: 1.2rem;
-            color: var(--color-grey-2);
-            pointer-events: none;
-        }
+.active-btn{
+    background-color: var(--color-secondary) !important;
+    transition: all .4s ease-in-out;
 
-    }
+}
 
+.active-btn i{
+    color: var(--color-white) !important;
 }
 
 
@@ -237,8 +231,232 @@ section{
         }
     }
 
+}
+
+
+
+/* about */
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+}
+
+.right-about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
 
 }
+
+.about-item{
+    border: 1px solid var(--color-grey-5);
+    border-radius: 5px;
+    transition: all .4s ease-in-out;
+    box-shadow: 1px 2px 15px rgba(0,0,0,.1);
+}
+
+.about-item:hover{
+    cursor: default;
+    transform: translateY(-5px);
+    border: 1px solid var(--color-secondary);
+    box-shadow: 1px 4px 15px rgba(0,0,0,.32);
+}
+
+.abt-text{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.large-text{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+}
+
+.small-text{
+    padding-left: 3rem;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: var(--color-grey-1);
+    letter-spacing: 2px;
+ }
+
+ .small-text::before{
+    content: "";
+    left: 0;
+    top: 15px;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--color-grey-5);
+ }
+
+
+ .left-about{
+    padding-right: 5rem;
+
+ }
+
+ .left-about p{
+    line-height: 2rem;
+    padding: 1rem;
+    color: var(--color-grey-1);
+ }
+ .left-about h4{
+    font-size: 2rem;
+    text-transform: uppercase;
+ }
+
+
+ .about-stats{
+    padding-bottom: 4rem;
+ }
+
+ .progress-bars{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+ }
+
+ .progress-bar{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .prog-title{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.progress-con{
+    display: flex;
+    align-items: center;
+}
+
+ .prog-text{
+    color: var(--color-grey-2);
+ }
+ 
+
+ .progress{
+    width: 100%;
+    height: .45rem;
+    background-color: var(--color-grey-4);
+    margin-left: 1rem;
+    position: relative;
+ }
+
+ .progress span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--color-secondary);
+    transition: all 0.4s ease-in-out;
+    width: 60%;
+ }
+
+ .progress .html{
+    width: 90%;
+ }
+ .progress .css{
+    width: 65%;
+ }
+ .progress .javacript{
+    width: 50%;
+ }
+
+ .stat-title{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 3.5rem 0;
+    position: relative;
+ }
+
+ .stat-title::before{
+    content: " ";
+    left: 50%;
+    top: 0;
+    width: 40%;
+    height: 1px;
+    background-color: var(--color-grey-5);
+    transform: translateY(-50%);
+ }
+
+/* timeline/ */
+
+.timeline{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.timeline-item{
+    position: relative;
+    padding-left: 3rem;
+    border: 1px solid var(--color-grey-5);
+}
+
+.ti-icon{
+    position: absolute;
+    left: -27px;
+    top: 0;
+    background-color: var(--color-secondary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ti-icon i{
+    font-size: 1.3rem;
+}
+
+.ti-duration{
+    padding: .2rem .5rem;
+    background-color: var(--color-grey-5);
+    border-radius: 15px;
+    display: inline-block;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+.timeline-item h5{
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight:600;
+}
+
+.timeline-item h5 span{
+    color: var(--color-grey-2);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.timeline-item p{
+    color: var(--color-grey-2);
+}
+
+
+
+
+
+
+
+
+
+
 
 /* independent componets  */
 .btn-con{
@@ -268,7 +486,7 @@ section{
         padding: 1rem;
 
     }&::before{
-        content: "";
+        content: " ";
         position: absolute;
         top: 0;
         right: 0;
@@ -290,3 +508,33 @@ section{
 
 }
 
+
+
+.main-title{
+    text-align: center;
+
+    h2{
+        position: relative;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: 700;
+
+        span{
+            color: var(--color-secondary);
+        }
+
+        .bg-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: var(--color-grey-5);
+        transition: all .4s ease-in-out;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        font-weight: 800;
+        font-size: 4.3rem;
+    }
+    }
+
+    
+}

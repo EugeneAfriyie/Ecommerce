@@ -96,6 +96,7 @@ ul {
   color: var(--secondary-color);
   margin: 0 10px;
   font-family: var(--font-headline);
+  text-wrap: nowrap;
 }
 
 .player-content {

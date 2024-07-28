@@ -69,6 +69,7 @@ export function addtoCart (button) {
       cart = newCart;
     saveToStorage();
   };
+  
 
   export function saveToStorage () {
     localStorage.setItem('cart',JSON.stringify(cart));

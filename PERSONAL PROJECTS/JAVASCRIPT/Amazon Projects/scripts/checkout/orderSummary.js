@@ -9,6 +9,7 @@ import {
   
   import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
   import { deliveryOptions,getDeliveryOption } from '../../data/deliveryOptions.js';
+  import { renderPaymentSummary } from './paymentSummary.js';
   
   
   
@@ -43,7 +44,7 @@ import {
                         ${matchingProduct.name}
                       </div>
                       <div class="product-price">
-                        ${formatCurrency(matchingProduct.priceCents)}
+                       ₵${formatCurrency(matchingProduct.priceCents)}
                       </div>
                       <div class="product-quantity">
                         <span>
@@ -89,7 +90,7 @@ import {
           const today = dayjs();
           const deliveryDate = today.add(deliveryOption.deliveryDays,'days');
           const dateString = deliveryDate.format('dddd, MMMM D');
-          const priceString = deliveryOption.priceCents === 0 ? 'FREE ' :  `$${formatCurrency(deliveryOption.priceCents)} -`;
+          const priceString = deliveryOption.priceCents === 0 ? 'FREE ' :  `₵${formatCurrency(deliveryOption.priceCents)} -`;
   
   
           const isChecked = deliveryOption.id === cartItem.deliveryOptionId ;
@@ -128,6 +129,7 @@ import {
           removeFromCart(productId);
           const container = document.querySelector(`.js-cart-item-container-${productId}`).remove();
           updatecartQuantity();
+          renderPaymentSummary();
         });
       });
   
@@ -205,6 +207,7 @@ import {
             matchingItem.deliveryOptionId = deliveryOptionId;
             saveToStorage();
             renderOrderSummary();
+            renderPaymentSummary();
           });
         });
       }

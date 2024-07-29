@@ -179,6 +179,9 @@ import {
               quantityLabel.innerHTML = newQuantity;
   
               updatecartQuantity();
+              renderOrderSummary();
+              // renderPaymentSummary();
+
               });
             });
   
@@ -207,9 +210,11 @@ import {
             matchingItem.deliveryOptionId = deliveryOptionId;
             saveToStorage();
             renderOrderSummary();
-            renderPaymentSummary();
           });
         });
+
+
+        renderPaymentSummary();
       }
   
       renderOrderSummary();

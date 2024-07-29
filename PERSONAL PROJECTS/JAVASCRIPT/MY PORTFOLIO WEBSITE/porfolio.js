@@ -46,6 +46,17 @@ function pageTransitions(){
 }
 
 pageTransitions();
+
+
+
+
+
+
+
+
+
+
+
 //  allSections.addEventListener('click', (e) =>{
       
 

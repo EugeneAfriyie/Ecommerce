@@ -122,7 +122,8 @@ section{
 
     }
     100% {
-      transform: translateY(0) scaleY(1);
+      transform: translateY(0) scaleY(1
+      );
     }
   }
 

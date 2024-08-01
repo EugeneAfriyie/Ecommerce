@@ -20,6 +20,7 @@
     --color-grey-6: #12181b;
     --br-sm-2:14px;
     --box-shadow-1:0 3px 15px rgba(0,0,0,0.3);
+    --submit-color:hsl(229, 75%, 22%);
 }
 
 .light-mode{
@@ -34,6 +35,7 @@
     --color-grey-4: #454e56;
     --color-grey-5: #f8f8f8;
     --color-grey-6: #12181b;
+    --submit-color:hsl(204, 96%, 52%);
 }
 
 
@@ -826,16 +828,24 @@ section{
 }
 
 .submit-btn-2{
-    border-radius: 30px;
-    color: inherit;
-    font-weight: 600;
-    position: relative;
-    border: 1px solid var(--color-secondary);
-    display: flex;
-    align-self: flex-start;
-    align-items: center;
-    overflow: hidden;
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--color-white);
+    font-weight: 800;
+    background-color: transparent;
+    border: 4px solid var(--color-secondary);
+
 }
+.submit-btn-2:hover{
+    border: 5px solid;
+    border-image: linear-gradient(var(--submit-color), var(--color-secondary)) 4;
+    clip-path: inset(0 round 10px);
+    
+}
+
+
+
+
 
 
 

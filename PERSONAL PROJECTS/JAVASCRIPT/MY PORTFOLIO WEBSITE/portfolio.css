@@ -411,7 +411,7 @@ section{
     width: 90%;
  }
  .progress .css{
-    width: 65%;
+    width: 75%;
  }
  .progress .javacript{
     width: 50%;
@@ -689,14 +689,17 @@ section{
     
 }
 .contact-item{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .contact-item p{
     margin: .3rem 0 !important;
     padding: 0 !important;
+    word-break: break-all;
+  
 }
 
 .contact-item .icon{

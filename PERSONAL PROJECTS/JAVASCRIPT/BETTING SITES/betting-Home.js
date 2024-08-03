@@ -1,11 +1,15 @@
-const moreSport = document.querySelector('.more-sport');
-const arrowUp = document.querySelector('.arrow-up');
-const moreSportItems = document.querySelector('.more-sport-items');
-const arrowDown = document.querySelector('.arrow-down');
-const displayed = document.querySelector('.displayed');
-moreSportItems.style.display = 'none';
+const moreSport = document.querySelectorAll(`.more-sport`);
 
-moreSport.addEventListener('click', () => {
+const displayed = document.querySelector(`.displayed`);
+// moreSportItems.style.display = 'none';
+
+moreSport.forEach((button)=>{
+   const id = button.dataset.id
+   const arrowUp = document.querySelector(`.arrow-up-${id}`);
+const moreSportItems = document.querySelector(`.more-sport-items-${id}`);
+const arrowDown = document.querySelector(`.arrow-down-${id}`);
+    console.log(arrowDown)
+button.addEventListener('click', () => {
     if (moreSportItems.style.display === 'none' || moreSportItems.style.display === "") {
         moreSportItems.style.display = 'grid';
         arrowUp.classList.remove('arrow');
@@ -17,3 +21,4 @@ moreSport.addEventListener('click', () => {
         arrowDown.classList.remove('arrow');
     }
 });
+})

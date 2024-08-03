@@ -1,0 +1,380 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body{
+    background-color: gray;
+    width: 1400px;
+
+}
+:root{
+    --red-color:#e41827;
+    --green-color: rgb(13, 151, 55);
+    --white-color:rgb(255, 255, 255);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header{
+    display: grid;
+    background-color: var(--red-color);
+    width: 1400px;
+
+}
+
+.header-sec-1{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    border: 1px solid var(--red-color);
+}
+
+.sec-1-top-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sec-1-con-1{
+    display: flex;
+    align-items:end;
+}
+.site-name{
+    font-size: 2rem;
+    font-family: "Bungee Shade", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(255, 0, 0, 0.164);
+
+    
+  
+}
+
+.site-name span{
+    font-size: 2.5rem;
+    color: var(--white-color);
+    font-weight: 700;
+    font-family: "Bungee Shade", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+     /* font-family: "Zeyada", cursive;
+  font-weight: 400;
+  font-style: normal; */
+    /* font-family: "Rubik Bubbles", system-ui;
+    font-weight: 400;
+    font-style: normal; */
+  
+}
+
+.country-name img{
+    width: 7em;
+    align-items:end;
+   
+}
+
+.sec-1-bottom-div{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    color:  rgba(255, 255, 255, 0.6);
+
+}
+
+.keep-user-in{
+    display: flex;
+}
+#checkbox{
+    width: 20px;
+    background-color: transparent;
+}
+
+.keep-user-in input:active{
+    background-color: var(--green-color);
+}
+
+.forgot-password{
+color:  rgba(255, 255, 255, 0.6);
+
+}
+
+
+
+
+/* .sec-1-con-2 css  */
+
+
+.sec-1-con-2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mob-input{
+background-color: #2422227a;
+
+
+}
+.pass-input{
+background-color: #2422227a;
+
+}
+
+.sec-1-con-2 input{
+    padding: 7px;
+    width: 150px;
+    color: var(--white-color);
+    background-color: transparent;
+    font-size: 15px;
+    
+}
+
+.sec-1-con-2 button{
+    padding: 7px;
+    background-color: transparent;
+    color: var(--white-color);
+}
+
+
+.sec-1-con-2 input:focus{
+    outline: none;
+}
+
+.sec-1-con-2 input::placeholder{
+    color: rgba(255, 255, 255, 0.486)
+}
+
+#login{
+    margin-left: -10px;
+    padding: 7px 10px;
+    color: var(--white-color);
+    background-color: #2422227a;
+    font-size: .9rem;
+}
+
+.register-button{
+    border: 1px solid ;
+    
+}
+
+
+/* position-sticky-div css */
+
+.position-sticky-div{
+    width: 100%;
+    display: grid;
+    background-color: var(--red-color);
+}
+
+.header-sec-2{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    align-items: center;
+    gap: 10px;
+    grid-template-columns: 1fr auto;
+}
+
+.header-sec-2-item{
+    display: grid;
+    grid-template-columns:repeat(9,1fr);
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.header-sec-2-item a{
+    
+    color: var(--white-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    transition: all .4s ease;
+
+
+}
+
+.header-sec-2-item a:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+.header-sec-2-timezone{
+    color: var(--white-color);
+    font-size: 1.1rem;
+}
+
+/* header-sec-3 css */
+
+.header-sec-3{
+    background-color: var(--white-color);
+  
+   
+}
+.header-sec-3-div{
+    background-color: var(--white-color);
+    width: 70%;
+    height: 40px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(10,auto);
+    font-size: 1rem;
+    padding-right: 100px;
+}
+
+
+.header-sec-3-div a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+
+}
+.header-sec-3-div a:hover{
+   border-bottom: 5px solid red;
+}
+
+.more-sport{
+    position: relative;
+}
+
+.more-sport i{
+    font-size: 15px;
+    margin-left: 5px;
+    color: var(--green-color);
+} 
+
+
+.arrow{
+    color: #e41827 !important;
+    display: none !important;
+}
+
+
+
+.more-sport-items{
+    position: absolute;
+    background-color: var(--white-color);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 130px;
+    height: 300px;
+    overflow: auto;
+    /* display: none; */
+}
+
+.more-sport-items a{
+    padding: 10px;
+
+}
+
+.more-sport-items a:hover{
+    padding: 5px;
+    border:3px solid var(--green-color);
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* main Sectiion 1 css  */
+
+
+
+.section-1{
+    width: 100%;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.801);
+    display: grid;
+    grid-template-columns: 14% 19% 1fr 20% 12%;
+}
+
+.main-sec-1{
+    /* border: 1px solid wheat; */
+}
+.main-sec-2{
+    /* border: 1px solid wheat; */
+    padding-right: 50px;
+    padding-top: 10px;
+
+   
+}
+
+
+.popular{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    color: var(--white-color);
+}
+
+.popular:not(:last-child){
+    border-bottom: 1px solid wheat;
+}
+
+.popular i{
+    font-size: 15px ;
+    color: var(--green-color);
+}
+
+.popular:first-child{
+    font-size: 25px;
+    
+}
+
+.main-sec-3{
+    /* border: 1px solid wheat; */
+}
+.main-sec-4{
+    /* border: 1px solid wheat; */
+}
+.main-sec-5{
+    /* border: 1px solid wheat; */
+}
+
+
+/* Remaining div CSS  */
+
+.remaining-sec{
+    width: 70%;
+    margin: auto;
+}
+
+.advert img{
+    width: auto;
+    height: auto;
+    border: 1px solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

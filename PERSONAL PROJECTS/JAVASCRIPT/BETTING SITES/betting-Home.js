@@ -1,24 +1,3 @@
-const moreSport = document.querySelectorAll(`.more-sport`);
+import  moreSportCon  from "./scripts/more-sports.js";
 
-const displayed = document.querySelector(`.displayed`);
-// moreSportItems.style.display = 'none';
-
-moreSport.forEach((button)=>{
-   const id = button.dataset.id
-   const arrowUp = document.querySelector(`.arrow-up-${id}`);
-const moreSportItems = document.querySelector(`.more-sport-items-${id}`);
-const arrowDown = document.querySelector(`.arrow-down-${id}`);
-    console.log(arrowDown)
-button.addEventListener('click', () => {
-    if (moreSportItems.style.display === 'none' || moreSportItems.style.display === "") {
-        moreSportItems.style.display = 'grid';
-        arrowUp.classList.remove('arrow');
-        arrowDown.classList.add('arrow');
-        console.log(arrowUp.classList);
-    } else {
-        moreSportItems.style.display = 'none';
-        arrowUp.classList.add('arrow');
-        arrowDown.classList.remove('arrow');
-    }
-});
-})
+moreSportCon();

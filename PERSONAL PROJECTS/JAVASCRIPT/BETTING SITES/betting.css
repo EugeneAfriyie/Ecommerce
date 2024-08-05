@@ -8,7 +8,7 @@
 body{
     background-color: gray;
     width: 1400px;
-    padding-bottom: 2000px;
+    padding-bottom: 20px;
 
 }
 :root{
@@ -26,6 +26,7 @@ header{
     display: grid;
     background-color: var(--red-color);
     width: 1400px;
+    
 
 }
 
@@ -167,15 +168,18 @@ background-color: #2422227a;
 /* position-sticky-div css */
 
 .position-sticky{
-    position: static;
+    position: sticky;
     top: 0;
-    width: 100%;
 }
 
 .position-sticky-div{
     width: 100%;
     display: grid;
     background-color: var(--red-color);
+    width: 100%;
+   
+   
+    
     
 }
 
@@ -194,7 +198,11 @@ background-color: #2422227a;
     align-items: center;
     justify-content: center;
     height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+
 
 .header-sec-2-item a{
     
@@ -456,6 +464,10 @@ background-color: #2422227a;
     border-bottom: 3px solid red;
 }
 
+
+main{
+    padding-bottom: 2000px;
+}
 
 
 

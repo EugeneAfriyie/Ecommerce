@@ -721,7 +721,6 @@ footer{
     background-color: rgba(21, 15, 30, 0.96);
     color: white;
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     padding: 20px ;
@@ -732,28 +731,35 @@ footer{
 
 .faq-answer{
     font-size: 17px;
-    height: 0;
     overflow: hidden;
-    transition: all 1s ease-in-out;
+    height: 0;
+    transition: height 1s ease-in-out;
     font-family: monospace;
     line-height: 20px;
     text-align: left;
+    font-weight: 600;
+
     
 }
 
-.active-answer{
-    padding: 10px;
-    height: 100px;
-
-}
-.active-answer-close{
-    /* height: 0; */
-}
-
-.close-answer{
-    display: none ;
+.faq-answer {
+    font-size: 17px;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s ease-in-out; 
+    font-family: monospace;
+    line-height: 20px;
+    text-align: left;
 }
 
-.faq-question i:hover{
-    font-size: 1px;
+.faq-answer-content {
+    padding: 10px; 
+}
+
+.faq-question {
+    cursor: pointer;
+}
+
+.faq-answer.open {
+    height: auto; 
 }

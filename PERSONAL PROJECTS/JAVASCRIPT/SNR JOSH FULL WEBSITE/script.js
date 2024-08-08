@@ -1,3 +1,7 @@
+import {menuFunc,renderFAQ } from "./pageFun.js";
+
+menuFunc();
+renderFAQ();
 
 
 
@@ -7,69 +11,6 @@
 
 
 
-
-
-
- const faq = [
-    {
-        id:1,
-        questionText:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos natus ex',
-                answerText: ' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos natus ex, laudantium voluptas labore officiis minimaLorem, ipsum dolor sit amet consectetur adipisicing elit. Eos natus ex, laudantium voluptas labore officiis minimaLorem, ipsum dolor sit amet consectetur adipisicing elit. Eos natus ex, laudantium voluptas labore officiis minima'
-
-    },
-    {
-        id:2,
-        questionText:'Lorem, ipsum dolor sit amet consectetur adipisicing eli',
-        answerText: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos natus ex, laudantium voluptas labore officiis minima'
-
-    },
-    {
-        id:3,
-        questionText:'Lorem, ipsum dolor sit ',
-        answerText: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos natus ex, laudantium voluptas labore officiis minima'
-
-    }
- ]
-
-
-
-    let faqHTML = '';
-    faq.forEach(con =>{
-        const conId = con.id;
-
-
-
-
-
-        faqHTML +=   `
-        
-         <div class="faq-con faq-con-${con.id} ">
-                    <div class="question-con">
-                        <h4 class="faq-question faq-question-${con.id}">
-                           ${con.questionText}
-                            <i class=" open-icon-${con.id} fa-solid fa-plus"></i>
-                            <i id="close-answer-${con.id} " class=" fa-solid fa-minus"></i>
-                        </h4>
-    
-                    </div>
-    
-                    <div class="faq-answer js-answer-${con.id}">
-                        <p>
-                            ${con.answerText}
-                        </p>
-                    </div>
-                </div>
-        
-        `;
-
-
-
-        
-            
-    });
-
-    document.querySelector('.allfaq').innerHTML = faqHTML;
-    openBtn.classList.add('.close-answer');
 
 
 

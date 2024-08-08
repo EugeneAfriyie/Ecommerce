@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -55,8 +56,6 @@ header{
  .nav-con{
     display: flex;
     gap: 30px;
-    
-
 }
 
 
@@ -73,8 +72,8 @@ nav{
     flex-wrap: nowrap;
 }
 
-
-nav a{
+nav a
+{
     font-size: 1rem;
     font-weight: 600;
     text-wrap: nowrap;
@@ -84,14 +83,17 @@ nav a{
 
 /* INTRO MESSAGE-DIV CSS  */
 
+
+
 .intro-meg{
     padding: 100px;
     background-color: rgba(36, 34, 34, 0.829);
+    width: 100%;
 }
 
 .intro-text{
     width: 50%;
-    font-size: 3.5rem;  
+    font-size: 3.2rem;  
     color: white;
     font-weight: 900;
 }
@@ -114,17 +116,18 @@ nav a{
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 100px;
+    padding: 100px 100px;
+    margin: auto;
+    
 }
 
 .div1{
-    background-color: #fff;
-    /* border: 1px solid red; */
-    min-width: 230px;
-    min-height: 230px;
-    display: grid;
-    grid-template-rows: 1fr 40%;
+    min-height: auto;
+    width: 220px;
+    min-width: 220px;
     box-shadow: 5px 5px 10px 3px rgb(214, 212, 212) ;
+    display: grid;
+    grid-template-rows: 1fr auto;
   
 }
 .img-div img {
@@ -136,7 +139,7 @@ nav a{
 .other-meg-text{
     height: 100%;
     font-size: 1rem;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     line-height: 25px;
     
@@ -163,7 +166,7 @@ nav a{
     grid-template-columns: 10% 1fr 15%;
     height: auto;
     gap: 20px;
-    margin-top: 200px;
+    margin-top: 100px;
     font-family: calibri;
     margin-bottom: 100px;
 }
@@ -247,7 +250,7 @@ nav a{
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    width: 280px;
+    width: 250px;
     display: inline-block;
 
 }
@@ -282,6 +285,53 @@ nav a{
 
 
 
+
+
+.service-container-item{
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 10px;
+    color: black;
+    width: 95%;
+    margin: 20px auto;
+    display: none;
+
+}
+
+.circle-con{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(255, 0, 255, .2), rgba(0, 0, 255, .2), rgba(0, 255, 0, .2));    display: flex;
+    align-items: center;
+    justify-content: center ;
+    font-weight: 800;
+    margin: 20px auto;
+}
+
+.service-container-items{
+    border: 2px dashed black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    font-weight: 600;
+}
+
+.service-container-items li{
+    background-color: rgba(173, 216, 230, 0.699);
+    padding: 9px;
+    border-radius: 5px;
+    
+}
+
+
+
+
 /* CLIENTS SWCTION CSS  */
 
 #clients{
@@ -295,7 +345,7 @@ nav a{
 }
 
 .client-div{
-    width: 70%;
+    width: 60%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -303,12 +353,16 @@ nav a{
 }
 
 .client-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 8px 15px rgba(54, 52, 52, 0.603);
+    height: 35px;
 }
 
 .client-con img{
-    width: 120px;
-    height: 35px;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -375,7 +429,12 @@ nav a{
     text-wrap: wrap;
 }
 
+.project-header p{
+    width: 30%;
+}
+
 .project-header p:first-child{
+    width: 40%;
     font-size: 30px;
     font-weight: 700;
     line-height: 35px;
@@ -384,16 +443,22 @@ nav a{
 
 
 .project-container{
-    width: 80%;
+    width: 75%;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 50px;
+    align-items: center;
+    gap: 40px;
 }
 
 .project-con{
+    min-height: 230px;
     height: 230px;
     width: 200px;
+    margin: auto;
+    min-width: 200px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -428,11 +493,10 @@ nav a{
 
 
 
-
 /* TESTIMONIALS SWCTION CSS  */
 
 #testimonials{
-    margin-top: 100px;
+    margin: 100px 0 50px ;
 }
 
 
@@ -450,23 +514,24 @@ nav a{
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    font-size: 25px;
 }
 
 .testimonials-con{
+    min-width: 220px;
     width: 200px;
     /* height: 250px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 10px;
+    padding: 30px 10px;
     text-align: center;
     box-shadow: 0 3px 10px rgb(136, 134, 134);
 
 }
 
 .client-meg{
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
     margin: 20px 0;
 }
 
@@ -476,9 +541,11 @@ nav a{
 
 }
 
-.testimonials-con p:last-child{
-    font-size: 12px;
+.testimonials-con p{
+    font-size: 14px;
     font-weight: 500;
+    line-height: 20px;
+
 }
 
 .testimonials-con img{
@@ -499,6 +566,9 @@ footer{
     padding: 30px 20%;
     font-size: 15px;
     background-color: rgba(21, 15, 30, 0.96);
+    display: flex;
+    gap: 50px;
+    /* justify-content: space-between; */
 }
 
 .fot-sec-1{
@@ -506,9 +576,9 @@ footer{
     vertical-align: top;
 }
 
-.fot-sec-1:nth-of-type(2){
+/* .fot-sec-1:nth-of-type(2){
     margin: 0 50px;
-}
+} */
 
 .foot-sec-header{
     font-weight: 800;
@@ -535,4 +605,128 @@ footer{
     align-items: center;
     justify-content: center;
     margin-top: -10px;
+}
+
+#menu-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    right: -100;
+    background-color: white;
+    z-index: 200;
+    transition: all 1.5s ease-in-out;
+    display: none;
+    right: -100;
+    
+}
+
+
+
+.menu-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px 40px 0 10px ;
+}
+
+.menu-header img{
+    width: 120px;
+}
+
+.menu-header i{
+    font-size: 25px;
+}
+
+.border{
+    width: 95%;
+    margin: auto;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.menu-items{
+    display: grid;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 30px 0 0 30px;
+}
+
+.menu-items a{
+    padding: 8px ;
+    margin-right: 50px;
+    border-radius: 5px;
+}
+
+.menu-items a:hover{
+    background-color: gray;
+    
+}
+
+.active{
+ width: 100%;
+
+      
+}
+
+
+
+.faq{
+    font-size: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed black;
+    width: 500px;
+    margin: 50px auto;
+}
+
+.faq-header{
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(21, 15, 30, 0.96);
+    color: white;
+}
+
+.question-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    padding: 0 10px;
+    margin-top: 10px;
+
+}
+
+.faq-question{
+    font-size: 20px;
+    padding: 10px;
+   
+}
+
+.faq-answer{
+    font-size: 17px;
+    padding: 0;
+    border: 1px solid red;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    
+}
+
+.active-answer{
+    padding: 10px;
+    height: 100px;
+
+}
+.active-answer-close{
+    height: 0;
+}
+
+#close-answer{
+    display: none;
+}
+
+.faq-question i:hover{
+    font-size: 1px;
 }

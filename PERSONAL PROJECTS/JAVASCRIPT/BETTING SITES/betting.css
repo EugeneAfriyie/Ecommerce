@@ -5,9 +5,13 @@
     border: none;
 }
 
+li{
+    list-style: none;
+}
+
 body{
     background-color: gray;
-    width: 1400px;
+    width: 100%;
     padding-bottom: 20px;
 
 }
@@ -25,7 +29,7 @@ a{
 header{
     display: grid;
     background-color: var(--red-color);
-    width: 1400px;
+    width: 100%;
     
 
 }
@@ -170,6 +174,7 @@ background-color: #2422227a;
 .position-sticky{
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 .position-sticky-div{
@@ -319,21 +324,39 @@ background-color: #2422227a;
 
 /* main Sectiion 1 css  */
 
-
-
-.section-1{
-    width: 100%;
-    height: 250px;
-    background-color: rgba(0, 0, 0, 0.801);
+main{
     display: grid;
-    grid-template-columns: 14% 19% 1fr 20% 12%;
+    gap: 20px;
+    
+
+}
+
+.main-secton-1-main{
+    background-color: black;
+    margin-top: 50px;
+    height:auto;
+}
+
+.main-section-1{
+    width: 73%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 200px 500px 200px ;
 }
 
 .main-sec-1{
-    /* border: 1px solid wheat; */
+    background-color: rgba(46, 44, 44, 0.26);
+
 }
 .main-sec-2{
     /* border: 1px solid wheat; */
+    padding-top: 10px;
+
+   
+}
+.main-sec-3{
+    /* border: 1px solid wheat; */
+    background-color: rgba(46, 44, 44, 0.26);
     padding-right: 50px;
     padding-top: 10px;
 
@@ -363,6 +386,16 @@ background-color: #2422227a;
     
 }
 
+
+
+.main-sec-2 a{
+    width: 100%;
+    height: 20px;
+}
+.main-sec-2 img{
+    width: 100%;
+}
+
 .main-sec-3{
     /* border: 1px solid wheat; */
 }
@@ -377,9 +410,8 @@ background-color: #2422227a;
 /* Remaining div CSS  */
 
 .remaining-sec{
-    width: 70%;
+    width: 73%;
     margin: auto;
-    margin-left: 14%;
 }
 
 .advert img{
@@ -390,13 +422,14 @@ background-color: #2422227a;
 
 .section-2{
     display: grid;
-    grid-template-columns: 1fr 250px;
-    gap: 20px;
+    grid-template-columns: 1fr 220px;
+    gap: 10px;
 }
 
 .section-2-left-con{
     background-color: #fff;
     padding: 10px;
+    /* padding: 10px; */
 }
 .section-2-right-con{
     border: 1px solid red;
@@ -444,6 +477,7 @@ background-color: #2422227a;
 .event-type{
     display: grid;
     grid-template-columns: 1fr auto;
+    align-items: center;
 }
 .header-div{
     display: grid;
@@ -483,7 +517,134 @@ main{
 .page-shortcut{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    text-wrap: nowrap;
+    gap: 5px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.219);
+    border-top: 1px solid rgba(128, 128, 128, 0.219);
 }
+
+
+.overflow{
+    overflow: hidden;
+    border: 1px solid rgba(128, 128, 128, 0.527);
+    padding: 10px 0 10px 10px;
+    background-color: rgba(199, 197, 197, 0.151);
+
+    
+
+}
+
+.overflow p{
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: sans-serif;
+}
+
+.overflow p:last-child{
+    font-weight: 600;
+    color: rgba(61, 59, 59, 0.801);
+}
+
+
+/* <section class="main-page-upc-math"> Css  */
+
+
+.upcom-match-section{
+    display: grid;
+    grid-template-columns: 270px 180px 190px 1fr;
+    gap: 10px;
+}
+
+.upcom-match-section div{
+    border: 1px solid red;
+}
+
+
+.upcom-match-date{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.odds-button{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+}
+
+.odds-button li{
+    padding: 10px;
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.upcom-match-info li{
+    background-color: green;
+    color: white;
+    font-size: 15px;
+}
+
+.upcom-match-info li:nth-of-type(2){
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+
+
+.upcom-match-info li:first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.upcom-match-info li:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.upcom-match-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-info-con{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+
+}
+
+.team-info-con span{
+    display: block;
+}
+
+.time-id {
+    font-size: 13px;
+    margin-right: 20px;
+}
+
+.time-id span:last-child{
+    opacity: 0.6;
+}
+
+
+.total-odds-types i{
+    margin-left: 10px;
+    color: rgb(13, 151, 55);
+}
+
+.team-info-stat{
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
 
 

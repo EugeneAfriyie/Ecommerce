@@ -296,7 +296,7 @@ background-color: #2422227a;
     text-align: center;
     flex-wrap: wrap;
     width: 130px;
-    height: 300px;
+    height: 200px;
     overflow: auto;
     /* margin-top: 10px; */
     display: none;
@@ -469,6 +469,7 @@ main{
 }
 
 .hi-other-content p i{
+    margin-right: 10px;
 }
 
 
@@ -558,7 +559,7 @@ main{
 }
 
 .upcom-match-section div{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 
@@ -581,6 +582,12 @@ main{
     justify-content: center;
     align-items: center;
     border: none;
+}
+
+.upcom-match-info{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.219);
+    border-top: 1px solid rgba(128, 128, 128, 0.219);
+    padding: 5px;
 }
 
 .upcom-match-info li{

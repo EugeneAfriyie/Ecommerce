@@ -1005,8 +1005,8 @@ section{
         justify-content: center;
         right: 10%;
         transform: translateX(-50px);
-        width: 100%;
-        background-color: var(--color-grey-5);
+        width: 50%;
+        background-color:transparent;
     }
 
     .control{

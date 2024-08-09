@@ -477,3 +477,13 @@ main{
 
 
 
+
+/* <div class="page-shortcut"> CSS  */
+
+.page-shortcut{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    text-wrap: nowrap;
+}
+
+

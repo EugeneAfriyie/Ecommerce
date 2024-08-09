@@ -7,7 +7,21 @@
     font-optical-sizing: auto;
     font-style: normal;
     scroll-behavior: smooth;
+    transition: all .5s ease-in-out;
 }
+
+title{
+    font-size: 15px;
+}
+
+img{
+    filter: grayscale(0);
+}
+img:hover{
+    filter: grayscale(50%);
+}
+
+
 
 #menu-icon{
     font-size: 25px;
@@ -79,6 +93,11 @@ nav a
     text-wrap: nowrap;
 }
 
+nav a:hover{
+    background-color: blueviolet;
+    padding: 10px;
+}
+
 
 
 /* INTRO MESSAGE-DIV CSS  */
@@ -106,6 +125,10 @@ nav a
     font-size: 0.9rem;
     background-color: rgb(243, 209, 19);
     font-weight: 500;
+}
+
+.intro-meg button:hover{
+    opacity: 0.8;
 }
 
 

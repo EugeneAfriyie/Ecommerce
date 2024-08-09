@@ -17,7 +17,7 @@ const faq = [
     {
         id: 3,
         questionText: 'How can your IT consulting services benefit my business? ',
-        answerText: 'Our IT consulting services provide expert guidance on how to optimize your technology infrastructure. We help you identify the best software, hardware, and processes to enhance efficiency, reduce costs, and improve security, ensuring that your business stays ahead in a competitive market.'
+        answerText: 'We offer comprehensive website design and development services, including custom website creation, responsive design, content management systems (CMS) integration, and e-commerce solutions. Our team ensures that your website is visually appealing, user-friendly, and optimized for performance.'
     }
 ];
 

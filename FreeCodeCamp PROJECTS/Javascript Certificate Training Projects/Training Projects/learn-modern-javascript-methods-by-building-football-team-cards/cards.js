@@ -1,19 +1,3 @@
-card js player innerWidth
-      name: "Marcelo Trobbiani",
-      position: "midfielder",
-      number: 21,
-      isCaptain: false,
-      nickname: "Calesita",
-    },
-    {
-      name: "Héctor Zelada",
-      position: "goalkeeper",
-      number: 22,
-      isCaptain: false,
-      nickname: null,
-    },
-  ],
-};
 
 Object.freeze(myFavoriteFootballTeam);
 const { sport, team, year, players } = myFavoriteFootballTeam;

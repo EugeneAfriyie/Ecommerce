@@ -1,26 +1,4 @@
 
-     
-      name: "Néstor Clausen",
-      position: "defender",
-      number: 8,
-      isCaptain: false,
-      nickname: null,
-    },
-    {
-      name: "José Luis Cuciuffo",
-      position: "defender",
-      number: 9,
-      isCaptain: false,
-      nickname: "El Cuchu",
-    },
-    {
-      name: "Diego Maradona",
-      position: "midfielder",
-      number: 10,
-      isCaptain: true,
-      nickname: "El Pibe de Oro",
-    },
-    {
       name: "Jorge Valdano",
       position: "forward",
       number: 11,

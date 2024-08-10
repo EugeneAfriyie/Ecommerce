@@ -1,33 +1,4 @@
 
-     
-    {
-      name: "Ricardo Giusti",
-      position: "midfielder",
-      number: 14,
-      isCaptain: false,
-      nickname: null,
-    },
-    {
-      name: "Luis Islas",
-      position: "goalkeeper",
-      number: 15,
-      isCaptain: false,
-      nickname: "El loco",
-    },
-    {
-      name: "Julio Olarticoechea",
-      position: "defender",
-      number: 16,
-      isCaptain: false,
-      nickname: null,
-    },
-    {
-      name: "Pedro Pasculli",
-      position: "forward",
-      number: 17,
-      isCaptain: false,
-      nickname: null,
-    },
     {
       name: "Nery Pumpido",
       position: "goalkeeper",

@@ -1,24 +1,5 @@
 
-      name: "Jorge Valdano",
-      position: "forward",
-      number: 11,
-      isCaptain: false,
-      nickname: "The Philosopher of Football",
-    },
-    {
-      name: "Héctor Enrique",
-      position: "midfielder",
-      number: 12,
-      isCaptain: false,
-      nickname: null,
-    },
-    {
-      name: "Oscar Garré",
-      position: "defender",
-      number: 13,
-      isCaptain: false,
-      nickname: null,
-    },
+     
     {
       name: "Ricardo Giusti",
       position: "midfielder",

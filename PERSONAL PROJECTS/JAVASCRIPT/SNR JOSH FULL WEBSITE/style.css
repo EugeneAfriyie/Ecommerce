@@ -24,7 +24,7 @@ img:hover{
 
 
 #menu-icon{
-    font-size: 25px;
+    font-size: 20px;
     display: none;
 }
 
@@ -37,6 +37,10 @@ li{
 body{
     padding-top: 60px;
     /* background-color: gray; */
+    max-width: 1500px;
+    min-width: 200px;
+    margin: auto;
+    
 
 }
 
@@ -53,11 +57,15 @@ main{
 /* HEADER CSS  */
 
 header{
+    max-width: 1500px;
     background-color: black;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 20;
+    margin: auto;
+    left: auto;
+    right: auto;
 
 }
 
@@ -650,15 +658,15 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:20px 40px 0 10px ;
+    padding:20px 10px 0 10px ;
 }
 
 .menu-header img{
-    width: 120px;
+    width: 80px;
 }
 
 .menu-header i{
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .border{
@@ -670,14 +678,13 @@ footer{
 .menu-items{
     display: grid;
     gap: 10px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
-    margin: 30px 0 0 30px;
+    margin: 30px 20px;
 }
 
 .menu-items a{
     padding: 8px ;
-    margin-right: 50px;
     border-radius: 5px;
 }
 

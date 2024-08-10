@@ -325,9 +325,7 @@ background-color: #2422227a;
 /* main Sectiion 1 css  */
 
 main{
-    display: grid;
-    gap: 20px;
-    
+    display: grid;   
 
 }
 
@@ -427,8 +425,7 @@ main{
 }
 
 .section-2-left-con{
-    background-color: #fff;
-    padding: 10px;
+    /* padding: 10px; */
     /* padding: 10px; */
 }
 .section-2-right-con{
@@ -530,9 +527,6 @@ main{
     border: 1px solid rgba(128, 128, 128, 0.527);
     padding: 10px 0 10px 10px;
     background-color: rgba(199, 197, 197, 0.151);
-
-    
-
 }
 
 .overflow p{
@@ -550,9 +544,20 @@ main{
 
 
 /* <section class="main-page-upc-math"> Css  */
+.section-2-left-con{
+    padding: 10px;
 
+}
+
+.upComing-matches{
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
 
 .upcom-match-section{
+    background-color: #fff;
+
     display: grid;
     grid-template-columns: 270px 180px 190px 1fr;
     gap: 10px;
@@ -561,6 +566,7 @@ main{
 .upcom-match-section div{
     /* border: 1px solid red; */
 }
+
 
 
 .upcom-match-date{
@@ -611,6 +617,10 @@ main{
     border-bottom-right-radius: 5px;
 }
 
+.upcom-match-info li:hover{
+    opacity: 0.8;
+}
+
 .upcom-match-details{
     display: flex;
     justify-content: space-between;
@@ -646,6 +656,42 @@ main{
     margin-right: 10px;
 }
 
+
+
+.over-odds{
+    position: relative;
+}
+
+#odds-dropdown{
+    border: none;
+    color: white;
+    outline: none;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 9px;
+    border-right: 1px solid white;
+}
+#odds-dropdown:focus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+   
+}
+
+#odds-dropdown option{
+    background-color: #fff;
+    color: black;
+    font-size: 12px;
+    margin-right: 20px;
+}
+
+#odds-dropdown option:hover{
+    background-color: green;
+}
 
 
 

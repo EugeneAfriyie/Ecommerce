@@ -692,6 +692,7 @@ main{
 #odds-dropdown option:hover{
     background-color: green;
 }
+event-type
 
 
 
@@ -700,4 +701,23 @@ main{
 
 
 
+/* <div class="live-matches">  */
 
+
+.live-matches{
+    margin-top: 200px;
+    padding: 10px;
+    background-color: rgb(27, 30, 37);
+    color: white;
+
+}
+
+
+.live-matches .upcom-match-section{
+    background-color: rgb(27, 30, 37);
+
+}
+
+.hi-light-text p{
+    color: white;
+}

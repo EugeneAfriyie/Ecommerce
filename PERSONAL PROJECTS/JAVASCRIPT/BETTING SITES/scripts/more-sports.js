@@ -11,7 +11,7 @@ moreSport.forEach((button)=>{
    const arrowUp = document.querySelector(`.arrow-up-${id}`);
 const moreSportItems = document.querySelector(`.more-sport-items-${id}`);
 const arrowDown = document.querySelector(`.arrow-down-${id}`);
-    console.log(arrowDown)
+    console.log(button)
 button.addEventListener('click', () => {
     if (moreSportItems.style.display === 'none' || moreSportItems.style.display === "") {
         moreSportItems.style.display = 'grid';

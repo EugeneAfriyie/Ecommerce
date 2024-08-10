@@ -1,26 +1,4 @@
-
-    {
-      name: "Nery Pumpido",
-      position: "goalkeeper",
-      number: 18,
-      isCaptain: false,
-      nickname: null,
-    },
-    {
-      name: "Oscar Ruggeri",
-      position: "defender",
-      number: 19,
-      isCaptain: false,
-      nickname: "El Cabezón",
-    },
-    {
-      name: "Carlos Tapia",
-      position: "midfielder",
-      number: 20,
-      isCaptain: false,
-      nickname: null,
-    },
-    {
+card js player innerWidth
       name: "Marcelo Trobbiani",
       position: "midfielder",
       number: 21,

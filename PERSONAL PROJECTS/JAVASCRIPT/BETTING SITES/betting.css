@@ -692,8 +692,9 @@ main{
 #odds-dropdown option:hover{
     background-color: green;
 }
-event-type
-
+.event-type .more-sport-item{
+    color:black;
+}
 
 
 
@@ -705,7 +706,7 @@ event-type
 
 
 .live-matches{
-    margin-top: 200px;
+    margin-top: 20px;
     padding: 10px;
     background-color: rgb(27, 30, 37);
     color: white;
@@ -721,3 +722,155 @@ event-type
 .hi-light-text p{
     color: white;
 }
+
+
+.live-matches .more-sport-items {
+    background-color: black;
+}
+.live-matches .header-div
+ a:hover{
+    border-bottom: 5px solid green;
+ }
+
+ .live-header,.live-odd{
+    display: grid;
+    grid-template-columns: 270px 170px 190px 70px;
+    gap: 10px;
+    /* border: 1px solid green; */
+    height: auto;
+ }
+
+ .live-header {
+    padding: 5px;
+    /* border: 1px solid red; */
+ }
+
+
+ .live-header-ele-2,.live-header-ele-3{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    font-size: 12px;
+ }
+
+
+ .align-left{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+ }
+ .align-center, .live-odd li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .brown-back{
+    /* background-color: gray; */
+
+ }
+
+ .grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+ }
+
+ .grid-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+
+ }
+ .live-odd{
+    font-size: 14px;
+    padding: 10px 0;
+ }
+
+ .live-header{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.308);
+
+ }
+
+ .live-odd{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.308);
+
+ }
+
+ .live-content{
+    margin-bottom: 20px;
+ }
+
+ .live-odd li{
+    background-color: green;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ #num-goals{
+    background-color: green;
+    color: white;
+    display: flex;
+    align-self: stretch;
+    border-right: 1px solid #000;
+
+ }
+
+ #num-goals:focus{
+    outline: none;
+ }
+
+#num-goals option{
+    background-color: black;
+    width: inherit;
+    text-align: center;
+} 
+
+
+.live-odds-odd li:nth-of-type(2){
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    
+}
+
+.live-odd-ele-1{
+    display: grid;
+    grid-template-columns: 70px 1fr;
+}
+
+.team-name-score-div,.time-half{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 3px;
+}
+
+.team-Name{
+    color:rgba(21, 197, 21, 0.877);
+    font-weight: 700;
+}
+
+.team-name-score{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.live-odd-ele-1 div{
+    /* border: 1px solid red; */
+}
+
+.view-more{
+    width: 100%;
+    height: 40px;
+    background-color: rgba(231, 228, 228, 0.377);
+    color: white;
+    font-weight: 600;
+
+    
+}
+
+

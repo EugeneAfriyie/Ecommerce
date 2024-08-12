@@ -27,3 +27,11 @@ button.addEventListener('click', () => {
 })
 
 }
+
+console.log(Date.now());
+console.log(Date.now());
+console.log(Date.now());
+console.log(Date.now());
+console.log(Date.now());
+console.log(Date.now());
+console.log(Date.now());

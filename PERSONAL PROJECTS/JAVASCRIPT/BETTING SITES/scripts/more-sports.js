@@ -26,12 +26,14 @@ button.addEventListener('click', () => {
 });
 })
 
+
+const inputField = document.getElementById('stake-$-input');
+
+// Event listener for input changes
+inputField.addEventListener('input', () => {
+    // Remove non-numeric characters from the input value
+    inputField.value = inputField.value.replace(/[^0-9]/g, '');
+});
 }
 
-console.log(Date.now());
-console.log(Date.now());
-console.log(Date.now());
-console.log(Date.now());
-console.log(Date.now());
-console.log(Date.now());
 console.log(Date.now());

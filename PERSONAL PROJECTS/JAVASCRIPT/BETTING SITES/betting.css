@@ -50,9 +50,10 @@ header{
     justify-content: space-between;
 }
 
-.sec-1-con-1{
+.FE{
     display: flex;
     align-items:end;
+    justify-content: end;
 }
 .site-name{
     font-size: 2rem;
@@ -1039,3 +1040,22 @@ select:hover,select option{
 .selected-market,.value-2-odd{
     font-size: 15px;
 }
+
+
+.odd-calcu-con-H{
+    width: 100%;
+    background-color: #fff;
+    display: grid;
+    font-size: 13px;
+    grid-template-columns: 1fr 1fr 70px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.stake-2 input{
+    width: 100%;
+    border: 1px solid black;
+
+    text-align: right;
+}
+

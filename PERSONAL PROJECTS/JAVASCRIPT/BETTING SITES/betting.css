@@ -41,7 +41,7 @@ header{
     
 
 }
-
+main
 .header-sec-1{
     width: 1000px;
     margin: auto;
@@ -67,12 +67,16 @@ header{
     font-family: "Bungee Shade", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: rgba(255, 0, 0, 0.164);
 
     
   
 }
 
+
+.header-sec-1{
+    width: 1000px;
+    margin: auto;
+}
 .site-name span{
     font-size: 2.5rem;
     color: var(--white-color);
@@ -317,6 +321,7 @@ background-color: var(--red-color);
     overflow: auto;
     /* margin-top: 10px; */
     display: none;
+    border: 1px solid rgba(128, 128, 128, 0.418);
 }
 
 .more-sport-items a{
@@ -442,7 +447,7 @@ main{
 
 
 .section-2-right-con{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .highlights{
@@ -720,9 +725,7 @@ width: 1000px;
     /* padding: 10px; */
     /* padding: 10px; */
 }
-.section-2-right-con{
-    border: 1px solid red;
-}
+
 
 .highlights{
     display: flex;
@@ -790,9 +793,7 @@ width: 1000px;
 }
 
 
-main{
-    padding-bottom: 2000px;
-}
+
 
 
 
@@ -1393,3 +1394,23 @@ select:hover,select option{
     color: rgb(10, 119, 10);
     margin-top: 5px;
 }
+
+
+
+
+
+/* 
+<footer>
+<sectiion class="footer-element"> */
+
+footer{
+    background-color: darkslategrey;
+    margin-top: 10px;
+}
+
+.footer-element{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+}
+
+

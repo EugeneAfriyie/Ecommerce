@@ -18,6 +18,11 @@ body{
     padding-bottom: 20px;
 
 }
+
+/* #page{
+    width: 1000px;
+    margin: auto;
+} */
 :root{
     --red-color:#e41827;
     --green-color: rgb(13, 151, 55);
@@ -38,10 +43,12 @@ header{
 }
 
 .header-sec-1{
-    width: 70%;
+    width: 1065px;
     margin: auto;
     display: grid;
     border: 1px solid var(--red-color);
+    background-color: var(--red-color);
+
 }
 
 .sec-1-top-div{
@@ -93,6 +100,7 @@ header{
     justify-content: end;
     gap: 10px;
     color:  rgba(255, 255, 255, 0.6);
+    font-size: 14px;
 
 }
 
@@ -140,7 +148,7 @@ background-color: #2422227a;
     width: 150px;
     color: var(--white-color);
     background-color: transparent;
-    font-size: 15px;
+    font-size: 13px;
     
 }
 
@@ -179,10 +187,12 @@ background-color: #2422227a;
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 1065px;
+    margin: auto;
+
 }
 
 .position-sticky-div{
-    width: 100%;
     display: grid;
     background-color: var(--red-color);
     width: 100%;
@@ -193,8 +203,8 @@ background-color: #2422227a;
 }
 
 .header-sec-2{
-    width: 70%;
-    margin: auto;
+    width: 100%;
+
     display: grid;
     align-items: center;
     gap: 10px;
@@ -213,11 +223,11 @@ background-color: #2422227a;
 }
 
 
-.header-sec-2-item a{
+.sticky-a{
     
     color: var(--white-color);
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -229,6 +239,11 @@ background-color: #2422227a;
 }
 
 .header-sec-2-item a:hover{
+    background-color: rgba(33, 37, 41, 0.349);
+    color: var(--white-color);
+}
+
+.bc-white{
     background-color: aliceblue;
     color: black;
 }
@@ -247,12 +262,12 @@ background-color: #2422227a;
 }
 .header-sec-3-div{
     background-color: var(--white-color);
-    width: 70%;
+    width: 80%;
     height: 40px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(10,auto);
-    font-size: 1rem;
+    font-size: 15px;
     padding-right: 100px;
 }
 .more-sport-div{
@@ -335,15 +350,309 @@ main{
 
 .main-secton-1-main{
     background-color: black;
-    margin-top: 50px;
+    height:auto;
+}
+
+/* .main-section-1{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 500px 1fr ;
+}
+
+.main-sec-1{
+    background-color: rgba(46, 44, 44, 0.26);
+
+} */
+.main-sec-2{
+    /* border: 1px solid wheat; */
+    padding-top: 10px;
+
+   
+}
+.main-sec-3{
+    /* border: 1px solid wheat; */
+    background-color: rgba(46, 44, 44, 0.26);
+    padding-right: 50px;
+    padding-top: 10px;
+
+   
+}
+
+
+.popular{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    color: var(--white-color);
+}
+
+.popular:not(:last-child){
+    border-bottom: 1px solid wheat;
+}
+
+.popular i{
+    font-size: 15px ;
+    color: var(--green-color);
+}
+
+.popular:first-child{
+    font-size: 25px;
+    
+}
+
+
+
+.main-sec-2 a{
+    width: 100%;
+    height: 20px;
+}
+.main-sec-2 img{
+    width: 100%;
+}
+
+.main-sec-3{
+    /* border: 1px solid wheat; */
+}
+.main-sec-4{
+    /* border: 1px solid wheat; */
+}
+.main-sec-5{
+    /* border: 1px solid wheat; */
+}
+
+
+/* Remaining div CSS  */
+
+.remaining-sec{
+    /* width: 73%;
+    margin: auto; */
+}
+
+.advert img{
+    width: 100%;
+    height: auto;
+    border: 1px solid;
+}
+
+.section-2{
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 10px;
+}
+
+
+.section-2-right-con{
+    border: 1px solid red;
+}
+
+.highlights{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hi-light-text{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hi-dot{
+    
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--green-color);
+}
+
+.hi-light-text p{
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.671);
+}
+
+.hi-other-content{
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    gap: 20px;
+    margin-right: 10px;
+}
+
+.hi-other-content p i{
+    margin-right: 10px;
+}
+
+
+
+
+.event-type{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.219);
+}
+.header-div{
+    display: grid;
+    height: 50px;
+    grid-template-columns:repeat(6,auto);
+    align-items: center;
+   
+
+    display: grid;
+    align-items: center;
+    gap: 10px;
+    grid-template-columns: 1fr auto;
+}
+
+.header-sec-2-item{
+    display: grid;
+    grid-template-columns:repeat(9,1fr);
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.sticky-a{
+    
+    color: var(--white-color);
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    transition: all .4s ease;
+
+
+}
+
+.header-sec-2-item a:hover{
+    background-color: rgba(33, 37, 41, 0.349);
+    color: var(--white-color);
+}
+
+.bc-white{
+    background-color: aliceblue;
+    color: black;
+}
+
+.header-sec-2-timezone{
+    color: var(--white-color);
+    font-size: 1.1rem;
+}
+
+/* header-sec-3 css */
+
+.header-sec-3{
+    background-color: var(--white-color);
+  
+   
+}
+.header-sec-3-div{
+    background-color: var(--white-color);
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(10,auto);
+    font-size: 15px;
+    padding-right: 100px;
+}
+.more-sport-div{
+    height: 100%;
+}
+
+
+.header-sec-3-div a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+
+}
+.header-sec-3-div a:hover{
+   border-bottom: 5px solid red;
+}
+
+.more-sport{
+    position: relative;
+    /* height: 100%; */
+}
+
+.more-sport i{
+    font-size: 15px;
+    margin-left: 5px;
+    color: var(--green-color);
+} 
+
+
+.arrow{
+    color: #e41827 !important;
+    display: none !important;
+}
+
+
+
+.more-sport-items{
+    position: absolute;
+    background-color: var(--white-color);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 130px;
+    height: 200px;
+    overflow: auto;
+    /* margin-top: 10px; */
+    display: none;
+}
+
+.more-sport-items a{
+    padding: 10px;
+
+}
+
+.more-sport-items a:hover{
+    padding: 5px;
+    border:3px solid var(--green-color);
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* main Sectiion 1 css  */
+
+main{
+    display: grid;   
+
+}
+
+.main-secton-1-main{
+    background-color: black;
     height:auto;
 }
 
 .main-section-1{
-    width: 73%;
+    width: 1060px;
     margin: auto;
     display: grid;
-    grid-template-columns: 200px 500px 200px ;
+    grid-template-columns: 250px 500px 1fr ;
 }
 
 .main-sec-1{
@@ -412,7 +721,7 @@ main{
 /* Remaining div CSS  */
 
 .remaining-sec{
-    width: 73%;
+    width: 1060px;
     margin: auto;
 }
 
@@ -549,10 +858,7 @@ main{
 
 
 /* <section class="main-page-upc-math"> Css  */
-.section-2-left-con{
-    padding: 10px;
 
-}
 
 .upComing-matches{
     margin-bottom: 20px;
@@ -1046,9 +1352,6 @@ select:hover,select option{
     background-color: #fff;
     font-size: 13px;
     padding: 10px;
-
-
-
 }
 
 .odd-calcu-con-H{
@@ -1074,7 +1377,7 @@ select:hover,select option{
 .T-stake-P-win{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 14px;
+    margin: 15px 0;
     gap: 2px;
 }
 
@@ -1084,4 +1387,21 @@ select:hover,select option{
 
 .FW{
     font-weight: 600;
+}
+
+
+
+.place-bet {
+    background-color: green;
+}
+.place-bet button{
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.book-print{
+    color: rgb(10, 119, 10);
+    margin-top: 5px;
 }

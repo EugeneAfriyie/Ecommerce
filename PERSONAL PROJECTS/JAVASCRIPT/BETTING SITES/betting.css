@@ -149,7 +149,6 @@ background-color: #2422227a;
     width: 150px;
     color: var(--white-color);
     background-color: transparent;
-    font-size: 13px;
     
 }
 
@@ -210,16 +209,7 @@ background-color: var(--red-color);
     grid-template-columns: 1fr auto;
 }
 
-.header-sec-2-item{
-    display: grid;
-    grid-template-columns:repeat(9,1fr);
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+
 
 
 .sticky-a{
@@ -498,6 +488,7 @@ main{
     height: 50px;
     grid-template-columns:repeat(6,auto);
     align-items: center;
+    margin-left: 20px;
    
 
     display: grid;
@@ -1413,6 +1404,8 @@ select:hover,select option{
 footer{
     background-color: darkslategrey;
     margin-top: 10px;
+   color: white;
+
 }
 
 .footer-element{
@@ -1420,8 +1413,18 @@ footer{
     grid-template-columns: repeat(5,auto);
     width: 1000px;
     margin: auto;
+    padding-top: 20px;
+    font-size: 13px;
+
+}
+.footer-element div{
+    border: 1px solid red;
 }
 
+
+footer .site-name{
+    color: #000;
+}
 .fot-div-1{
     display: grid;
     gap: 10px;
@@ -1439,7 +1442,6 @@ footer{
     font-size: 20px;
    display: flex;
    align-items: center;
-   color: white;
 }
 
 .partner-text::after{
@@ -1469,5 +1471,57 @@ footer{
 
 }
 
+
+.fot-div-2{
+    font-size: 16px;
+    text-align: center;
+  
+   
+}
+
+.paybill-ussd{
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.country-symbol{
+    height: 30px;
+}
+
+.country-symbol img{
+    width: 40px;
+    height: 100%;
+}
+
+.fot-H{
+    font-weight: 600;
+    text-align: left;
+}
+
+.fot-items{
+    margin-top: 10px;
+    display: grid;
+    gap: 2px;
+}
+
+.fot-items i{
+    margin-right: 5px;
+}
+
+
+.telephone{
+    display: flex;
+}
+
+.tel-1::after{
+    content: "";
+    border: 1px solid rgb(196, 191, 191);
+    margin: 0 3px;
+}
+
+.social-handle{
+    font-size: 18px;
+    margin-top: 10px;
+}
 
 

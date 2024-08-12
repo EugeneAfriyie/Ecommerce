@@ -1042,20 +1042,46 @@ select:hover,select option{
 }
 
 
+.odd-calcu-con{
+    background-color: #fff;
+    font-size: 13px;
+    padding: 10px;
+
+
+
+}
+
 .odd-calcu-con-H{
     width: 100%;
-    background-color: #fff;
     display: grid;
-    font-size: 13px;
     grid-template-columns: 1fr 1fr 70px;
     gap: 10px;
-    padding: 10px;
 }
 
 .stake-2 input{
     width: 100%;
-    border: 1px solid black;
-
+    border: 1px solid rgba(128, 128, 128, 0.425);
     text-align: right;
+    font-size: 11px;
+    padding: 2px;
 }
 
+.stake-2 input:focus{
+    outline: none;
+}
+
+
+.T-stake-P-win{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 14px;
+    gap: 2px;
+}
+
+.FS{
+    font-size: 15px;
+}
+
+.FW{
+    font-weight: 600;
+}

@@ -3,8 +3,7 @@ import { getProducts,products} from "../../data/products.js";
 import { getDeliveryOption } from "../../data/deliveryOptions.js";
 
 import formatCurrency from "../Utils/money.js";
-import { renderOrderSummary } from "./ordersummary.js";
-
+import {renderOrderSummary } from "./orderSummary.js"
 
 
 

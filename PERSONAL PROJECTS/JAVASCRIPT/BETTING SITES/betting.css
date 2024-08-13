@@ -246,12 +246,14 @@ background-color: var(--red-color);
 
 .header-sec-3{
     background-color: var(--white-color);
-  
-   
+
 }
+
+
 .header-sec-3-div{
+    
     background-color: var(--white-color);
-    width: 80%;
+    width: 1000px;
     height: 40px;
     margin: auto;
     display: grid;
@@ -262,6 +264,8 @@ background-color: var(--red-color);
 .more-sport-div{
     height: 100%;
 }
+
+
 
 
 .header-sec-3-div a{
@@ -343,6 +347,13 @@ main{
     height:auto;
 }
 
+.main-section-1{
+        width: 1000px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 250px 500px 1fr ;
+    }
+
 /* .main-section-1{
     width: 100%;
     margin: auto;
@@ -354,6 +365,11 @@ main{
     background-color: rgba(46, 44, 44, 0.26);
 
 } */
+
+.main-sec-1{
+    background-color: rgba(46, 44, 44, 0.26);
+
+}
 .main-sec-2{
     /* border: 1px solid wheat; */
     padding-top: 10px;
@@ -519,145 +535,8 @@ width: 1000px;
 
 
 
-
-/* header-sec-3 css */
-
-.header-sec-3{
-    background-color: var(--white-color);
-  
-   
-}
-.header-sec-3-div{
-    
-    background-color: var(--white-color);
-    width: 1000px;
-    height: 40px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(10,auto);
-    font-size: 15px;
-}
-.more-sport-div{
-    height: 100%;
-}
-
-
-.header-sec-3-div a{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
-
-}
-.header-sec-3-div a:hover{
-   border-bottom: 5px solid red;
-}
-
-.more-sport{
-    position: relative;
-    /* height: 100%; */
-}
-
-.more-sport i{
-    font-size: 15px;
-    margin-left: 5px;
-    color: var(--green-color);
-} 
-
-
-.arrow{
-    color: #e41827 !important;
-    display: none !important;
-}
-
-
-
-.more-sport-items{
-    position: absolute;
-    background-color: var(--white-color);
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
-    width: 130px;
-    height: 200px;
-    overflow: auto;
-    /* margin-top: 10px; */
-    display: none;
-}
-
-.more-sport-items a{
-    padding: 10px;
-
-}
-
-.more-sport-items a:hover{
-    padding: 5px;
-    border:3px solid var(--green-color);
-    
-}
-
-
-
-
-
-
-
-
-
-
 /* main Sectiion 1 css  */
 
-main{
-    display: grid;   
-
-}
-
-.main-secton-1-main{
-    background-color: black;
-    height:auto;
-}
-
-.main-section-1{
-width: 1000px;
- margin: auto;
-    display: grid;
-    grid-template-columns: 250px 500px 1fr ;
-}
-
-.main-sec-1{
-    background-color: rgba(46, 44, 44, 0.26);
-
-}
-.main-sec-2{
-    /* border: 1px solid wheat; */
-    padding-top: 10px;
-
-   
-}
-.main-sec-3{
-    /* border: 1px solid wheat; */
-    background-color: rgba(46, 44, 44, 0.26);
-    padding-right: 50px;
-    padding-top: 10px;
-
-   
-}
-
-
-.popular{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 30px;
-    color: var(--white-color);
-}
-
-.popular:not(:last-child){
-    border-bottom: 1px solid wheat;
-}
 
 .popular i{
     font-size: 15px ;

@@ -10,16 +10,7 @@ const titleInput = document.getElementById("title-input");
 const dateInput = document.getElementById("date-input");
 const descriptionInput = document.getElementById("description-input");
 
-const taskData = [];
-let currentTask = {};
-confirmCloseDialog.showModal();
 
-openTaskFormBtn.addEventListener("click", () =>
-  taskForm.classList.toggle("hidden")
-);
-
-closeTaskFormBtn.addEventListener("click", () => {
-});
 
 cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
 

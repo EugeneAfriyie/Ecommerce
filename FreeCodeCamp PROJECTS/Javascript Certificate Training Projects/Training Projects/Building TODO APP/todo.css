@@ -103,22 +103,6 @@ h1 {
   justify-content: space-around;
 }
 
-.task-form-footer {
-  display: flex;
-  justify-content: center;
-}
-
-.task-form-label,
-#title-input,
-#date-input,
-#description-input {
-  display: block;
-}
-
-.task-form-label {
-  margin-bottom: 5px;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
+.
 
 

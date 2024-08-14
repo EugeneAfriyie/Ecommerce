@@ -711,6 +711,7 @@ width: 1000px;
     margin-bottom: 20px;
     background-color: #fff;
     padding: 10px;
+    border:1px solid rgba(214, 211, 211, 0.425);
 }
 
 .upcom-match-section{
@@ -1296,9 +1297,9 @@ footer{
     font-size: 13px;
 
 }
-.footer-element div{
+/* .footer-element div{
     border: 1px solid red;
-}
+} */
 
 
 footer .site-name{

@@ -3,6 +3,7 @@ import {formatCurrency} from '../../scripts/Utils/money.js';
 
 
 
+
 describe('Test suite: formatCurrency',()=>{
     it('Convert cent to dollars',()=>{
         expect(formatCurrency(2095)).toEqual('20.95')

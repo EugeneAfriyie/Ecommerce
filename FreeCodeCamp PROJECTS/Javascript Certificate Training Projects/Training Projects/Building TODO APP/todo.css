@@ -121,23 +121,4 @@ h1 {
   font-weight: bold;
 }
 
-#title-input,
-#date-input,
-#description-input {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 2px;
-}
-
-#confirm-close-dialog {
-  padding: 10px;
-  margin: 10px auto;
-  border-radius: 15px;
-}
-
-.confirm-close-dialog-btn-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
 

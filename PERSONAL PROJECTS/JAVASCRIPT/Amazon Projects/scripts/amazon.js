@@ -1,6 +1,6 @@
 import {cart,addtoCart} from '../data/cart.js';
 import {products} from '../data/products.js'
-import formatCurrency from './Utils/money.js'
+import {formatCurrency} from './Utils/money.js'
     
     
     
@@ -83,8 +83,9 @@ products.forEach ((product) =>{
 document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
     button.addEventListener('click', () =>{
       console.log(button);
+    const productId = button.dataset.productId;
       
-      addtoCart(button);
+      addtoCart(productId);
 
       updatecartQuantity();
 

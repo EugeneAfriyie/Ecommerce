@@ -10366,7 +10366,7 @@ getJasmineRequireObj().SuiteBuilder = function(j$) {
 
       if (suite.parentSuite && !suite.children.length && !threw) {
         throw new Error(
-                    `describe with no children (describe() or it()): ${suite.getFullName()}`
+          `describe with no children (describe() or it()): ${suite.getFullName()}`
         );
       }
 

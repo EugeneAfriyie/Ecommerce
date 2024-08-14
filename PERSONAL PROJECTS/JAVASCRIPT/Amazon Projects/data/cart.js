@@ -18,17 +18,16 @@ if (!cart){
 ];
 };
 
-export function addtoCart (button) {
-    const productId = button.dataset.productId;
+export function addtoCart (productId) {
+    console.log (productId)
+    
       let matchingItem;
       cart.forEach((cartItem) =>{
         if (productId === cartItem.productId){
           matchingItem = cartItem;
         }
       });
-      const quantitySelector = document.querySelector(
-        `.js-quantity-selector-${productId}`
-      );
+      const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
       const quantity = Number(quantitySelector.value)
 
       if (matchingItem){

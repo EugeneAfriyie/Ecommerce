@@ -36,7 +36,7 @@ const cart ={
           matchingItem.quantity += 1;
           // matchingItem.quantity += quantity
         }else{
-          cart.push({
+          this.cartItems.push({
             productId:productId,
             quantity: 1,
             deliveryOptionId:'1'
@@ -56,7 +56,7 @@ const cart ={
   
      
    
-        saveToStorage();
+        cart.saveToStorage();
     },
     
     removeFromCart(productId){
@@ -118,8 +118,10 @@ const cart ={
 }
 
 cart.loadFromStorage();
+cart.addtoCart("5968897c-4d27-4872-89f6-5bcb052746d7");
+cart.addtoCart("5968897c-4d27-4872-89f6-5bcb052746d7");
 
-
+console.log(cart)
 
 
   

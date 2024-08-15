@@ -129,27 +129,7 @@ cart.loadFromStorage();
 console.log(cart)
 
 
-
-
-
-
 businessCart.loadFromStorage();
 console.log(businessCart)
 
-
-
-  
-
-
-  
-
-  
-
- 
-
-
-
-
-
- 
 

@@ -1,13 +1,15 @@
 
 
 class Cart{
-    localStorageKey;
+    #localStorageKey;
     cartItems;
 
+
+    // # + Any property prevent that property from been used outside its object
     
     constructor(localStorageKey){
-        this.localStorageKey = localStorageKey;
-        this.loadFromStorage();
+        this.#localStorageKey = localStorageKey;
+        this.#loadFromStorage();
 
         console.log(this)
         console.log(this instanceof Cart)
@@ -15,8 +17,8 @@ class Cart{
       
     }
      
-    loadFromStorage(){
-        this.cartItems = JSON.parse(localStorage.getItem(this.localStorageKey)); 
+    #loadFromStorage(){
+        this.cartItems = JSON.parse(localStorage.getItem(this.#localStorageKey)); 
       if (!this.cartItems){
         this.cartItems =[
           {
@@ -34,6 +36,9 @@ class Cart{
       };
       
       };
+
+
+
     addtoCart (productId) {
     
         
@@ -87,7 +92,7 @@ class Cart{
       };
 
       saveToStorage () {
-        localStorage.setItem(this.localStorageKey,JSON.stringify(this.cartItems));
+        localStorage.setItem(this.#localStorageKey,JSON.stringify(this.cartItems));
       };
       updatecartQuantity(){
         let cartQuantity = 0;
@@ -135,7 +140,6 @@ class Cart{
 
 const cart = new Cart('cart-opp');
 const businessCart = new Cart('cart-business');
-
 
 
 

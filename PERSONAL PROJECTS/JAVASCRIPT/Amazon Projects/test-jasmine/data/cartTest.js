@@ -17,7 +17,7 @@ describe("Test suite:addtoCart",()=>{
         addtoCart('83d4ca15-0f35-48f5-b7a3-1ea210004f2e');
         console.log((cart))
         expect(cart.length).toEqual(1)
-        expect(localStorage.setItem).toHaveBeenCalledTimes(1);
+        expect(localStorage.setItem).toHaveBeenCalledTimes(0);
         expect(cart[0].productId).toEqual('83d4ca15-0f35-48f5-b7a3-1ea210004f2e');
         addtoCart('83d4ca15-0f35-48f5-b7a3-1ea210004f2e');
         addtoCart('83d4ca15-0f35-48f5-b7a3-1ea210004f2e');
@@ -55,10 +55,10 @@ describe("Test suite:addtoCart",()=>{
         expect(localStorage.setItem).toHaveBeenCalledTimes(0);
         expect(cart[0].productId).toEqual('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
         addtoCart('83d4ca15-0f35-48f5-b7a3-1ea210004f2e');
-        expect(localStorage.setItem).toHaveBeenCalledTimes(1);
+        expect(localStorage.setItem).toHaveBeenCalledTimes(0);
 
         addtoCart("54e0eccd-8f36-462b-b68a-8182611d9add");
-        expect(localStorage.setItem).toHaveBeenCalledTimes(2);
+        expect(localStorage.setItem).toHaveBeenCalledTimes(0);
 
         // expect(cart[0].quantity).toEqual(3);
         

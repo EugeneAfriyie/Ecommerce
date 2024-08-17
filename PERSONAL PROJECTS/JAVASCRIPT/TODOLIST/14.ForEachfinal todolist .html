@@ -188,84 +188,99 @@
     </main>
 
     <script>
-
-        document.querySelector('.js-add-button').addEventListener('click',()=>{
+        let todoList = JSON.parse(localStorage.getItem('todo')) || [];
+        let editIndex = -1; // To track the index of the item being edited
+    
+        document.querySelector('.js-add-button').addEventListener('click', () => {
             addTodo();
         });
-
-        document.body.addEventListener('keydown',()=>{
-            if(event.key === 'Enter'){
+    
+        document.body.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
                 addTodo();
             }
         });
-        
-        function renderTodoList()  {
-    let todoListHtml = '';
-        
-        todoList.forEach( (value,index) =>{
-        const todoObject = todoList[index];
-        value = todoObject.todo
-        const dueDate = todoObject.date
-        const html = `
-        <ol class=" todo-grid ">
-            <li class='list-style'></li>
-            <li class='todo-activity todo' >
-                    ${value} 
-            </li>
-            <p>
-                ${dueDate}
-            </p> 
-            <button class='remove-list js-delect-buttom' onclick="todoList.splice(${index}, 1);
-            renderTodoList();">Delect From List</button> 
-            </ol>
-            <div class='line'></div>`;
-        todoListHtml += html;
-    });
-
-        console.log(todoListHtml)
-        document.querySelector('.todo-display').innerHTML = todoListHtml;
-
-    document.querySelector('.js-delect-buttom').forEach((delectButton, index) =>{
-        delectButton.addEventListener('click',()=>{
-            todoList.splice(0,todoList.length);
-            renderTodoList();})
-    });
-
-    document.body.addEventListener('keydown',()=>{
-        if(event.key === 'Backspace'){
-        todoList.splice(0,todoList.length);
-        }
-    });
-    };
     
-
-        let todoList = [
-        ];
-        function addTodo(){
+        function renderTodoList() {
+            let todoListHtml = '';
+    
+            todoList.forEach((todoObject, index) => {
+                const { todo, date } = todoObject;
+    
+                const html = `
+                    <ol class="todo-grid">
+                        <li class='list-style'></li>
+                        <li class='todo-activity todo'>${todo}</li>
+                        <p>${date}</p>
+                        <button class='edit' data-index="${index}">Edit</button>
+                    </ol>
+                    <div class='line'></div>`;
+    
+                todoListHtml += html;
+            });
+    
+            document.querySelector('.todo-display').innerHTML = todoListHtml;
+    
+            document.querySelectorAll('.js-delete-button').forEach((deleteButton) => {
+                deleteButton.addEventListener('click', (event) => {
+                    const index = event.target.getAttribute('data-index');
+                    todoList.splice(index, 1);
+                    renderTodoList();
+                });
+            });
+    
+            document.querySelectorAll('.edit').forEach((editButton) => {
+                editButton.addEventListener('click', (event) => {
+                    const index = event.target.getAttribute('data-index');
+                    const todoItem = todoList[index];
+                    document.querySelector('.input-todolist').value = todoItem.todo;
+                    document.querySelector('.date-input').value = todoItem.date;
+                    editIndex = index; // Set the current item index to edit
+                });
+            });
+    
+            localStorage.setItem('todo', JSON.stringify(todoList));
+        }
+    
+        document.body.addEventListener('keydown', (event) => {
+            if (event.key === 'Backspace') {
+                todoList.splice(0, todoList.length);
+                renderTodoList();
+            }
+        });
+    
+        function addTodo() {
             const inputValue = document.querySelector('.input-todolist');
             const inputDate = document.querySelector('.date-input');
-            const todoActivity = inputValue.value ;
-            const dueDate = inputDate.value ;
-
-            if ( dueDate  !== '' & todoActivity !== '' ){
-                todoList.push({
-                    todo: todoActivity,
-                    date: dueDate
-                });
+            const todoActivity = inputValue.value.trim();
+            const dueDate = inputDate.value.trim();
+    
+            if (todoActivity !== '' && dueDate !== '') {
+                if (editIndex >= 0) {
+                    // Update the existing item
+                    todoList[editIndex] = {
+                        todo: todoActivity,
+                        date: dueDate
+                    };
+                    editIndex = -1; // Reset the edit index
+                } else {
+                    // Add a new item
+                    todoList.push({
+                        todo: todoActivity,
+                        date: dueDate
+                    });
+                }
                 inputValue.value = '';
                 inputDate.value = '';
-        
-            }else{
-            alert('Input a Valid Todo activity')
-            };
-            renderTodoList();
-            };
-
+                renderTodoList();
+            } else {
+                alert('Please enter a valid task and due date.');
+            }
+        }
+    
         renderTodoList();
-
-            
-           
-  
-</script>
+    </script>
+    
+    
 </body>
 </html>

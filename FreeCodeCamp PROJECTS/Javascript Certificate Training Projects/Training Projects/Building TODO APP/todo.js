@@ -15,6 +15,8 @@ let currentTask = {};
 
 const addOrUpdateTask = () => {
   const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
+  console.log(currentTask)
+  console.log(currentTask.id)
   const taskObj = {
     id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
     title: titleInput.value,
@@ -22,12 +24,12 @@ const addOrUpdateTask = () => {
     description: descriptionInput.value,
   };
 
+
   if (dataArrIndex === -1) {
     taskData.unshift(taskObj);
   } else {
     taskData[dataArrIndex] = taskObj;
   }
-
   localStorage.setItem("data", JSON.stringify(taskData));
   updateTaskContainer()
   reset()
@@ -69,9 +71,9 @@ const editTask = (buttonEl) => {
 
   currentTask = taskData[dataArrIndex];
 
-  titleInput.value = currentTask.title;
-  dateInput.value = currentTask.date;
-  descriptionInput.value = currentTask.description;
+  // titleInput.value = currentTask.title;
+  // dateInput.value = currentTask.date;
+  // descriptionInput.value = currentTask.description;
 
   addOrUpdateTaskBtn.innerText = "Update Task";
 
@@ -118,3 +120,5 @@ taskForm.addEventListener("submit", (e) => {
 
   addOrUpdateTask();
 });
+
+

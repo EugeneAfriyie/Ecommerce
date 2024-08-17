@@ -33,6 +33,11 @@ getPriceCents (){
 return ` ₵${formatCurrency(this.priceCents)}`;
 }
 
+extraInfoHTML(){
+
+  return '';
+}
+
 
 
 id;
@@ -42,7 +47,60 @@ priceCents;
 name;
 
 
+
+
+
 }
+
+
+class clothings  extends Products{
+  sizeChartLink;
+
+  constructor (productDetails){
+    super(productDetails);
+    this.sizeChartLink = productDetails.sizeChartLink;
+  }
+
+// defining getSizeChartLinkHTML method inside the clothing  class overrides the parents method called method overrriding
+extraInfoHTML(){
+  // super.sizeChartLink() //this called the method in the parents class
+
+    return `
+      <a href="${this.sizeChartLink}" target="_blank">
+         Size chart
+      </a>
+    `;
+  }
+
+}
+
+
+// const tShirt = new clothings({
+//   id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
+//   image: "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
+//   name: "Adults Plain Cotton T-Shirt - 2 Pack",
+//   rating: {
+//     stars: 4.5,
+//     count: 56
+//   },
+//   priceCents: 799,
+//   keywords: [
+//     "tshirts",
+//     "apparel",
+//     "mens"
+//   ],
+//   type: "clothing",
+//   sizeChartLink: "images/clothing-size-chart.png"
+// })
+
+
+// console.log(tShirt);
+// console.log(tShirt.getStarUrl())
+// console.log(tShirt.getPriceCents())
+
+
+
+
 // const product1 =new Products( {
 //   id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
 //   image: "images/products/athletic-cotton-socks-6-pairs.jpg",
@@ -723,8 +781,19 @@ const products = [
     ]
   }
 ].map((productDetails)=>{
-  return new Products(productDetails);
-})
 
-console.log(products)
-console.log(Products)
+
+  if (productDetails.type === 'clothing'){
+    return new clothings(productDetails);
+  }
+
+
+  return new Products(productDetails);
+  
+});
+
+console.log(products[2].name)
+
+
+// console.log(products)
+// console.log(Products)

@@ -68,6 +68,10 @@
             
         }
 
+        .todo-grid p{
+            font-size: 14px;
+        }
+
         .list-style{
             list-style:square;
         }
@@ -253,9 +257,9 @@
             const inputValue = document.querySelector('.input-todolist');
             const inputDate = document.querySelector('.date-input');
             const todoActivity = inputValue.value.trim();
-            const dueDate = inputDate.value.trim();
+            // const dueDate = inputDate.value.trim();
     
-            if (todoActivity !== '' && dueDate !== '') {
+            if (todoActivity !== '' ) {
                 if (editIndex >= 0) {
                     // Update the existing item
                     todoList[editIndex] = {
@@ -267,7 +271,7 @@
                     // Add a new item
                     todoList.push({
                         todo: todoActivity,
-                        date: dueDate
+                        date: new Date()
                     });
                 }
                 inputValue.value = '';

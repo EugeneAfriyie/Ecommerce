@@ -38,17 +38,11 @@ extraInfoHTML(){
   return '';
 }
 
-
-
 id;
 image;
 rating;
 priceCents;
 name;
-
-
-
-
 
 }
 
@@ -72,6 +66,14 @@ extraInfoHTML(){
     `;
   }
 
+}
+
+class appliances extends Products{
+
+
+  extraInfoHTML (){
+    return `<a href="${'images\appliance-instructions.png'}">Instrution</a>`
+  }
 }
 
 
@@ -738,12 +740,9 @@ const products = [
     ]
   }
 ].map((productDetails)=>{
-
-
   if (productDetails.type === 'clothing'){
     return new clothings(productDetails);
   }
-
 
   return new Products(productDetails);
   

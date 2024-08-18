@@ -38,6 +38,10 @@ extraInfoHTML(){
   return '';
 }
 
+appliancesHTML (){
+  return ` `;
+}
+
 id;
 image;
 rating;
@@ -68,13 +72,24 @@ extraInfoHTML(){
 
 }
 
-class appliances extends Products{
+class appliances extends Products {
+  constructor(productDetails) {
+    super(productDetails);
+    this.warrantyLink = productDetails.warrantyLink;
+    this.instructionLink = productDetails.instructionLink;
+  }
 
-
-  extraInfoHTML (){
-    return `<a href="${'images\appliance-instructions.png'}">Instrution</a>`
+  appliancesHTML() {
+    return `
+      <a href="${this.warrantyLink}" target="_blank">Warranty</a>
+      <a href="${this.instructionLink}" target="_blank">Instruction</a>
+    `;
   }
 }
+
+
+// console.log(appliances)
+// console.log(clothings)
 
 
 export {products}
@@ -135,6 +150,9 @@ const products = [
       stars: 5,
       count: 2197
     },
+    type:'appliances',
+    instructionLink:'images/appliance-instructions.png',
+    warrantyLink:"images/appliance-warranty.png",
     priceCents: 1899,
     keywords: [
       "toaster",
@@ -325,7 +343,10 @@ const products = [
       "water boiler",
       "appliances",
       "kitchen"
-    ]
+    ],
+    type:'appliances',
+    instructionLink:'images/appliance-instructions.png',
+    warrantyLink:'images/appliance-warranty.png',
   },
   {
     id: "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
@@ -630,7 +651,10 @@ const products = [
       "coffeemakers",
       "kitchen",
       "appliances"
-    ]
+    ],
+    type:'appliances',
+    instructionLink:'images/appliance-instructions.png',
+    warrantyLink:'images/appliance-warranty.png',
   },
   {
     id: "02e3a47e-dd68-467e-9f71-8bf6f723fdae",
@@ -690,7 +714,9 @@ const products = [
       "food blenders",
       "kitchen",
       "appliances"
-    ]
+    ],type:'appliances',
+    instructionLink:'images/appliance-instructions.png',
+    warrantyLink:'images/appliance-warranty.png',
   },
   {
     id: "36c64692-677f-4f58-b5ec-0dc2cf109e27",
@@ -743,12 +769,16 @@ const products = [
   if (productDetails.type === 'clothing'){
     return new clothings(productDetails);
   }
+   else if(productDetails.type === 'appliances') {
+
+    return new appliances(productDetails);
+  }
 
   return new Products(productDetails);
   
 });
 
-console.log(products[2].name)
+// console.log(products[2].name)
 
 
 

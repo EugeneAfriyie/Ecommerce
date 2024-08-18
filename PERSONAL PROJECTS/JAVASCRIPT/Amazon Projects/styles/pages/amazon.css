@@ -2,6 +2,10 @@
   margin-top: 60px;
 }
 
+a{
+  color: inherit;
+}
+
 .products-grid {
   display: grid;
 

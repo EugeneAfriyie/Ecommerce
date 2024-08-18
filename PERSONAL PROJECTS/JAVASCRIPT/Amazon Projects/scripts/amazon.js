@@ -8,7 +8,7 @@ import {formatCurrency} from './Utils/money.js'
     let productHTML = '';
 products.forEach ((product) =>{
 
-    
+    console.log(product.extraInfoHTML)
    productHTML += `
     <div class="product-container">
           <div class="product-image-container">
@@ -48,6 +48,8 @@ products.forEach ((product) =>{
           </div>
 
           ${product.extraInfoHTML()}
+          ${product.appliancesHTML()}
+          
 
           <div class="product-spacer"></div>
 

@@ -2,35 +2,76 @@
 
 
 
-    export const Best_President = [
+
+
+
+export const categories =[
+
     {
-        type:"Best President",
-        voteNumber:200,
-        voteAmount: 40,
-        id:'BP-1'
+        id:"#BP",
+        categoryName:"Best President",
+        numOfNominees:5,
+        noOfVotes:200,
+        totalVoteAmount:300,
+        nomineeArray: [
+            {
+                type:"Best President",
+                voteNumber:200,
+                voteAmount: 40,
+                id:'BP-1'
+            },
+            {
+                type:"Best President",
+                voteNumber:200,
+                voteAmount: 40,
+                id:'BP-1'
+            },
+            {
+                type:"Best President",
+                voteNumber:200,
+                voteAmount: 40,
+                id:'BP-1'
+            },
+            {
+                type:"Best-President",
+                voteNumber:200,
+                voteAmount: 40,
+                id:'BP-1'
+            }
+            
+            
+            
+            ]
     },
     {
-        type:"Best President",
-        voteNumber:200,
-        voteAmount: 40,
-        id:'BP-1'
+        id:'#P',
+        categoryName:"President",
+        numOfNominees:5,
+        noOfVotes:300,
+        totalVoteAmount:500,
+        nomineeArray:[
+            
+        ]
     },
     {
-        type:"Best President",
-        voteNumber:200,
-        voteAmount: 40,
-        id:'BP-1'
+        id:"#F",
+        categoryName:"Fashoinable",
+        numOfNominees:5,
+        noOfVotes:200,
+        totalVoteAmount:300
     },
     {
-        type:"Best-President",
-        voteNumber:200,
-        voteAmount: 40,
-        id:'BP-1'
+        id:"#KOK",
+        categoryName:"King Of Kicks",
+        numOfNominees:5,
+        noOfVotes:200,
+        totalVoteAmount:300
     }
-    
-    
-    
-    ]
+
+
+]
+
+    // export const Best_President = 
     
      export const KOK = [
     {

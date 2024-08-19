@@ -1,15 +1,13 @@
 
 import './array-cat/category.js'
-import { fashionable, president } from './array-cat/category.js';
+import { fashionable, president,categories } from './array-cat/category.js';
 
 
-
-
-
-const btns = document.querySelectorAll('.aside-a');
+const aLinks = document.querySelectorAll('.aside-a');
 const sect = document.querySelectorAll('.main-page-content');
 const categoryType = document.querySelectorAll('.category-type');
 const pageHeader = document.querySelectorAll(".page-title");
+const categoryBody = document.querySelector(".categories-body");
 
 
 
@@ -18,43 +16,91 @@ const pageHeader = document.querySelectorAll(".page-title");
 
 
 
-categoryType.forEach(category=>{
-    category.addEventListener('click',()=>{
-        const id = category.dataset.id;
-        // console.log(`${id}`)
 
-        // id.forEach(item=>{
-        //     console.log(item)
-        // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+aLinks.forEach(link =>{
+
+    link.addEventListener('click',()=>{
+        const id = link.dataset.id;
+
+        if(id === 'categories'){
+
+            
+
+            // console.log(categoryBody.innerHTML)
+
+       
+
+            
+
+        }
     })
 })
 
+let categoryHTML = '';
+
+categories.forEach(category=>{
 
 
-btns.forEach(btn => {
-    btn.addEventListener('click',()=>{
+                
 
-        const id = btn.dataset.id;
-        // console.log(id)
-
-
-        sect.forEach(sec =>{
-            sec.classList.remove('active');
-        })
-
-        const element = document.getElementById(id)
-        element.classList.add('active');
-
-      
-
-
-
-
-        pageHeader.innerHTML = id;
-    })
+    categoryHTML += `
+        <tr class="category-type" data-id="${category.id}">
+        <td>
+        
+             <a href="./nominee.html">
+                ${category.categoryName}
+            </a>
+        
+        </td>
+        <td>
+            <a href="./nominee.html">
+                ${category.numOfNominees}
+            </a>
+        </td>
+        <td>
+            <a href="./nominee.html">
+                ${category.noOfVotes}
+            </a>
+        </td>
+        <td>
+            <a href="./nominee.html">
+                ${category.totalVoteAmount}
+            </a>
+        </td>
+        <td>
+          Delete
+        </td>
+    </tr>
     
+`;
 
-});
+
+
+})
+
+console.log(categoryHTML)
+categoryBody.innerHTML = categoryHTML;
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,80 @@
+
+
+.sec-3{
+    /* display: none; */
+    transform: translateX(100%) scale(0);
+}
+
+.active{
+    /* display: block; */
+    transform: translateX(0) scale(1);
+}
+
+
+
+*{
+    font-family: "Roboto",sans-serif;
+}
+
+.nominated{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 15px;
+
+}
+
+.nominee-details{
+    border: 1px solid rgba(190, 189, 189, 0.295);
+    text-align: center;
+    position: relative;
+}
+
+
+
+.blue-back{
+    background-color: blue;
+    height: 80px;
+}
+
+.nominee-name{
+    margin-top: 50px;
+}
+
+.nominee-position{
+    color: blueviolet;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.vote-details{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 15px 5px 10px 5px;
+}
+
+.view-details{
+    background-color: black;
+    display: block;
+    color: white;
+    font-weight: 500;
+    padding: 15px 0;
+}
+
+.profie-pic{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 16%;
+    left: 37%;
+}
+.profie-pic img{
+
+    width: 88%;
+    height: 88%;
+    border-radius: 50%;
+}
+

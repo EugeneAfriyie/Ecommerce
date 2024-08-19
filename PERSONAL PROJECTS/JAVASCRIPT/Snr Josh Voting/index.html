@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting</title>
+    <link rel="stylesheet" href="./styles/main-styles.css">
+    <link rel="stylesheet" href="./styles/aside.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="./styles/nominee.css">
+    <link rel="stylesheet" href="./styles/categories.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Bungee+Shade&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="main-sec main-sec-1">
+        <aside>
+            <h3 class="aside-header">Voting System</h3>
+            <div class="admin-box">
+                <div class="admin-img C-cont">
+                    <img src="./image/admin.JPG" alt="">
+
+                </div>
+                <div class="admin-details">
+                    <h4>Admin Admin</h4>
+                    <div class="online-status-info">
+                        <p class="online-status-color"></p>
+                        <span class="online-status-text">
+                            Online
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="voting-containers">
+
+                <div class="voting-con" id="reports">
+                    <h4 class="vot-con-h">
+                        Reports
+                    </h4>
+                    <div class="vot-con-item">
+                        <div class="vot-con-item-con">
+                            <a href="#" class="aside-a" onclick="" class="dash" data-id="dashboard"> 
+                                <i class="fa-solid fa-house"></i>
+                                <span>
+                                    Dashboard
+                                </span>
+                            </a>
+                            <a href="#"  class="aside-a" data-id="categories">
+                                <i class="fa-solid fa-landmark"></i>
+                                <span>
+                                    Categories
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="voting-con" id="manage">
+                    <h4 class="vot-con-h">
+                        Manage
+                    </h4>
+                    <div class="vot-con-item">
+                        <div class="vot-con-item-con">
+                            <a href="#"  class="aside-a"> 
+                                <i class="fa-solid fa-house"></i>
+                                <span>
+                                Voters
+                                </span>
+                            </a>
+                            <a href="#"  class="aside-a">
+                                <i class="fa-solid fa-landmark"></i>
+                                <span>
+                                    Position
+                                </span>
+                            </a>
+                            <a href="#"  class="aside-a">
+                                <i class="fa-solid fa-landmark"></i>
+                                <span>
+                                    Candles
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="voting-con" id="settings">
+                    <h4 class="vot-con-h">
+                        settings
+                    </h4>
+                    <div class="vot-con-item">
+                        <div class="vot-con-item-con">
+                            <a href="#"  class="aside-a"> 
+                                <i class="fa-solid fa-house"></i>
+                                <span>
+                                    Ballot Position
+                                </span>
+                            </a>
+                            <a href="#"  class="aside-a">
+                                <i class="fa-solid fa-landmark"></i>
+                                <span>
+                                    Election Title
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+
+
+
+            </section>
+
+            <div class="daily-analy ">
+                <h3>Daily Anailysis</h3>
+                <p>Your Voting rate is at 60%</p>
+                <div class="rate-indicator-con">
+                    <div class="rate-indicator">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="logout C-cont">
+                <button>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Logout
+                </button>
+            </div>
+        </aside>
+        
+    </section>
+    <section class="main-sec main-sec-2">
+        
+
+
+        <secttion class="main-page-content sec-1 " id="dashboard">
+            <header>
+                <nav class="">
+                    <h3 id="main-page-title" class="page-title">
+                        Dashboard
+                    </h3>
+    
+                    <div class="other-nav-items C-cont">
+                        <div class="search-bar C-cont ">
+                            <button class="search-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input type="search" placeholder="Search">
+                            <button id="filter-icon" class="C-cont">
+                                <i class="fa-solid fa-arrow-up-a-z"></i>
+                            </button>
+                            
+                        </div>
+                        <button class="noficatication">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <div class="user-profile">
+                            <div class="user-pic C-cont">
+                                <img src="./image/admin.JPG" alt="">
+                            </div>
+                            <div class="user-details">
+                                <h4>Josh</h4>
+                                <p>CEO</p>
+                            </div>
+                        </div>
+                    </div>
+            </nav>
+            </header>
+
+            <h1 class="page-top-namer">
+                Voting Analytics
+            </h1>
+
+            <div class="main-page-details ">
+
+                <div class="main-page-item" id="T-position">
+                    <div class="top-div">
+                        <div class="div-details">
+                            <p class="div-number">0</p>
+                            <p>No. Of Position</p>
+                        </div>
+                        <div class="top-img">
+                            <img src="./image/staistics.png" alt="">
+                        </div>
+
+                    </div>
+                    <a href="#" class="more-info C-cont">
+                        More info
+                        <p class="more-info-i C-cont ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </p>
+                    </a>
+                    
+                </div>
+                <div class="main-page-item" id="T-nominees">
+                    <div class="top-div">
+                        <div class="div-details">
+                            <p class="div-number">0</p>
+                            <p>No. Of Nominee</p>
+                        </div>
+                        <div class="top-img">
+                            <img src="./image/2 people.jpeg" alt="">
+                        </div>
+
+                    </div>
+                    <a href="#" class="more-info C-cont">
+                        More info
+                        <p class="more-info-i C-cont ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </p>
+                    </a>
+                    
+                </div>
+                <div class="main-page-item" id="T-voters">
+                    <div class="top-div">
+                        <div class="div-details">
+                            <p class="div-number">231</p>
+                            <p>Total Voters</p>
+                        </div>
+                        <div class="top-img">
+                            <img src="./image/3 people.jpeg" alt="">
+                        </div>
+
+                    </div>
+                    <a href="#" class="more-info C-cont">
+                        More info
+                        <p class="more-info-i C-cont ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </p>
+                    </a>
+                    
+                </div>
+                <div class="main-page-item" id="T-amount">
+                    <div class="top-div">
+                        <div class="div-details">
+                            <p class="div-number">730</p>
+                            <p>Total Amount</p>
+                        </div>
+                        <div class="top-img">
+                            <img src="./image/money.jpeg" alt="">
+                        </div>
+
+                    </div>
+                    <a href="#" class="more-info C-cont">
+                        More info
+                        <p class="more-info-i C-cont ">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </p>
+                    </a>
+                    
+                </div>
+            </div>
+
+    
+        </secttion>
+
+
+        <secttion class="main-page-content sec-2" id="categories">
+
+            <header>
+                <nav class="">
+                    <h3 id="main-page-title" class="page-title">
+                        Dashboard
+                    </h3>
+    
+                    <div class="other-nav-items C-cont">
+                        <div class="search-bar C-cont ">
+                            <button class="search-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input type="search" placeholder="Search">
+                            <button id="filter-icon" class="C-cont">
+                                <i class="fa-solid fa-arrow-up-a-z"></i>
+                            </button>
+                            
+                        </div>
+                        <button class="noficatication">
+                            <i class="fa-regular fa-bell"></i>
+                        </button>
+                        <div class="user-profile">
+                            <div class="user-pic C-cont">
+                                <img src="./image/admin.JPG" alt="">
+                            </div>
+                            <div class="user-details">
+                                <h4>Josh</h4>
+                                <p>CEO</p>
+                            </div>
+                        </div>
+                    </div>
+            </nav>
+            </header>
+
+            <h1 class="page-top-namee ">
+                Categories
+            </h1>
+
+
+            <div class="categories-details">
+
+                <table cellspacing="0">
+                    <thead>
+                        <tr class="">
+                            <th class="cat-name">Category Name</th>
+                            <th class="num-nom">No. Of Nominees</th>
+                            <th class="num-votes">No. Of votes</th>
+                            <th class="cash-amount">Amount (GH₵)</th>
+                            <th class="action">Action</th>
+                        </tr>
+                    </thead>
+
+                    <div>
+                        <tbody>
+                            
+                            <tr class="category-type" data-id="Best_President">
+                                <td>Best President</td>
+                                <td>5</td>
+                                <td>200</td>
+                                <td>40</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr  class="category-type"  data-id="fashionable">
+                                <td>Fashinable</td>
+                                <td>5</td>
+                                <td>200</td>
+                                <td>40</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr  class="category-type"  data-id="KOK">
+                                <td>King Of Kicks</td>
+                                <td>5</td>
+                                <td>200</td>
+                                <td>40</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr  class="category-type"  data-id="president">
+                                <td>President</td>
+                                <td>5</td>
+                                <td>200</td>
+                                <td>40</td>
+                                <td>Delete</td>
+                            </tr>
+                
+                        </tbody>
+                    </div>
+            </table>
+
+            </div>
+
+            
+
+    
+        </secttion>
+
+        <secttion class="main-page-content sec-3 " id="nominees">
+
+            <h1 class="page-top-name">
+                Nominees
+            </h1>
+
+
+            <div class="nominated">
+
+                <div class="nominee-details">
+                    <div class="blue-back"></div>
+                    <div class="white-back">
+                    <h3 class="nominee-name">Josh Joy</h3>
+                    <p class="nominee-position">Best President</p>
+
+                    <div class="vote-details">
+                        <div class="num-vote">
+                            <p>No. of Votes</p>
+                            <p>12</p>
+                        </div>
+                        <div class="num-vote">
+                            <p>Vote Amount</p>
+                            <p>Ghs 232</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-details">
+                        View Details
+                    </a>
+
+                    <div class="profie-pic C-cont">
+                        <img src="./image/admin.JPG" alt="" >
+                    </div>
+                    </div>
+                </div>
+                <div class="nominee-details">
+                    <div class="blue-back"></div>
+                    <div class="white-back">
+                    <h3 class="nominee-name">Josh Joy</h3>
+                    <p class="nominee-position">Best President</p>
+
+                    <div class="vote-details">
+                        <div class="num-vote">
+                            <p>No. of Votes</p>
+                            <p>12</p>
+                        </div>
+                        <div class="num-vote">
+                            <p>Vote Amount</p>
+                            <p>Ghs 232</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-details">
+                        View Details
+                    </a>
+
+                    <div class="profie-pic C-cont">
+                        <img src="./image/admin.JPG" alt="" >
+                    </div>
+                    </div>
+                </div>
+                <div class="nominee-details">
+                    <div class="blue-back"></div>
+                    <div class="white-back">
+                    <h3 class="nominee-name">Josh Joy</h3>
+                    <p class="nominee-position">Best President</p>
+
+                    <div class="vote-details">
+                        <div class="num-vote">
+                            <p>No. of Votes</p>
+                            <p>12</p>
+                        </div>
+                        <div class="num-vote">
+                            <p>Vote Amount</p>
+                            <p>Ghs 232</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-details">
+                        View Details
+                    </a>
+
+                    <div class="profie-pic C-cont">
+                        <img src="./image/admin.JPG" alt="" >
+                    </div>
+                    </div>
+                </div>
+                <div class="nominee-details">
+                    <div class="blue-back"></div>
+                    <div class="white-back">
+                    <h3 class="nominee-name">Josh Joy</h3>
+                    <p class="nominee-position">Best President</p>
+
+                    <div class="vote-details">
+                        <div class="num-vote">
+                            <p>No. of Votes</p>
+                            <p>12</p>
+                        </div>
+                        <div class="num-vote">
+                            <p>Vote Amount</p>
+                            <p>Ghs 232</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-details">
+                        View Details
+                    </a>
+
+                    <div class="profie-pic C-cont">
+                        <img src="./image/admin.JPG" alt="" >
+                    </div>
+                    </div>
+                </div>
+                <div class="nominee-details">
+                    <div class="blue-back"></div>
+                    <div class="white-back">
+                    <h3 class="nominee-name">Josh Joy</h3>
+                    <p class="nominee-position">Best President</p>
+
+                    <div class="vote-details">
+                        <div class="num-vote">
+                            <p>No. of Votes</p>
+                            <p>12</p>
+                        </div>
+                        <div class="num-vote">
+                            <p>Vote Amount</p>
+                            <p>Ghs 232</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-details">
+                        View Details
+                    </a>
+
+                    <div class="profie-pic C-cont">
+                        <img src="./image/admin.JPG" alt="" >
+                    </div>
+                    </div>
+                </div>
+                <div class="nominee-details">
+                    <div class="blue-back"></div>
+                    <div class="white-back">
+                    <h3 class="nominee-name">Josh Joy</h3>
+                    <p class="nominee-position">Best President</p>
+
+                    <div class="vote-details">
+                        <div class="num-vote">
+                            <p>No. of Votes</p>
+                            <p>12</p>
+                        </div>
+                        <div class="num-vote">
+                            <p>Vote Amount</p>
+                            <p>Ghs 232</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-details">
+                        View Details
+                    </a>
+
+                    <div class="profie-pic C-cont">
+                        <img src="./image/admin.JPG" alt="" >
+                    </div>
+                    </div>
+                </div>
+                <div class="nominee-details">
+                    <div class="blue-back"></div>
+                    <div class="white-back">
+                    <h3 class="nominee-name">Josh Joy</h3>
+                    <p class="nominee-position">Best President</p>
+
+                    <div class="vote-details">
+                        <div class="num-vote">
+                            <p>No. of Votes</p>
+                            <p>12</p>
+                        </div>
+                        <div class="num-vote">
+                            <p>Vote Amount</p>
+                            <p>Ghs 232</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-details">
+                        View Details
+                    </a>
+
+                    <div class="profie-pic C-cont">
+                        <img src="./image/admin.JPG" alt="" >
+                    </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+            
+
+            
+
+    
+        </secttion>
+       
+
+    </section>
+
+    
+
+
+
+
+
+    
+
+<script type="module" src="./script.js">
+
+  
+</script>
+</body>
+</html>

@@ -3,13 +3,13 @@
 
 .sec-2{
     /* display: none; */
-    transform: translateX(100%) scale(0);
+    /* transform: translateX(100%) scale(0); */
 
 }
 
 .active{
     /* display: block; */
-    transform: translateX(0) scale(1);
+    /* transform: translateX(0) scale(1); */
 }
 .categories-details{
     /* border: 1px solid red; */

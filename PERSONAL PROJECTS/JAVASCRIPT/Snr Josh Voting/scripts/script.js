@@ -14,9 +14,24 @@ function renderCategories(){
     let categoryHTML = '';
 
     categories.forEach(category=>{
+
+        let numOfNominees = 0;
+        let noOfVotes = 0;
+        let totalVoteAmount = 0;
+        category.nomineeArray.forEach(item=>{
+
+            totalVoteAmount  += item.voteAmount;
+            noOfVotes += item.voteNumber;
+
+
+
+
+
+
+        })
     
         categoryHTML += `
-            <tr class="category-type nominee" data-id="${category.id}">
+            <tr class="category-type category-type-${category.id} nominee" data-id="${category.id}">
                 <td class="nominee">
                 
                     <a href="./nominee.html"  >
@@ -26,18 +41,18 @@ function renderCategories(){
                 </td>
                 <td >
                     <a href="./nominee.html"   >
-                        ${category.numOfNominees}
+                        ${category.nomineeArray.length}
                     </a>
                 </td>
     
                 <td class="nominee"  data-id="${category.id}">
                     <a  >
-                        ${category.noOfVotes}
+                        ${noOfVotes}
                     </a>
                 </td>
                 <td >
                     <a href="./nominee.html " class="nominee"  >
-                        ${category.totalVoteAmount}
+                        ${totalVoteAmount}
                     </a>
                 </td>
                 <td class='delete delete-${category.id}' data-id="${category.id}">
@@ -49,6 +64,7 @@ function renderCategories(){
     
     })
     categoryBody.innerHTML = categoryHTML;
+    // console.log(categoryHTML)
 }
 
 renderCategories();
@@ -76,29 +92,34 @@ export function nomineeFunc(){
 
     
 }
-
 nomineeFunc();
+
+
 function deleteFun() {
-    const deleteBtns = document.querySelector('.delete');
+    const deleteBtns = document.querySelectorAll('.delete');
 
-   
-        deleteBtns.addEventListener('click', () => {
-            const id = Btn.dataset.id;
-            
-            const categoryElement = document.querySelector(`delete-${id}`);
+        deleteBtns.forEach(btn=>{
 
+        
+        btn.addEventListener('click', () => {
+            const id =  btn.dataset.id;
+
+
+            categories.forEach((item,i)=>{
+                if(item.id === id){
+                    categories.splice(i,1)
+                }
+            })
+
+            const categoryElement = document.querySelector(`.category-type-${id}`);
             if (categoryElement) {
                 categoryElement.remove();
+                
             } 
         });
-    
+    })
 
-    renderCategories();
 }
-
-
-
-
 deleteFun();
 
 

@@ -17,7 +17,7 @@ categories.forEach(category =>{
             <div class="nominee-details">
                     <div class="blue-back"></div>
                     <div class="white-back">
-                    <h3 class="nominee-name">Josh Joy</h3>
+                    <h3 class="nominee-name">${item.name}</h3>
                     <p class="nominee-position">${item.type}</p>
 
                     <div class="vote-details">

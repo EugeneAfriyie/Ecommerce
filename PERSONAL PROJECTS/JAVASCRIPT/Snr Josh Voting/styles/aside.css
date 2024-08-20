@@ -114,3 +114,18 @@ aside{
     margin:  10px;
 
 }
+
+
+
+
+
+
+
+@media (max-width:800px) {
+
+    aside{
+       display: none;
+    }
+
+    
+}

@@ -4,7 +4,7 @@
 
 
 .main-page-content{
-    display: block;
+    /* display: block; */
     /* margin-top: 50px; */
     border-top: 1px solid var(---border-color);
     transition: all 2s ease-in-out;
@@ -19,6 +19,8 @@
     gap: 10px;
     position: absolute;
     background-color: var(--color-primary);
+    margin-top: 10px;
+    margin-right: 10px;
     /* transform: translateX(-100%) scale(0); */
 
 }
@@ -33,7 +35,7 @@
 
 
 .page-header{
-    /* margin: 50px 0; */
+    /* margin: 50px 10px; */
 }
 
 #T-position{
@@ -105,3 +107,30 @@
     
 }
 
+@media  (max-width:1090px){
+
+    .main-page-details{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        margin: 0 20px;
+       
+    
+    }
+    
+}
+@media  (max-width:480px){
+
+    .main-page-details{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 10px 20px;
+        /* width: 300px; */
+    }
+
+    .main-page-item{
+        /* width: 300px; */
+    }
+    
+}

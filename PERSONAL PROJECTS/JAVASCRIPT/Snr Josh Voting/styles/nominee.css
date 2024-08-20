@@ -49,7 +49,7 @@
 .vote-details{
     display: flex;
     justify-content: space-between;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin: 15px 5px 10px 5px;
 }
@@ -78,3 +78,27 @@
     border-radius: 50%;
 }
 
+
+
+@media (max-width:1020px) {
+    
+
+    .vote-details{
+        font-size: 1rem;
+    margin: 15px 0  10px ;
+
+
+    }
+}
+
+
+@media (max-width:1020px) {
+    
+
+    .vote-details{
+        font-size: 1rem;
+    margin: 15px 0  10px ;
+
+
+    }
+}

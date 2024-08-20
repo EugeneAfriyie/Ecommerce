@@ -1,84 +1,57 @@
 
-import '../array-cat/category.js'
-import { categories } from '../array-cat/category.js';
+import './array-cat/category.js'
+import { categories } from './array-cat/category.js';
+import asideDisplay from './asideDis.js';
 
 
 const aLinks = document.querySelectorAll('.aside-a');
 const sect = document.querySelectorAll('.main-page-content');
 const categoryType = document.querySelectorAll('.category-type');
-const pageHeader = document.querySelectorAll(".page-title");
+const pageHeader = document.querySelectorAll(".page-menu");
 const categoryBody = document.querySelector(".categories-body");
 
+function renderCategories(){
+    let categoryHTML = '';
 
-aLinks.forEach(link =>{
-
-    link.addEventListener('click',()=>{
-        const id = link.dataset.id;
-
-        if(id === 'categories'){
-
-            
-
-            // console.log(categoryBody.innerHTML)
-
-       
-
-            
-
-        }
-    })
-})
-
-let categoryHTML = '';
-
-categories.forEach(category=>{
-
-    categoryHTML += `
-        <tr class="category-type nominee" data-id="${category.id}">
-            <td class="nominee">
-            
-                <a href="./nominee.html"  >
-                    ${category.categoryName}
-                </a>
-            
-            </td>
-            <td >
-                <a href="./nominee.html"   >
-                    ${category.numOfNominees}
-                </a>
-            </td>
-
-            <td class="nominee"  data-id="${category.id}">
-                <a  >
-                    ${category.noOfVotes}
-                </a>
-            </td>
-            <td >
-                <a href="./nominee.html " class="nominee"  >
-                    ${category.totalVoteAmount}
-                </a>
-            </td>
-            <td>
-            Delete
-            </td>
-        </tr>
+    categories.forEach(category=>{
     
-`;
+        categoryHTML += `
+            <tr class="category-type nominee" data-id="${category.id}">
+                <td class="nominee">
+                
+                    <a href="./nominee.html"  >
+                        ${category.categoryName}
+                    </a>
+                
+                </td>
+                <td >
+                    <a href="./nominee.html"   >
+                        ${category.numOfNominees}
+                    </a>
+                </td>
+    
+                <td class="nominee"  data-id="${category.id}">
+                    <a  >
+                        ${category.noOfVotes}
+                    </a>
+                </td>
+                <td >
+                    <a href="./nominee.html " class="nominee"  >
+                        ${category.totalVoteAmount}
+                    </a>
+                </td>
+                <td class='delete delete-${category.id}' data-id="${category.id}">
+                    Delete
+                </td>
+            </tr>
+        
+    `;
+    
+    })
+    categoryBody.innerHTML = categoryHTML;
+}
 
-})
-categoryBody.innerHTML = categoryHTML;
-
-
-
-// console.log(nomineeCon)
-
-
-
-
-
-
-
-
+renderCategories();
 
 
 
@@ -104,10 +77,32 @@ export function nomineeFunc(){
     
 }
 
-
-
 nomineeFunc();
+function deleteFun() {
+    const deleteBtns = document.querySelector('.delete');
+
+   
+        deleteBtns.addEventListener('click', () => {
+            const id = Btn.dataset.id;
+            
+            const categoryElement = document.querySelector(`delete-${id}`);
+
+            if (categoryElement) {
+                categoryElement.remove();
+            } 
+        });
+    
+
+    renderCategories();
+}
 
 
+
+
+deleteFun();
+
+
+
+    
 
 

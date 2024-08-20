@@ -1,8 +1,8 @@
-import { categories } from "../array-cat/category.js";
+import { categories } from "./array-cat/category.js";
+import asideDisplay from "./asideDis.js";
+asideDisplay();
 
 const categoryClickedId = localStorage.getItem('categoryClickedId');
-
-
 
 categories.forEach(category =>{
     let nomineeHTML=''

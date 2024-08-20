@@ -1,17 +1,4 @@
 
-
-.sec-3{
-    /* display: none; */
-    /* transform: translateX(100%) scale(0); */
-}
-
-.active{
-    /* display: block; */
-    /* transform: translateX(0) scale(1); */
-}
-
-
-
 *{
     font-family: "Roboto",sans-serif;
 }
@@ -20,6 +7,7 @@
    display: grid;
    grid-template-columns: repeat(4,1fr);
    gap: 15px;
+   margin-right: 10px;
 
 }
 
@@ -80,25 +68,64 @@
 
 
 
-@media (max-width:1020px) {
+@media (max-width:1120px) {
     
+    .nominated{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 15px;
+     
+     }
 
     .vote-details{
         font-size: 1rem;
-    margin: 15px 0  10px ;
+    margin: 15px 3px  10px ;
+    }
+}
+
+
+@media (max-width:920px) {
+    
+    .nominated{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+        margin: 0 10px;
+     
+     }
+    .vote-details{
+        font-size: 1rem;
 
 
     }
 }
 
 
-@media (max-width:1020px) {
-    
+@media (max-width:500px) {
+    .page-top-name{
+        margin: 0 20px;
 
+    }
+    .nominated{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 15px;
+        margin: 0 30px;
+     }
+
+     .nominee-details{
+        width: 100%;
+     }
     .vote-details{
         font-size: 1rem;
-    margin: 15px 0  10px ;
+    }
 
+    .vote-details{
+        font-size: 1.2rem;
+        margin: 15px 3px  10px ;
+    }
 
+    .page-top-name{
+        margin-left: 30px;
     }
 }

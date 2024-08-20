@@ -9,6 +9,22 @@
 
 }
 
+.overlay{
+    position: fixed;
+    background-color: transparent;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+#menu{
+    display: none;
+    font-size: 23px;
+    margin-right: 10px;
+}
+
 
 :root{
     ---border-color:rgba(180, 177, 177, 0.37);
@@ -25,14 +41,10 @@ body{
     display: grid;
     grid-template-columns: 250px 1fr;
     gap: 20px;
-
-    /* padding-left: 230px; */
     max-width: 1500px;
-    min-width: none;
+    min-width: 300px;
     margin: auto;
-    border: 1px solid red;
 
-    padding-bottom: 2000px;
     
 }
 
@@ -42,15 +54,6 @@ body{
     justify-content: center;
 }
 
-.main-sec{
-
-        
-        /* border: 1px solid red; */
-}
-
-
-
-
 nav{
     display: flex;
     justify-content: space-between;
@@ -59,9 +62,6 @@ nav{
     margin-top: 20px;
     margin-right: 50px;
     margin: 20px 50px 50px 0;
-
-    /* border: 1px solid green; */
-
 }
 .page-title{
     font-size: 25px;
@@ -167,6 +167,11 @@ nav{
         height: 40px;
         width: 40px;
     }
+    @media (max-width:800px){
+        #menu{
+            display: block;
+        }
+    }
 
     @media (max-width:480px) {
 
@@ -196,15 +201,6 @@ nav{
 
 
     }
-
-    
-
-
-
-
-
-
-
 
 } 
 

@@ -17,7 +17,7 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
-    position: absolute;
+    /* position: absolute; */
     background-color: var(--color-primary);
     margin-top: 10px;
     margin-right: 10px;

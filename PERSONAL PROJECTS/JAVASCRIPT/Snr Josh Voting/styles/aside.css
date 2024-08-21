@@ -129,7 +129,7 @@ aside{
        position: fixed;
        top: 0;
        bottom: 0;
-       height: 100vh;
+       /* height: 100vh; */
        overflow: auto;
     transform: translateX(-100%) scale(0);
     transition: all 1.5s ease-in-out;

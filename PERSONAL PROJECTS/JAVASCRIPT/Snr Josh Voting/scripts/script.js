@@ -24,10 +24,6 @@ function renderCategories(){
             noOfVotes += item.voteNumber;
 
 
-
-
-
-
         })
     
         categoryHTML += `

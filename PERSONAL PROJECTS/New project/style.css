@@ -10,6 +10,8 @@ body{
     display: grid;
     gap: 20px;
     padding-bottom: 1000px;
+    border: 1px solid red;
+    width: 100%;
 }
 
 
@@ -17,6 +19,10 @@ a{
     text-decoration: none;
     color: inherit;
     text-wrap: nowrap;
+}
+
+#menu{
+    /* display: none; */
 }
 
 
@@ -27,15 +33,12 @@ a{
 }
 
 nav{
-    width: 95%;
     margin: auto;
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 .nav-sec-1{
-   display: flex;
-   justify-content: end;
-    gap: 10px;
+    text-align: right;
     margin-right: 10px;
     font-size: 23px;
     color: green;
@@ -44,13 +47,14 @@ nav{
 .nav-div-2{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: nowrap;
     /* margin-right: 30px; */
 }
 
 .nav-2-a{
     display: flex;
+    /* margin-right: 30px; */
+ 
 }
 
 .page-img{
@@ -75,25 +79,18 @@ nav{
 }
 
 .site-name{
-    font-size: 18px;
     font-weight: 600;
 }
 
 .nav-2-b{
     display: flex;
-    width: 60%;
-    justify-content: space-between;
     align-items: center;
+    gap: 30px;
     color: green;
     font-size: 22px;
     text-transform: capitalize;
-
-}
-
-.nav-2-b a{
     margin-right: 10px;
 }
-
 
 #t-learning{
     background-color: green;
@@ -112,7 +109,7 @@ nav{
 .main-sec-1{
     width: 100%;
     font-size: 22px;
-    background-image: url(./images/background.jpg);
+    background-image: url(./photos/background.jpg);
     background-size: cover;
     height: 600px;
     display: flex;

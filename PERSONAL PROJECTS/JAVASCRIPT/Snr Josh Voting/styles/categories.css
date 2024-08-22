@@ -7,27 +7,28 @@
 
 table{
     width: 100%;
+    text-align: center;
    
 }
 .cat-name{
     width: 28%;
-    text-align: left;
+
 }
 .num-nom{
     width: 23%;
-    text-align: left;
+
 }
 .num-votes{
     width: 17%;
-    text-align: left;
+
 }
 .cash-amount{
     width: 23%;
-    text-align: left;
+
 }
 .action{
     width: 9%;
-    text-align: left;
+
 }
 
 thead tr th {

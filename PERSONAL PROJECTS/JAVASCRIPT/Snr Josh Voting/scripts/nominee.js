@@ -47,8 +47,30 @@ categories.forEach(category =>{
             `
         });
 
-        console.log(nomineeHTML);
+        // console.log(nomineeHTML);
         document.querySelector('.nominated').innerHTML= nomineeHTML;
 
     }
 })
+
+
+function checkWidth() {
+    if (window.innerWidth < 700) {
+        console.log("Current innerWidth:", window.innerWidth);
+        console.log("Viewport width in DevTools:", window.visualViewport.width);;
+        console.log("Device Pixel Ratio:", window.devicePixelRatio);
+
+
+    } else {
+      console.log("Page width is 500px or more");
+      console.log("Current innerWidth:", window.innerWidth);
+      console.log("Device Pixel Ratio:", window.devicePixelRatio);
+
+
+    }
+  }
+  
+  window.addEventListener('resize', checkWidth);
+  
+  // Check width on page load
+  checkWidth();

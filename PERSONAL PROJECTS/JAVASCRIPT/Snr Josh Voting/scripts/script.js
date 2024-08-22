@@ -9,6 +9,9 @@ const sect = document.querySelectorAll('.main-page-content');
 const categoryType = document.querySelectorAll('.category-type');
 const pageHeader = document.querySelectorAll(".page-menu");
 const categoryBody = document.querySelector(".categories-body");
+const searchIcon = document.querySelector(".search-icon");
+const pageTitle = document.querySelector(".page-title");
+const searchInput = document.querySelector(".search-input");
 
 function renderCategories(){
     let categoryHTML = '';
@@ -118,7 +121,23 @@ function deleteFun() {
 }
 deleteFun();
 
+function checkWidth() {
+    const actualWidth = window.innerWidth / window.devicePixelRatio;
+    console.log(`Actual width: ${actualWidth}px`);
+    
+    if (actualWidth < 500) {
+        console.log("Page width is less than 500px");
+    } else {
+        console.log("Page width is 500px or more");
+    }
+}
 
+// Call the function when the page loads and when the window is resized
+window.addEventListener('load', checkWidth);
+window.addEventListener('resize', checkWidth);
+
+
+  
 
     
 

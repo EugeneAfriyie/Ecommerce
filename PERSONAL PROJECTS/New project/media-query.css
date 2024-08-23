@@ -1,4 +1,4 @@
-/* @media (max-width:1200px){
+@media (max-width:1200px){
     .nav-2-b{
         gap:20px;
         font-size: 20px;
@@ -15,12 +15,310 @@
 
 @media (max-width:930px){
     .nav-2-b a{
-        display: none;
+        /* display: none; */
     }
     
-    #menu{
-        display: block;
+    .nav-2-b{
+        gap: 10px;
     }
+
+    #t-learning{
+        font-size: 20px;
+        padding: 6px;
+    }
+
+    .page-img{
+        width: 65px;
+        height: 65px;
+    }
+
+    .main-sec-1{
+        height: 450px;
+    }
+
+    .main-sec-1 h1{
+        font-size: 45px;
+        line-height: 70px;
+    }
+
+    .main-sec-1{
+        font-size: 18px;
+    }
+
+    .main-sec-1 button{
+        font-size: 30px;
+        padding: 10px 25px;
+
+    }
+
+    .sec-1-text{
+        width: 60%;
+        padding-left: 50px;
+    }
+
+    article{
+        padding: 20px ;
+        width: 100%;
+     }
+
+     .main-2-div-1{
+        font-size: 20px;
+     }
+     .address-div{
+        font-size: 25px;
+     }
+
+     form h1{
+        font-size: 35px;
+     }
+
+     .header-text{
+        font-size: 30px;
+     }
+
+     .the-sec-3{
+        display: flex;
+        gap: 20px;
+        text-wrap: nowrap;
+        flex-wrap: wrap;
+     }
+
+     /* .footer-sec{
+        width: 40%;
+     } */
+
+        
+    footer{
+        height: 550px;
+    }
+
+    .footer-sec-2a a{
+        font-size: 17px;
+    }
+
+   
+
+    }
+
+
+
+
+
+@media (max-width:830px){
+
+    .nav-sec-1{
+        font-size: 18px;
+    }
+
+    .nav-2-b{
+        font-size: 20px;
+    }
+
+    .page-motto{
+        display: none;
+    }
+
+    .page-img{
+        width: 70px;
+        height: 70px;
 }
 
- */
+    nav{
+        width: 95%;
+    }
+
+    .main-sec-1 h1{
+        font-size: 40px;
+        line-height: 70px;
+    }
+
+    .main-sec-1{
+        font-size: 17px;
+    }
+
+    .address-div{
+        font-size: 20px;
+     }
+
+     
+.main-2-div-1{
+    font-size: 18px;
+}
+.about-text{
+    font-size: 18px;
+}
+
+}
+
+
+@media (max-width:700px){
+
+    .nav-2-b a{
+        display: none;
+    }
+
+    #menu,.side-bar{
+        display: block;
+    }
+
+
+    .page-motto{
+        display: grid;
+    }
+
+    .page-img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .nav-sec-1{
+        font-size: 18px;
+    }
+
+
+    .main-sec-1{
+       
+        height: 300px;
+    }
+
+    .sec-1-text{
+        width: 70%;
+        padding-left: 30px;
+    }
+
+    .main-sec-1 button{
+        font-size: 18px;
+    }
+    .main-sec-1 h1{
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    form h1{
+        font-size: 30px;
+    }
+
+    .main-2-div-6{
+        gap: 20px;
+    }
+
+    .main-2-div-6 textarea{
+        height: 150px;
+    }
+
+    .header-text{
+        font-size: 28px;
+    }
+
+    
+
+}
+
+@media (max-width:600px){
+.main-2-div-6{
+    display: grid;
+}
+
+form{
+    width: 400px;
+}
+
+.address-div{
+    font-size:25px;
+    line-height: 35px;
+}
+
+.the-sec-3{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.footer-sec-1{
+    display: flex;
+    gap: 50px;
+    
+}
+    
+.footer-sec-2{
+    margin: 0;
+    border: none;
+    padding: 0px;
+
+}
+
+footer{
+    height: 700px;
+}
+
+}
+
+
+@media (max-width:480px){
+.nav-sec-1{
+    display: none;
+}
+
+
+.page-img{
+    width: 60px;
+    height: 60px;
+}
+
+nav{
+    margin-top: 10px;
+}
+
+.page-motto{
+    font-size: 13px;
+}
+
+.sec-1-text{
+    width: 90%;
+    padding: 10px;
+}
+
+.main-sec-1 h1{
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.main-sec-1{
+    height: 250px;
+    font-size: 14px;
+}
+
+.main-sec-1 button{
+    padding: 10px 20px;
+    margin-top: 15px;
+}
+
+.main-2-div-5 a{
+    font-size: 20px;
+}
+
+article {
+    padding: 5px;
+}
+
+form{
+    width: 320px;
+}
+.address-div{
+    font-size: 20px;
+}
+
+.main-2-div-6{
+    
+}
+
+     
+.main-2-div-1{
+    font-size: 16px;
+}
+.about-text{
+    font-size: 16px;
+}
+
+
+}
+

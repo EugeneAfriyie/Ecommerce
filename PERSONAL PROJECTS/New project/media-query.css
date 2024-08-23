@@ -99,7 +99,7 @@
    
 
     }
-    
+
 @media (max-width:830px){
 
     .nav-sec-1{
@@ -246,6 +246,9 @@ footer{
     height: 700px;
 }
 
+
+
+
 }
 
 
@@ -280,7 +283,7 @@ nav{
 
 .main-sec-1{
     height: 250px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .main-sec-1 button{
@@ -292,8 +295,14 @@ nav{
     font-size: 20px;
 }
 
+.main-2-div-5 p{
+    font-size: 17px;
+}
+
 article {
-    padding: 5px;
+    text-align: center;
+    padding: 3px;
+    
 }
 
 form{
@@ -309,10 +318,47 @@ form{
 
      
 .main-2-div-1{
-    font-size: 16px;
+    font-size: 15px;
 }
 .about-text{
     font-size: 16px;
+}
+
+.menu-container .nav-2-a{
+    gap: 3px;
+}
+
+.menu-container .page-motto{
+    font-size: 9px;
+    /* display: none; */
+}
+
+.menu-container .page-img{
+    width: 40px;
+    height: 40px;
+}
+
+.menu-container .close-icon{
+    display: none;
+}
+
+.menu-items a{
+    font-size: 15px;
+}
+
+.menu-items #t-learning{
+    font-size: 15px;
+}
+
+.grow{
+    font-size: 20px;
+}
+
+.shift-2{
+    display: block;
+}
+.shift{
+    display: none;
 }
 
 

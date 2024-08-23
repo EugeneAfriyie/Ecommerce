@@ -16,6 +16,8 @@ function menuFunc() {
 
     closeBtn.addEventListener('click', () => {
         menuContainer.classList.remove('active');
+        overlay.style.display = 'none'
+
 
     });
 

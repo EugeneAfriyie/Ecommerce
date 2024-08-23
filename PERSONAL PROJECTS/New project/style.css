@@ -4,6 +4,10 @@
     box-sizing: border-box;
     transition: all 0.7s ease-in-out;
     border: none;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }
 
 body{
@@ -11,6 +15,7 @@ body{
     gap: 20px;
     width: 100%;
     min-width: 300px;
+    padding-top: 93px;
 }
 
 
@@ -159,8 +164,13 @@ nav{
 article{
    padding: 20px 60px;
    width: 100%;
+   text-align: center;
 }
 
+
+.shift-2{
+    display: none;
+}
 
 .main-2-div-1{
     font-size: 24px;
@@ -194,8 +204,9 @@ article{
 }
 
 .main-2-div-5 p{
-    font-size: 0px;
+    font-size: 20px;
     margin-bottom: 10px;
+    margin-top: 20px;
   
 }
 .main-2-div-5 a{
@@ -468,7 +479,7 @@ font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:20px 10px 0 10px ;
+    padding:20px 10px 0 0 ;
 }
 
 
@@ -488,7 +499,7 @@ font-size: 20px;
     gap: 10px;
     font-size: 17px;
     font-weight: 700;
-    margin: 30px 20px;
+    margin: 30px 10px;
 }
 
 .menu-items a{

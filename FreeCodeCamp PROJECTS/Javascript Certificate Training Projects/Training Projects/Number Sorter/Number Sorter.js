@@ -53,3 +53,10 @@ const selectionSort = (array) => {
   return array;
 }
 
+const insertionSort = (array) => {
+
+  
+  return array;
+}
+
+sortButton.addEventListener("click", sortInputArray);

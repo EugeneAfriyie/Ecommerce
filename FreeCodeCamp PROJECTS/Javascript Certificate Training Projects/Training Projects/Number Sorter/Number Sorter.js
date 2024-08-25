@@ -35,6 +35,9 @@ const bubbleSort = (array) => {
   return array;
 }
 
- array;
+const selectionSort = (array) => {
+ 
+
+  return array;
 }
 

@@ -124,7 +124,6 @@ export function loadProducts( callback){
 
     callback();
     console.log('Products has loaded')
-    console.log(products)
   })
 
 

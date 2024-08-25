@@ -14,7 +14,7 @@ loadProducts(renderProducts);
     let productHTML = '';
     products.forEach ((product) =>{
     
-        // console.log(product.extraInfoHTML)
+        console.log(product.extraInfoHTML)
        productHTML += `
         <div class="product-container">
               <div class="product-image-container">

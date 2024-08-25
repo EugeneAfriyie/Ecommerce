@@ -1,9 +1,9 @@
-import { cart,updatecartQuantity} from "../../data/cart.js";
-import { getProducts,products} from "../../data/products.js";
-import { getDeliveryOption } from "../../data/deliveryOptions.js";
+import { cart,updatecartQuantity} from "../../data/cart-backend.js";
+import { getProducts,products} from "../../data/products-backend.js";
+import { getDeliveryOption } from "../../data/deliveryOptions-backend.js";
 
 import {formatCurrency }from "../Utils/money.js";
-import {renderOrderSummary } from "./orderSummary.js"
+import {renderOrderSummary } from "./orderSummary-backend.js"
 
 
 

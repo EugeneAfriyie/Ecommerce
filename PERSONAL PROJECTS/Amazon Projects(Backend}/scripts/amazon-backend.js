@@ -1,7 +1,7 @@
-import {cart,addtoCart} from '../data/cart.js';
-import {products} from '../data/products.js'
+import {cart,addtoCart} from '../data/cart-backend.js';
+import {products} from '../data/products-backend.js'
 import {formatCurrency} from './Utils/money.js'
-import { loadProducts } from '../data/products.js';
+import { loadProducts } from '../data/products-backend.js';
 
 
 loadProducts(renderProducts);

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <button id="that" popovertarget="this">
+        delete
+    </button>
+    ggdgdggdggggcyvsctvydty
+    
+    <div id="this" popover class="me">
+        <p>Are you sure you want to delete</p>
+        <button>yes</button>
+        <button>no</button>
+    </div>
+
+    <script>
+        document.getElementById('that').addEventListener('click',()=>{
+            // alert('hrekk')
+            document.getElementById('this').style.transform = ' translateX(0)';
+        })
+    </script>
+</body>
+</html>

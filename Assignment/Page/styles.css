@@ -1,0 +1,28 @@
+[popover]::backdrop{
+    backdrop-filter: blur(1px);
+}
+
+body{
+    position: relative;
+}
+
+
+#that{
+    /* position: relative; */
+}
+
+#this{
+    display: block;
+    position: absolute;
+    /* right: 10%; */
+    top: 50px;
+    left: 50%;
+    width: 50%;
+    transform: translateX(100%);
+    transition: all 1.4s ease-in-out;
+    /* margin-right: 20px ; */
+}
+
+.active{
+    transform: translateX(0);
+}

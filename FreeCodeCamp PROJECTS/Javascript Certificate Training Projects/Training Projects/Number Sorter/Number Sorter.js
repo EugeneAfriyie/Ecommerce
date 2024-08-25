@@ -21,5 +21,12 @@ const updateUI = (array = []) => {
   })
 }
 
+const bubbleSort = (array) => {
 
+
+  return array;
+}
+
+ array;
+}
 

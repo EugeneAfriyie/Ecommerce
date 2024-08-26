@@ -121,10 +121,10 @@ export function loadProducts( callback){
       return new Products(productDetails);
        
     });
-
     callback();
+
     console.log('Products has loaded')
-    console.log(products)
+    // console.log(products)
   })
 
 

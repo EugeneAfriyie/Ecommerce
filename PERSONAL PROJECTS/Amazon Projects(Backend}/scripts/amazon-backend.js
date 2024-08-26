@@ -13,6 +13,7 @@ loadProducts(renderProducts);
     function renderProducts(){
     let productHTML = '';
     products.forEach ((product) =>{
+      console.log(product.id)
     
         // console.log(product.extraInfoHTML)
        productHTML += `

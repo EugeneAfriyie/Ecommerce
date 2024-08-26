@@ -3,14 +3,10 @@ import { renderPaymentSummary } from "./checkout/paymentSummary-backend.js";
 import { loadProducts } from "../data/products-backend.js";
 
 loadProducts(() => {
-  console.log('Products loaded:', products);
-  eugene();
-});
-
-const eugene = () => {
+  // console.log('Products loaded:', products);
   renderOrderSummary();
-  renderPaymentSummary();
-};
+  renderPaymentSummary();});
+
 
 // In your orderSummary-backend.js
 

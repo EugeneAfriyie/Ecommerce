@@ -7,10 +7,11 @@ import { loadProducts,loadCart } from '../data/products-backend.js';
 // loadProducts(renderProducts);
 
 
-new Promise((resolve)=>{
+new Promise((resolve) => {
 
-  loadProducts();
-  resolve
+  loadProducts(() => {
+    resolve()
+  })
 
 }).then(()=>{
   renderProducts();

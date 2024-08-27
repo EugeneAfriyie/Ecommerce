@@ -100,6 +100,7 @@ class appliances extends Products {
 
 
 export let products = [];
+let cart={}
 
 export function loadProducts( callback){
 
@@ -123,7 +124,7 @@ export function loadProducts( callback){
     });
     callback();
 
-    console.log('Products has loaded')
+    console.log(products)
     // console.log(products)
   })
 
@@ -140,28 +141,29 @@ export function loadCart( callback){
   
   xhr.addEventListener('load' , ()=>{
 
-    cart = (JSON.parse(xhr.response)).map((productDetails)=>{
-      if (productDetails.type === 'clothing'){
-        return new clothings(productDetails);
-      }
-       else if(productDetails.type === 'appliances') {
-    
-        return new appliances(productDetails);
-      }
-    
-      return new Products(productDetails);
-       
-    });
-    callback();
+    cart =  xhr.response
 
-    console.log('cart has loaded')
+    console.log(cart)
     // console.log(products)
   })
+  callback();
 
 
-xhr.open('GET', 'https:supersimplebackend.dev/carts');
+xhr.open('GET', 'https:supersimplebackend.dev/cart');
 xhr.send();
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 // loadProducts();
 

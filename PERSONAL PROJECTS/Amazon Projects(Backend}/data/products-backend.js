@@ -132,6 +132,37 @@ xhr.open('GET', 'https:supersimplebackend.dev/products');
 xhr.send();
 }
 
+export function loadCart( callback){
+
+  const xhr = new XMLHttpRequest();
+  
+  
+  
+  xhr.addEventListener('load' , ()=>{
+
+    cart = (JSON.parse(xhr.response)).map((productDetails)=>{
+      if (productDetails.type === 'clothing'){
+        return new clothings(productDetails);
+      }
+       else if(productDetails.type === 'appliances') {
+    
+        return new appliances(productDetails);
+      }
+    
+      return new Products(productDetails);
+       
+    });
+    callback();
+
+    console.log('cart has loaded')
+    // console.log(products)
+  })
+
+
+xhr.open('GET', 'https:supersimplebackend.dev/carts');
+xhr.send();
+}
+
 // loadProducts();
 
 

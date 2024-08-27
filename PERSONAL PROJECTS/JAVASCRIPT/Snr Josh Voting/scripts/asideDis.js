@@ -7,12 +7,12 @@ const menu = document.getElementById('menu');
     menu.addEventListener('click',()=>{
         aside.style.display = 'block';
         overlay.style.display = 'block'
-        aside.classList.add('display')
+        aside.classList.toggle('display')
     })
 
 
     overlay.addEventListener('click',()=>{
-        aside.classList.remove('display')
+        aside.classList.toggle('display')
         overlay.style.display = 'none'
 
     })

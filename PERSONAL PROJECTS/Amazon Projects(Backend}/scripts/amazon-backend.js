@@ -1,10 +1,20 @@
 import {cart,addtoCart} from '../data/cart-backend.js';
 import {products} from '../data/products-backend.js'
 import {formatCurrency} from './Utils/money.js'
-import { loadProducts } from '../data/products-backend.js';
+import { loadProducts,loadCart } from '../data/products-backend.js';
 
 
-loadProducts(renderProducts);
+// loadProducts(renderProducts);
+
+
+new Promise((resolve)=>{
+
+  loadProducts();
+  resolve
+
+}).then(()=>{
+  renderProducts();
+})
     
 
 
@@ -70,9 +80,23 @@ loadProducts(renderProducts);
               </button>
             </div>
         `;
-    
-    
+
+
         document.querySelector('.js-products-grid').innerHTML = productHTML;
+
+        document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
+          button.addEventListener('click', () =>{
+            console.log(button);
+          const productId = button.dataset.productId;
+            
+            addtoCart(productId);
+      
+            updatecartQuantity();
+      
+          
+      
+          });
+      })
     
     });
     
@@ -94,16 +118,3 @@ loadProducts(renderProducts);
   updatecartQuantity();
 
 
-document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
-    button.addEventListener('click', () =>{
-      console.log(button);
-    const productId = button.dataset.productId;
-      
-      addtoCart(productId);
-
-      updatecartQuantity();
-
-    
-
-    });
-})

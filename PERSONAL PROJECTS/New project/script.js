@@ -9,29 +9,29 @@ function menuFunc() {
     
 
     menu.addEventListener('click', () => {
-        menuContainer.classList.add('active');
+        menuContainer.classList.toggle('active');
         overlay.style.display = 'block';
 
     });
 
     closeBtn.addEventListener('click', () => {
-        menuContainer.classList.remove('active');
-        overlay.style.display = 'none'
+       onOff();
 
 
     });
 
     overlay.addEventListener('click',()=>{
-        menuContainer.classList.remove('active')
-        overlay.style.display = 'none'
+      onOff();
 
     })
 
-    
 
- 
-
-    
 }
 
 menuFunc();
+
+
+const onOff =()=>{
+     menuContainer.classList.remove('active')
+        overlay.style.display = 'none'
+}

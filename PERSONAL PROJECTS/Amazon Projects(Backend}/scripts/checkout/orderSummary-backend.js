@@ -14,7 +14,7 @@ import {
   
   
   export function renderOrderSummary(){
-    console.log("Rendering order summary...");
+    // console.log("Rendering order summary...");
       let cartSummaryHTML = '';
       cart.forEach((cartItem) => {
         const productId = cartItem.productId;

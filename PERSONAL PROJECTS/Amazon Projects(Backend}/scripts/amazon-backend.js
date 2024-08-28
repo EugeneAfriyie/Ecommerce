@@ -1,12 +1,34 @@
 import {cart,addtoCart} from '../data/cart-backend.js';
-import {products} from '../data/products-backend.js'
+import {loadProductsFetch, products} from '../data/products-backend.js'
 import {formatCurrency} from './Utils/money.js'
-import { loadProducts,loadCart } from '../data/products-backend.js';
+'../data/products-backend.js';
+
+
+loadProductsFetch().then(()=>{
+  renderProducts();
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // loadProducts(renderProducts);
 
-
+/*
 new Promise((resolve) => {
 
   loadProducts(() => {
@@ -16,6 +38,8 @@ new Promise((resolve) => {
 }).then(()=>{
   renderProducts();
 })
+
+*/
     
 
 

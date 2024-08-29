@@ -19,7 +19,8 @@ int main (){
 
             cout<< "WElcome  "<< username<< " Enter your pin ";
             cin >> pin;
-        while (i<3){
+        while ( i < 3){
+
             if (pin == 1234){
                 cout<< "Login Successful  Your Accont Balance:"<< money;
 
@@ -30,19 +31,14 @@ int main (){
                 cout<<"4.Exit";
                 cout<<""<< endl;
                 cout<<"select your preferred option to proceed"<< endl;
-r
-                
-
-
-
                 switch(option){
 
                 }
 
-                break;
             }else{
                 cout << "Incorrect Pin , Try again !!" <<endl;
                   i++;
+
             }
 
         }

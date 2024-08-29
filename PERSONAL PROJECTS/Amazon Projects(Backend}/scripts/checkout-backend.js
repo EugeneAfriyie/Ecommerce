@@ -61,7 +61,7 @@ loadProducts(()=>{
   return new Promise((resolve, reject) => {
     loadCart(()=>{
       resolve()
-    })
+    }) 
   })
 }).then(()=>{
 

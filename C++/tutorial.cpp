@@ -228,68 +228,89 @@
 
 
 // Eugene Afriyie UEB3502023
+// #include <iostream>
+//  using namespace std;
+
+// int main() {
+//     int month;
+
+//     cout << " " <<endl;
+//     cout << "ENTER YOUR THE NUMBER OF YOUR MONTH IN THE ORDER ON THE CALENDER  "<<  endl;
+//     cout << "TO DISPLAY THE NUMBER OF DAYS IN IT i.e May - 5, November - 11 etc  ";
+//     cin >> month;
+//     cout << " " <<endl;
+
+//     if  (month == 1){
+//         cout<< " There are 31 days in 1-January" ;
+      
+
+//     }
+//     else if (month == 2){
+//         cout<< " There are 28 days in in 2-February BUT 29 days in leap year" ;
+      
+
+//     }
+//     else if(month == 3){
+//         cout<< " There are 31 days in in 3-March";
+      
+
+//     }
+//     else if (month == 4){
+//         cout<< " There are 30 days in in 4-April";
+//     }
+    
+//     else if (month == 5){
+//         cout<< " There are 31 days in in 5-May";
+//     }
+//     else if (month == 6){
+//         cout<< " There are 30 days in 6-June";
+//     }
+//     else if( month ==7){
+//         cout<< " There are 31 days in in 7-July";
+//     }
+//     else if (month == 8){
+//         cout<< " There are 31 days in in 8-August";
+//     }
+//     else if (month == 9){
+//         cout<< " There are 31 days in in 9-September";
+//     }
+//     else if (month == 10){
+//         cout<< " There are 31 days in in 10-October";
+//     }
+//     else if (month == 11){
+//         cout<< " There are 31 days in in 11-November";
+//     }
+//     else if (month == 12){
+//         cout<< " There are 31 days in in 12-December";
+//     }
+//     else {
+//         cout<<"!!! ENTER VALID MONTH ORDER NUMBER "<< endl;
+//         cout<<"i.e: 5 to display details of May "; }
+//     return 0;
+// }
+
+
 #include <iostream>
- using namespace std;
+using namespace std;
 
 int main() {
-    int month;
+    int n = 3;
+    while (n >= 0) {
+        cout << n * n << endl;
+        --n;
+    }
 
-    cout << " " <<endl;
-    cout << "ENTER YOUR THE NUMBER OF YOUR MONTH IN THE ORDER ON THE CALENDER  "<<  endl;
-    cout << "TO DISPLAY THE NUMBER OF DAYS IN IT i.e May - 5, November - 11 etc  ";
-    cin >> month;
-    cout << " " <<endl;
+    // cout << n << endl;
+    // while (n < 4) {
+    //     cout << ++n << endl;
+    // }
 
-    if  (month == 1){
-        cout<< " There are 31 days in 1-January" ;
-      
-
-    }
-    else if (month == 2){
-        cout<< " There are 28 days in in 2-February BUT 29 days in leap year" ;
-      
-
-    }
-    else if(month == 3){
-        cout<< " There are 31 days in in 3-March";
-      
-
-    }
-    else if (month == 4){
-        cout<< " There are 30 days in in 4-April";
-    }
-    
-    else if (month == 5){
-        cout<< " There are 31 days in in 5-May";
-    }
-    else if (month == 6){
-        cout<< " There are 30 days in 6-June";
-    }
-    else if( month ==7){
-        cout<< " There are 31 days in in 7-July";
-    }
-    else if (month == 8){
-        cout<< " There are 31 days in in 8-August";
-    }
-    else if (month == 9){
-        cout<< " There are 31 days in in 9-September";
-    }
-    else if (month == 10){
-        cout<< " There are 31 days in in 10-October";
-    }
-    else if (month == 11){
-        cout<< " There are 31 days in in 11-November";
-    }
-    else if (month == 12){
-        cout<< " There are 31 days in in 12-December";
-    }
-    else {
-        cout<<"!!! ENTER VALID MONTH ORDER NUMBER "<< endl;
-        cout<<"i.e: 5 to display details of May "; }
+    // cout << n << endl;
+    // while (n >= 0) {
+    //     cout << (n /= 2) << endl;
+    // }
     return 0;
 }
-
-
 
 
 

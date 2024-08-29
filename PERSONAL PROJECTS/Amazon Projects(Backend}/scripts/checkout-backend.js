@@ -52,9 +52,7 @@ import { renderPaymentSummary } from "./checkout/paymentSummary-backend.js";
 new Promise ((resolve)=>{
 
 loadProducts(()=>{
-  resolve(
-    
-  )
+  resolve()
 })
 
 }).then((resolve)=>{

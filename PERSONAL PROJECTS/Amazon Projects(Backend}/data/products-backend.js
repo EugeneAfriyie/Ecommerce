@@ -103,33 +103,32 @@ export let products = [];
 let cart={}
 
 
-export function loadProductsFetch(){
+// export function loadProductsFetch(){
 
-    const promise = fetch(
-      'https:supersimplebackend.dev/products'
-    ).then((reponse)=>{
-      return reponse.json()
-    }).then((productsData)=>{
-      products = productsData.map((productDetails)=>{
-        if (productDetails.type === 'clothing'){
-          return new clothings(productDetails);
-        }
-         else if(productDetails.type === 'appliances') {
+//     const promise = fetch(
+//       'https:supersimplebackend.dev/products'
+//     ).then((reponse)=>{
+//       return reponse.json()
+//     }).then((productsData)=>{
+//       products = productsData.map((productDetails)=>{
+//         if (productDetails.type === 'clothing'){
+//           return new clothings(productDetails);
+//         }
+//          else if(productDetails.type === 'appliances') {
       
-          return new appliances(productDetails);
-        }
+//           return new appliances(productDetails);
+//         }
       
-        return new Products(productDetails);
+//         return new Products(productDetails);
          
-      });
+//       });
 
-      console.log('loaded Products')
+//       console.log('loaded Products')
+//     })
 
-    })
+//     return promise;
 
-    return promise;
-
-}
+// }
 
 
 

@@ -40,4 +40,9 @@ const getVariance = (array) => {
   return variance;
 }
 
+const getStandardDeviation = (array) => {
+  const variance = getVariance(array);
+  const standardDeviation = Math.sqrt(variance);
+  return standardDeviation;
+}
 

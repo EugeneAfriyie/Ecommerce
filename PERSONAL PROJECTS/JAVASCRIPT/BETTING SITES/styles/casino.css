@@ -1,0 +1,103 @@
+
+
+/* left sectin css */
+
+#casino-main{
+    border: 1px solid red;
+    width: 1000px;
+    margin: 50px auto;
+
+
+    display: grid;
+    grid-template-columns: 150px 1fr ;
+    gap: 20px;
+    
+
+}
+
+.cas-main-sec{
+    border: 1px solid green;
+    /* height: 100vh; */
+}
+
+.cas-sec-1-div{
+    background-color: rgb(32, 30, 30);
+}
+
+.cas-sec-1-items{
+    display: flex;
+    color: white;
+    padding: 13px 0 13px 13px ;
+    gap: 10px;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.cas-sec-1-items:hover{
+    background-color: rgba(17, 255, 17, 0.305);
+    color: black;
+}
+
+.cas-active{
+    background-color: rgba(17, 255, 17, 0.511);
+    color: black;
+
+}
+
+.cas-sec-1-items img{
+    width: 20px;
+    color: black;
+}
+
+.cas-sec-1-div li{
+}
+
+
+
+
+
+
+
+/* right section css */
+
+#cas-main-sec-2{
+    background-color: rgb(32, 30, 30);
+
+
+}
+
+
+.cas-main-sec-2-main-header{
+    background-color: rgb(5, 80, 5);
+    display: grid;
+    grid-template-columns: auto 1fr ;
+}
+
+.header-img{
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.cas-main-sec-2-sub-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    text-transform: capitalize;
+    margin: 50px 0 20px;
+
+}
+
+.cas-main-sec-2-sub-header button{
+    padding: 10px;
+
+}
+.cas-main-sec-2-sub-header input{
+    padding: 10px;
+    font-size: 15px;
+    width: 300px;
+    background-color: gray;
+    color: white;
+
+}
+

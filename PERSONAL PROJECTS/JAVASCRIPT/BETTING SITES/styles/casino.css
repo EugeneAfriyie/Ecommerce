@@ -1,9 +1,29 @@
+::placeholder{
+    color: white;
+    font-size: 14px;
+}
+
+.AC{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-sec-3{
+    display: none;
+}
+
+
 
 
 /* left sectin css */
 
 #casino-main{
-    border: 1px solid red;
+    background-color: rgba(1, 36, 25, 0.998);
+
+}
+
+#casino-content{
     width: 1000px;
     margin: 50px auto;
 
@@ -16,8 +36,12 @@
 }
 
 .cas-main-sec{
-    border: 1px solid green;
-    /* height: 100vh; */
+    border: 1px solid rgba(179, 179, 179, 0.053);
+}
+
+.cas-main-sec-1{
+    height: auto;
+
 }
 
 .cas-sec-1-div{
@@ -61,7 +85,7 @@
 /* right section css */
 
 #cas-main-sec-2{
-    background-color: rgb(32, 30, 30);
+    background-color:rgba(47, 79, 79, 0.789);
 
 
 }
@@ -74,7 +98,6 @@
 }
 
 .header-img{
-    border: 1px solid red;
     padding: 5px;
 }
 
@@ -85,19 +108,126 @@
     padding: 0 20px;
     text-transform: capitalize;
     margin: 50px 0 20px;
+    color: white;
+
+}
+
+
+.cas-search-div{
+    display: flex;
+    color: white;
+    background-color: gray;
+    border: 1px solid rgb(175, 173, 173);
+    border-radius: 10px;
+
 
 }
 
 .cas-main-sec-2-sub-header button{
     padding: 10px;
+    background-color: transparent;
+}
 
+.clear{
+    border-left: 1px solid #f4f1f1;
+    height: 30px;
+    align-self: center;
+    font-size: 16px;
+    padding: 0 10px;
+    
 }
 .cas-main-sec-2-sub-header input{
-    padding: 10px;
     font-size: 15px;
-    width: 300px;
-    background-color: gray;
-    color: white;
+    width: 250px;
+    outline: none;
+    background-color: transparent;
+    /* border: 1px solid red; */
 
 }
 
+
+#cas-main-sec-main{
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+
+    
+}
+
+
+.games-cards{
+    position: relative;
+    color: white;
+}
+
+.card-img{
+    height: 150px;
+}
+
+.games-cards img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius:15px ;
+    border-top-left-radius:15px ;
+}
+
+.card-title{
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    background-color: rgb(68, 67, 67);
+    text-transform: capitalize;
+    font-weight: 600;
+
+}
+
+
+.card-header{
+    position: absolute;
+    /* background-color: gray; */
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    font-size: 13px;
+    width: 100%;
+
+}
+
+.game-rate{
+       /* padding: 4px; */
+       background-image: linear-gradient(90deg, red, #ff6507 34%, red);
+    font-style: italic;
+    transform: skewX(-12deg);
+    border-radius: 4px;
+    border-bottom-left-radius: 7px;
+   
+    padding: 5px ;
+}
+.exclusive{
+    font-size: 12px;
+    padding:  5px;
+    background-image: linear-gradient(90deg, #2c2c2c, #5d5d5d 38%, #2b2a2a), linear-gradient(90deg, #fece61, #fdd564 52%, #bf741a); 
+    border-image: linear-gradient(90deg, #fece61, #fdd564 52%, #bf741a);
+
+}
+
+.active-players{
+
+    font-size: 12px;
+    background-color: rgba(20, 18, 18, 0.777);
+    padding: 0 10px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    
+}
+
+.active-players span{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(0, 128, 0);
+    margin-right: 10px;
+}

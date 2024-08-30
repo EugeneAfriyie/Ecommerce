@@ -22,7 +22,7 @@ import { renderPaymentSummary } from "./checkout/paymentSummary-backend.js";
   //   resolve();
       
   //   });
-  // }),
+  // }) ,
   
   new Promise((resolve, reject) => {
     loadCart(()=>{

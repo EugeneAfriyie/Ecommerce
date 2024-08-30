@@ -164,6 +164,7 @@ xhr.open('GET', 'https:supersimplebackend.dev/products');
 xhr.send();
 }
 
+
 export function loadCart( callback){
 
   const xhr = new XMLHttpRequest();

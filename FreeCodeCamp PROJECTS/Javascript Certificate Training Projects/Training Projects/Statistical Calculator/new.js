@@ -26,6 +26,18 @@ const getMode = (array) => {
   return mode.join(", ");
 }
 
+const getRange = (array) => {
+  return Math.max(...array) - Math.min(...array);
+}
 
+const getVariance = (array) => {
+  const mean = getMean(array);
+  const variance = array.reduce((acc, el) => {
+    const difference = el - mean;
+    const squared = difference ** 2;
+    return acc + squared;
+  }, 0) / array.length;
+  return variance;
+}
 
 

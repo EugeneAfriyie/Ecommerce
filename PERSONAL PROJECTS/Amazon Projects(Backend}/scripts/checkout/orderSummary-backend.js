@@ -218,6 +218,8 @@ import {
 
         renderPaymentSummary();
       }
+
+      
   
     //   renderOrderSummary();
       // console.log(cart)

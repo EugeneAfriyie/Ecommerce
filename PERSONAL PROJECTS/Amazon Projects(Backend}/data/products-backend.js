@@ -100,38 +100,38 @@ class appliances extends Products {
 
 
 export let products = [];
-let cart={}
+// let cart= []
 
 
-// export function loadProductsFetch(){
+export function loadProductsFetch(){
 
-//     const promise = fetch(
-//       'https://supersimplebackend.dev/products'
-//     ).then((reponse)=>{
-//       return reponse.json()
-//     }).then((productsData)=>{
-//       products = productsData.map((productDetails)=>{
-//         if (productDetails.type === 'clothing'){
-//           return new clothings(productDetails);
-//         }
-//          else if(productDetails.type === 'appliances') {
+    const promise = fetch(
+      'https://supersimplebackend.dev/products'
+    ).then((reponse)=>{
+      return reponse.json()
+    }).then((productsData)=>{
+      products = productsData.map((productDetails)=>{
+        if (productDetails.type === 'clothing'){
+          return new clothings(productDetails);
+        }
+         else if(productDetails.type === 'appliances') {
       
-//           return new appliances(productDetails);
-//         }
+          return new appliances(productDetails);
+        }
       
-//         return new Products(productDetails);
+        return new Products(productDetails);
          
-//       })
-//       console.log('loaded Products')
-//     }).catch((error)=>{
-//       console.log( 'Unexpected error ,Please try again later')
+      })
+      console.log('loaded Products')
+    }).catch((error)=>{
+      console.log( 'Unexpected error ,Please try again later')
    
-//          });
+         });
    
 
-//     return promise;
+    return promise;
 
-// }
+}
 
 
 
@@ -167,34 +167,34 @@ xhr.send();
 }
 
 
-export function loadCart( callback){
+// export function loadCart( callback){
 
-  const xhr = new XMLHttpRequest();
+//   const xhr = new XMLHttpRequest();
   
   
   
-  xhr.addEventListener('load' , ()=>{
+//   xhr.addEventListener('load' , ()=>{
 
-    cart =  xhr.response
+//     cart =  xhr.response
 
-    // console.log(cart)
-    // console.log(products)
-  })
-  callback();
+//     // console.log(cart)
+//     // console.log(products)
+//   })
+//   callback();
 
-  xhr.addEventListener('error' , (error)=>{
+//   xhr.addEventListener('error' , (error)=>{
 
-   console.log( 'Unexpected error ,Please try again later')
+//    console.log( 'Unexpected error ,Please try again later')
 
-    // console.log(cart)
-    // console.log(products)
-  })
+//     // console.log(cart)
+//     // console.log(products)
+//   })
 
 
-// xhr.open('GET', 'https://error.supersimplebackend.dev/cart');
-xhr.open('GET', 'https://supersimplebackend.dev/cart');
-xhr.send();
-}
+// // xhr.open('GET', 'https://error.supersimplebackend.dev/cart');
+// xhr.open('GET', 'https://supersimplebackend.dev/cart');
+// xhr.send();
+// }
 
 
 

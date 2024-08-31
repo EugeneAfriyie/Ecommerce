@@ -5,6 +5,7 @@ export let cart;
 loadFromStorage();
 
 
+
 export function loadFromStorage(){
   cart = JSON.parse(localStorage.getItem('cart-backend')); 
 if (!cart){
@@ -20,9 +21,10 @@ if (!cart){
       deliveryOptionId:'3'
     }
   
-];
+]
 };
 
+console.log(cart)
 }
 
 export function addtoCart (productId) {

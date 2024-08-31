@@ -1,4 +1,4 @@
-import { loadCart, loadProducts, products } from "../data/products-backend.js";
+import { loadProducts, products } from "../data/products-backend.js";
 import { renderOrderSummary } from "./checkout/orderSummary-backend.js";
 import { renderPaymentSummary } from "./checkout/paymentSummary-backend.js";
  "../data/products-backend.js";
@@ -21,14 +21,14 @@ try{
     });
   }) ,
   
-  new Promise((resolve, reject) => {
-    loadCart(()=>{
+  // new Promise((resolve, reject) => {
+  //   loadCart(()=>{
 
-      reject('error ')
-      resolve();
-    });
+  //     // reject('error ')
+  //     resolve();
+  //   });
    
-  }),
+  // }),
  ])
 
 } catch(error){

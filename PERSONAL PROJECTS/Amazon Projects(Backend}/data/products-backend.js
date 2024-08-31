@@ -106,7 +106,7 @@ let cart={}
 // export function loadProductsFetch(){
 
 //     const promise = fetch(
-//       'https:supersimplebackend.dev/products'
+//       'https://supersimplebackend.dev/products'
 //     ).then((reponse)=>{
 //       return reponse.json()
 //     }).then((productsData)=>{
@@ -121,10 +121,13 @@ let cart={}
       
 //         return new Products(productDetails);
          
-//       });
-
+//       })
 //       console.log('loaded Products')
-//     })
+//     }).catch((error)=>{
+//       console.log( 'Unexpected error ,Please try again later')
+   
+//          });
+   
 
 //     return promise;
 
@@ -133,12 +136,11 @@ let cart={}
 
 
 
+
 export function loadProducts( callback){
 
   const xhr = new XMLHttpRequest();
-  
-  
-  
+
   xhr.addEventListener('load' , ()=>{
 
     products = (JSON.parse(xhr.response)).map((productDetails)=>{
@@ -160,7 +162,7 @@ export function loadProducts( callback){
   })
 
 
-xhr.open('GET', 'https:supersimplebackend.dev/products');
+xhr.open('GET', 'https://supersimplebackend.dev/products');
 xhr.send();
 }
 
@@ -180,10 +182,20 @@ export function loadCart( callback){
   })
   callback();
 
+  xhr.addEventListener('error' , (error)=>{
 
-xhr.open('GET', 'https:supersimplebackend.dev/cart');
+   console.log( 'Unexpected error ,Please try again later')
+
+    // console.log(cart)
+    // console.log(products)
+  })
+
+
+// xhr.open('GET', 'https://error.supersimplebackend.dev/cart');
+xhr.open('GET', 'https://supersimplebackend.dev/cart');
 xhr.send();
 }
+
 
 
 

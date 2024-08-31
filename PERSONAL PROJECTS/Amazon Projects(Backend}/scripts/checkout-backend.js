@@ -1,4 +1,4 @@
-import { loadCart, loadProducts } from "../data/products-backend.js";
+import { loadCart, loadProducts, products } from "../data/products-backend.js";
 import { renderOrderSummary } from "./checkout/orderSummary-backend.js";
 import { renderPaymentSummary } from "./checkout/paymentSummary-backend.js";
  "../data/products-backend.js";
@@ -6,12 +6,16 @@ import { renderPaymentSummary } from "./checkout/paymentSummary-backend.js";
 
 
 
-async function loadPage(params) {
+async function loadPage() {
+try{
+  // throw 'Tgis will throw an error automatically'
 
   await Promise.all([
     // loadProductsFetch(),
   new Promise((resolve, reject) => {
     loadProducts(()=>{
+    console.log(products)
+
     resolve();
       
     });
@@ -19,21 +23,26 @@ async function loadPage(params) {
   
   new Promise((resolve, reject) => {
     loadCart(()=>{
+
+      reject('error ')
       resolve();
     });
    
   }),
  ])
 
+} catch(error){
+    console.log( 'Unexpected error ,Please try again later')
+}
 
-
- renderOrderSummary();
+  renderOrderSummary();
   renderPaymentSummary();
   
 }
 
 
 
+loadPage();
 
 
 

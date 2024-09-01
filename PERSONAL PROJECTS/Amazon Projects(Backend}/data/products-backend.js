@@ -208,7 +208,6 @@ xhr.send();
 
 
 
-
 // loadProducts();
 
 

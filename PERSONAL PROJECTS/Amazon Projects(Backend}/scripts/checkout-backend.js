@@ -14,7 +14,7 @@ try{
     // loadProductsFetch(),
   new Promise((resolve, reject) => {
     loadProducts(()=>{
-    console.log(products)
+    // console.log(products)
 
     resolve();
       

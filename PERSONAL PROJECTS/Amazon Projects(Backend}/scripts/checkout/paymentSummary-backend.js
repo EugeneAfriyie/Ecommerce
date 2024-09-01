@@ -1,10 +1,10 @@
-import { cart,updatecartQuantity} from "../../data/cart-backend.js";
+import { cart,saveToStorage,updatecartQuantity} from "../../data/cart-backend.js";
 import { getProducts,products} from "../../data/products-backend.js";
 import { getDeliveryOption } from "../../data/deliveryOptions-backend.js";
 
 import {formatCurrency }from "../Utils/money.js";
 import {renderOrderSummary } from "./orderSummary-backend.js"
-import { addOrder } from "../../data/orders.js";
+import { addOrder, ordersList } from "../../data/orders.js";
 
 
 
@@ -90,12 +90,15 @@ export function renderPaymentSummary (){
         
         `;
 
+     
         document.querySelector('.js-payment-summary').innerHTML = paymentSummaryHTML;
 
         const placeOrderBtn =document.querySelector('.js-place-order');
         placeOrderBtn.addEventListener('click', async() =>{
 
-            try{
+
+
+            
            const response = await fetch('https:supersimplebackend.dev/orders',{
                 method:'POST',
                 headers:{'Content-Type': 'application/json'},
@@ -106,12 +109,22 @@ export function renderPaymentSummary (){
             console.log(response)
             const orders = await response.json();
             addOrder(orders);
-        } catch(error){
-            console.log('Unexpected Error,Try Again Later.  !!!')
-        }
+    // console.log(ordersList[0].products[1].estimatedDeliveryTime
+        
+    //     )
 
 
-        window.location.href = 'orders.html'
+
+
+        cart.length = 0;
+        console.log(cart)
+
+        
+
+
+        window.location.href = 'orders.html';
+
+        saveToStorage();
 
             
         })

@@ -1,10 +1,9 @@
 import { cart,saveToStorage,updatecartQuantity} from "../../data/cart-backend.js";
-import { getProducts,products} from "../../data/products-backend.js";
+import { getProducts} from "../../data/products-backend.js";
 import { getDeliveryOption } from "../../data/deliveryOptions-backend.js";
 
 import {formatCurrency }from "../Utils/money.js";
-import {renderOrderSummary } from "./orderSummary-backend.js"
-import { addOrder, ordersList } from "../../data/orders.js";
+import { addOrder } from "../order-backend.js";
 
 
 

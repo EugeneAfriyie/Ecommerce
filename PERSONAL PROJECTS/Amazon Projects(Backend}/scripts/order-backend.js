@@ -1,12 +1,6 @@
+import { loadProductsFetch } from "../data/products-backend.js";
 import { formatCurrency } from "../scripts/Utils/money.js";
-import { getProducts } from "./products-backend.js";
-import { loadProductsFetch } from "./products-backend.js";
-
-
-
-
-
-alert('fsdgh')
+import { getProducts } from "../data/products-backend.js";
 
 
 export const ordersList = JSON.parse(localStorage.getItem('orders')) || [];

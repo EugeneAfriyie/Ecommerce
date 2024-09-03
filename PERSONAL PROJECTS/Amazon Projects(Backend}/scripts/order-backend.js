@@ -1,7 +1,5 @@
-import { loadProductsFetch } from "../data/products-backend.js";
 import { formatCurrency } from "../scripts/Utils/money.js";
-import { getProducts } from "../data/products-backend.js";
-import { addtoCart } from "../data/cart-backend.js";
+import { getProducts ,loadProductsFetch} from "../data/products-backend.js";
 import { updatecartQuantity,cart ,saveToStorage} from "../data/cart-backend.js";
 
 
@@ -156,7 +154,7 @@ async function renderOrderList() {
 
 
     renderOrderList();
-    updatecartQuantity()
+    // updatecartQuantity()
 
 
 

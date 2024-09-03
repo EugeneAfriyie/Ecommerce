@@ -2,7 +2,7 @@ import { loadProductsFetch } from "../data/products-backend.js";
 import { formatCurrency } from "../scripts/Utils/money.js";
 import { getProducts } from "../data/products-backend.js";
 import { addtoCart } from "../data/cart-backend.js";
-import { updatecartQuantity,cart } from "../data/cart-backend.js";
+import { updatecartQuantity,cart ,saveToStorage} from "../data/cart-backend.js";
 
 
 export const ordersList = JSON.parse(localStorage.getItem('orders')) || [];
@@ -13,11 +13,11 @@ console.log(ordersList);
 export function addOrder(orders){
     ordersList.push(orders);
 
-    saveToStorage()
+    saveToStorageOrder()
 }
 
 
-function saveToStorage(){
+function saveToStorageOrder(){
     localStorage.setItem('orders' , JSON.stringify(ordersList))
 }
 
@@ -101,20 +101,14 @@ async function renderOrderList() {
     const productId = buyBtn.dataset.id;
     const orderId = buyBtn.dataset.orderid;
     buyBtn.addEventListener('click',()=>{
-        console.log(orderId)
 
         let matchingItem;
         let matchingOrder;
         ordersList.forEach(order =>{
-            console.log(order.id)
          if (order.id === orderId){
             matchingOrder = order;
         }
     })
-    console.log(matchingOrder)
-
-
-        
 
         let matchingOrderElement ;
         matchingOrder.products.forEach(order=>{
@@ -123,7 +117,6 @@ async function renderOrderList() {
             }
 
         })
-    console.log(matchingOrderElement)
 
 
 
@@ -148,21 +141,13 @@ async function renderOrderList() {
              
              
 
-            document.querySelector('.js-cart-quantity').innerHTML = updatecartQuantity()
- console.log('addeed')
-console.log(cart);
-saveToStorage()
+         updatecartQuantity()
+         saveToStorage()
 
 
-    })
-
-
-
-
-
-
-
-
+ 
+ 
+})
  })
 
 
@@ -171,6 +156,7 @@ saveToStorage()
 
 
     renderOrderList();
+    updatecartQuantity()
 
 
 

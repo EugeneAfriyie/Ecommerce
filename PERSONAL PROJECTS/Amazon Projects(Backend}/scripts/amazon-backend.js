@@ -134,7 +134,7 @@ new Promise((resolve) => {
     let cartQuantity = 0;
     cart.forEach((cartItem) =>{
       cartQuantity += cartItem.quantity
-    });3
+    });
     document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 
     return cartQuantity;

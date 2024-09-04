@@ -60,7 +60,8 @@ export function renderPaymentSummary() {
     const order ={
         OrderId: Date.now(),
         products: [...cart],
-        OrderPrice: totalCents
+        OrderPrice: totalCents,
+        orderTime: new Date()
     }
     orderList.push(order); 
     saveOrder();

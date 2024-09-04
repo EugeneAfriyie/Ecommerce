@@ -14,7 +14,7 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
     orderList.forEach(order => {
         let orderProductHTml = '';
 
-        order.products.forEach(orderProduct => {
+        order.products.forEach((orderProduct,i) => {
             const productId = orderProduct.productId;
             const matchingProduct = getProducts(productId);
 
@@ -24,7 +24,13 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
           
           const today = dayjs();
           const deliveryDate = today.add(deliveryOption.deliveryDays,'days');
+          const shippedDay = today.add(deliveryOption.shippedDay,'days');
           const dateString = deliveryDate.format('dddd, MMMM D');
+          const shippedDayString = shippedDay.format('dddd, MMMM D');
+          orderProduct.dateString = dateString;
+          orderProduct.shippedDayString = shippedDayString;
+        
+
   
 
             orderProductHTml += `
@@ -80,10 +86,14 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
                 ${orderProductHTml}
             </div>
         `;
+
+    // console.log(order.products)
+
     });
 
 
     document.querySelector('.js-order-grid').innerHTML = ordersListHTML;
+
 
     
 
@@ -97,8 +107,7 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
         let matchingItem;
         let matchingOrder;
     orderList.forEach(order =>{
-        console.log(order.OrderId)
-        console.log(orderId)
+        
           if (order.OrderId === orderId){
             matchingOrder = order;
             console.log(matchingOrder)
@@ -139,7 +148,8 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
           }
              
              
-          localStorage.setItem('trackItem',JSON.stringify(matchingItem))
+          localStorage.setItem('trackItem',JSON.stringify(matchingOrderElement))
+          console.log(matchingOrderElement)
          updatecartQuantity()
          saveToStorage()
 

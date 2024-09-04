@@ -3,6 +3,8 @@ import { getProducts } from "../../data/products.js";
 import { getDeliveryOption } from "../../data/deliveryOptions.js";
 import { formatCurrency } from "../Utils/money.js";
 import { saveOrder, orderList } from "../order/order.js";
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
 
 export function renderPaymentSummary() {
   let productPriceCents = 0;
@@ -56,14 +58,15 @@ export function renderPaymentSummary() {
   document.querySelector('.js-payment-summary').innerHTML = paymentSummaryHTML;
 
   // Add event listener to the Place Order button
+  const formattedDate = dayjs().format('MMMM D, YYYY h:mm A');
   document.querySelector('.js-place-order').addEventListener('click', () => {
     const order ={
         OrderId: Date.now(),
         products: [...cart],
         OrderPrice: totalCents,
-        orderTime: new Date()
+        orderTime: formattedDate
     }
-    orderList.push(order); 
+    orderList.unshift(order); 
     saveOrder();
     cart.length = 0;
     saveToStorage()

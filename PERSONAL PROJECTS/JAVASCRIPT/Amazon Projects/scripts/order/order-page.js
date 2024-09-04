@@ -65,11 +65,11 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
                     <div class="order-header-left-section">
                         <div class="order-date">
                             <div class="order-header-label">Order Placed:</div>
-                            <div>${new Date()}</div>
+                            <div>${order.orderTime}</div>
                         </div>
                         <div class="order-total">
                             <div class="order-header-label">Total:</div>
-                            <div>$${formatCurrency(order.OrderPrice)}</div>
+                            <div>₵${formatCurrency(order.OrderPrice)}</div>
                         </div>
                     </div>
                     <div class="order-idheader-right-section">
@@ -119,12 +119,13 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
         })
 
 
-
+        
         cart.forEach((cartItem) =>{
           if (productId === cartItem.productId){
             matchingItem = cartItem;
 
           }
+        
         });
         if (matchingItem){
             matchingItem.quantity += matchingOrderElement.quantity;
@@ -138,7 +139,7 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
           }
              
              
-
+          localStorage.setItem('trackItem',JSON.stringify(matchingItem))
          updatecartQuantity()
          saveToStorage()
 

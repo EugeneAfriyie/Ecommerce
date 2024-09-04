@@ -1,9 +1,9 @@
 import { cart,updatecartQuantity} from "../../data/cart.js";
 import { getProducts,products} from "../../data/products.js";
 import { getDeliveryOption } from "../../data/deliveryOptions.js";
-
 import {formatCurrency }from "../Utils/money.js";
 import {renderOrderSummary } from "./orderSummary.js"
+import { saveOrder,orderList } from "../order/order.js";
 
 
 
@@ -82,17 +82,54 @@ export function renderPaymentSummary (){
                     </div>
                 </div>
 
-                <button class="place-order-button button-primary">
+                <button class="place-order-button button-primary js-place-order'">
                     Place your order
                 </button>
         
         `;
 
         document.querySelector('.js-payment-summary').innerHTML = paymentSummaryHTML;
+        
 
+        
+      
+        createOrder()
   
-
+        alert('hello')
   
 }
 
 renderOrderSummary();
+
+
+
+function createOrder(){
+
+    const placeOrderBtn = document.querySelector('.js-place-order');
+
+    placeOrderBtn.addEventListener('click',()=>{
+        orderList.push(cart)
+        saveOrder();
+        alert('hello')
+
+
+
+    })
+
+
+
+
+}
+
+const placeOrderBtn = document.querySelector('.js-place-order');
+
+document.querySelector('.js-place-order').addEventListener('click',()=>{
+orderList.push(cart)
+saveOrder();
+alert('hello')
+
+
+
+})
+
+alert('hello')

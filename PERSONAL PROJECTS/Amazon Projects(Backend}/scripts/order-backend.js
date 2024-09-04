@@ -4,7 +4,6 @@ import { updatecartQuantity,cart ,saveToStorage} from "../data/cart-backend.js";
 
 
 export const ordersList = JSON.parse(localStorage.getItem('orders')) || [];
-console.log(ordersList);
 
 
 

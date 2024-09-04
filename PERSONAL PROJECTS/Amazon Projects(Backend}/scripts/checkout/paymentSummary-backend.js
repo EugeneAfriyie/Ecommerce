@@ -90,7 +90,7 @@ export function renderPaymentSummary (){
         `;
 
      
-        document.querySelector('.js-payment-summary').innerHTML = paymentSummaryHTML;
+    document.querySelector('.js-payment-summary').innerHTML = paymentSummaryHTML;
 
         const placeOrderBtn =document.querySelector('.js-place-order');
         placeOrderBtn.addEventListener('click', async() =>{

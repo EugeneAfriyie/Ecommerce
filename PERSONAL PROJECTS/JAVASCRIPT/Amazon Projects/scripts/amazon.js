@@ -1,11 +1,8 @@
 import {cart,addtoCart} from '../data/cart.js';
 import {products} from '../data/products.js'
 import {formatCurrency} from './Utils/money.js'
-import { loadProducts } from '../data/products.js';
     
 
-loadProducts(renderProducts);
-alert('hello')
     
     function renderProducts(){
       let productHTML = '';
@@ -87,6 +84,8 @@ alert('hello')
       });
 
 }
+
+renderProducts()
 
  
 

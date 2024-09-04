@@ -6,6 +6,7 @@ import { renderPaymentSummary } from "./checkout/paymentSummary.js";
 
 renderOrderSummary();
 renderPaymentSummary();
+console.log(cart);
 
-alert('gh')
+
 

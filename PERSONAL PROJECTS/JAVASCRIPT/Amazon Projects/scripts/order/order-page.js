@@ -56,7 +56,7 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
                 </div>
                 <div class="product-actions">
                   <a href="tracking.html">
-                    <button class="track-package-button button-secondary">
+                    <button class="track-package-button js-track-package-button button-secondary">
                       Track package
                     </button>
                   </a>
@@ -97,8 +97,9 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
     
 
+    
     const buyAgainbBtn = document.querySelectorAll('.js-buy-again-button');
-
+    const trackB = document.querySelectorAll('.js-track-package-button');
     buyAgainbBtn.forEach(buyBtn =>{
     const productId = buyBtn.dataset.id;
     const orderId = Number(buyBtn.dataset.orderid);
@@ -158,6 +159,9 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
  
 })
  })
+
+
+ 
 }
 
 updatecartQuantity()

@@ -240,4 +240,5 @@ i.cart-item-container,
 
 .cart-empty img{
   width: 200px;
+  display: block;
 }

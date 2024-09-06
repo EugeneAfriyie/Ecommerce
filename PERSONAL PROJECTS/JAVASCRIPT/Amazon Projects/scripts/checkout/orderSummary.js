@@ -1,10 +1,16 @@
-import { cart,removeFromCart,updateQuantity,updateDeliveryOption,saveToStorage
+import {
+    cart,
+    removeFromCart,
+      updateQuantity,updateDeliveryOption,saveToStorage
   } from '../../data/cart.js';
   import {products,getProducts} from '../../data/products.js';
+  // import { updatecartQuantity } from './amazon.js'
   import {formatCurrency }from '../Utils/money.js'
+  
   import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
   import { deliveryOptions,getDeliveryOption } from '../../data/deliveryOptions.js';
   import { renderPaymentSummary } from './paymentSummary.js';
+  
   
   
   export function renderOrderSummary(){
@@ -66,6 +72,7 @@ import { cart,removeFromCart,updateQuantity,updateDeliveryOption,saveToStorage
                       <div class="delivery-options-title">
                         Choose a delivery option:
                       </div>
+                      
                           ${deliveryOptionsHTML(matchingProduct,cartItem)}
                     </div>
                   </div>
@@ -73,13 +80,6 @@ import { cart,removeFromCart,updateQuantity,updateDeliveryOption,saveToStorage
                 
   
               });
-
-          const cartIsEmptyHTML =  `
-              <div class="js-cart-empty cart-empty">
-                <img src="./images/appliance-instructions.png" alt="cart-icon">
-              </div>
-          `;
-          
   
   
   
@@ -120,21 +120,13 @@ import { cart,removeFromCart,updateQuantity,updateDeliveryOption,saveToStorage
   
   
   
-      const cartIsEmpty = document.querySelector('.js-cart-empty')
-      console.log(cartIsEmpty)
-      const cartHasProducts = document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
-      const cartNOsProducts = document.querySelector('.js-order-summary').innerHTML = cartIsEmpty;
-      const orderSummaryDiv = document.querySelector('.js-order-summary');
-      orderSummaryDiv.innerHTML= cartIsEmptyHTML
-
-
-   
-
-       cart.length = 0 ? orderSummaryDiv.innerHTML = cartSummaryHTML: orderSummaryDiv.innerHTML= cartIsEmptyHTML
-     
-       document.querySelectorAll('.js-delect-link').forEach((link) =>{
+  
+      document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
+  
+      document.querySelectorAll('.js-delect-link').forEach((link) =>{
         link.addEventListener('click',() =>{
           const productId = link.dataset.productId;
+          location.reload();
   
           removeFromCart(productId);
           const container = document.querySelector(`.js-cart-item-container-${productId}`).remove();

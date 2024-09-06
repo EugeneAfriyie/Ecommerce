@@ -216,8 +216,21 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
  
 }
 
-updatecartQuantity()
-renderOrderList()
+const none = document.querySelectorAll('.none')
+const checkeoutDiv = document.querySelector('.js-order-grid')
+const carEmptyDiv = document.querySelector('.js-cart-empty')
+
+
+if (orderList.length > 0 ){
+  carEmptyDiv.style.display= 'none';
+  renderOrderList()
+
+  
+}else{
+  checkeoutDiv.style.display= 'none';
+}
+
+
 
 
 

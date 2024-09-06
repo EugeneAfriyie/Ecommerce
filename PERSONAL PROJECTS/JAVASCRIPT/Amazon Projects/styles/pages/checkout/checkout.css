@@ -55,7 +55,7 @@ i.cart-item-container,
 .payment-summary {
   padding-bottom: 5px;
   position: sticky;
-  top: 0;
+  top: 60px;
   
 }
 
@@ -67,6 +67,7 @@ i.cart-item-container,
       the HTML. grid-row overrides this default ordering). */
     grid-row: 1;
     margin-bottom: 12px;
+    position: static;
   }
 }
 
@@ -236,3 +237,7 @@ i.cart-item-container,
 .is-editing-quantity .update-quantity-link {
   display: none;
 } 
+
+.cart-empty img{
+  width: 200px;
+}

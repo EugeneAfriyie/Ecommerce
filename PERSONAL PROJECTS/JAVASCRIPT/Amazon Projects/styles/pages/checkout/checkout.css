@@ -41,8 +41,7 @@
     grid-template-columns: 1fr;
   }
 }
-
-.cart-item-container,
+i.cart-item-container,
 .payment-summary {
   border: 1px solid rgb(222, 222, 222);
   border-radius: 4px;
@@ -55,6 +54,9 @@
 
 .payment-summary {
   padding-bottom: 5px;
+  position: sticky;
+  top: 0;
+  
 }
 
 @media (max-width: 1000px) {

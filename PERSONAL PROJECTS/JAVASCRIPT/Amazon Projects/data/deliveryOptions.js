@@ -1,3 +1,4 @@
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 export const deliveryOptions =[
 {
@@ -15,7 +16,8 @@ export const deliveryOptions =[
 {
     id:'3',
     deliveryDays:1,
-    priceCents:999
+    priceCents:999,
+    shippedDay: 0
 }
 
 ]
@@ -33,14 +35,11 @@ export function getDeliveryOption(deliveryOptionId){
     return deliveryOption || deliveryOptions[0];
 }
 
-export function shipDate(dateString, deliveryDays){
-    let date = new Date(`${dateString} 2024`);
-    
-    date.setDate(date.getDate() +1);
-    let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    let newDate = date.toLocaleDateString('en-US', options);
-    console.log(newDate)
-    
-    return newDate;
-    }
+// export function shipDate(shippedDay){
+//     let date = dayjs();
+//     const newDate = date.add(0, 'days');
+//     let shipDateString =  newDate.format('dddd, MMMM D YYYY')
+//     console.log(shipDateString)
+//     return shipDateString;
+//     }
 

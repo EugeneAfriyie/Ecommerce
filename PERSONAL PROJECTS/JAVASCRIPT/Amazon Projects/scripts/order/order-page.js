@@ -1,4 +1,4 @@
-import { orderList } from "./order.js";
+import { orderList,saveOrder } from "./order.js";
 import { getProducts } from "../../data/products.js";
 import { formatCurrency } from "../Utils/money.js";
 import { cart,updatecartQuantity,saveToStorage } from "../../data/cart.js";
@@ -55,8 +55,9 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
                   </button>
                 </div>
                 <div class="product-actions">
-                  <a href="tracking.html">
-                    <button class="track-package-button js-track-package-button button-secondary">
+                  <a >
+                    <button class="track-package-button js-track-package-button button-secondary" data-id="${matchingProduct.id}" 
+                  data-orderId="${order.OrderId}">
                       Track package
                     </button>
                   </a>
@@ -87,11 +88,14 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
             </div>
         `;
 
+
+
     // console.log(order.products)
+    
+  });
 
-    });
 
-
+    saveOrder()
     document.querySelector('.js-order-grid').innerHTML = ordersListHTML;
 
 
@@ -99,7 +103,7 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
     
     const buyAgainbBtn = document.querySelectorAll('.js-buy-again-button');
-    const trackB = document.querySelectorAll('.js-track-package-button');
+    const trackBtn = document.querySelectorAll('.js-track-package-button');
     buyAgainbBtn.forEach(buyBtn =>{
     const productId = buyBtn.dataset.id;
     const orderId = Number(buyBtn.dataset.orderid);
@@ -117,9 +121,6 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
        
     })
     
-
-
-
         let matchingOrderElement ;
         matchingOrder.products.forEach(order=>{
             if(order.productId === productId){
@@ -147,18 +148,69 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
               deliveryOptionId:'1'
                });          
           }
-             
-             
-          localStorage.setItem('trackItem',JSON.stringify(matchingOrderElement))
-          console.log(matchingOrderElement)
-         updatecartQuantity()
-         saveToStorage()
+          
+
+
+
+
+          updatecartQuantity()
+          saveToStorage()
+        
+
+          
 
 
  
  
 })
  })
+
+
+
+ trackBtn.forEach(buyBtn =>{
+  const productId = buyBtn.dataset.id;
+  const orderId = Number(buyBtn.dataset.orderid);
+  buyBtn.addEventListener('click',()=>{
+
+      let matchingOrder;
+  orderList.forEach(order =>{
+      
+        if (order.OrderId === orderId){
+          matchingOrder = order;
+          console.log(matchingOrder)
+      }
+
+     
+  })
+  
+      let matchingOrderElement ;
+      matchingOrder.products.forEach(order=>{
+          if(order.productId === productId){
+              matchingOrderElement = order;
+          }
+
+      })
+
+
+ 
+        
+
+
+
+
+     
+        localStorage.setItem('trackItem',JSON.stringify(matchingOrderElement))
+
+        window.location.href = 'tracking.html';
+       
+
+        console.log(matchingOrderElement)
+
+
+
+
+})
+})
 
 
  

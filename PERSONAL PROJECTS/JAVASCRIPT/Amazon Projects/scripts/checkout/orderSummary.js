@@ -217,6 +217,8 @@ import {
 
         renderPaymentSummary();
       }
+
+      console.log(cart)
   
       renderOrderSummary();
       // console.log(cart)

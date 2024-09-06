@@ -1,13 +1,12 @@
 import { getProducts } from "../../data/products.js";
-import { getDeliveryOption,shipDate } from "../../data/deliveryOptions.js";
+import { getDeliveryOption } from "../../data/deliveryOptions.js";
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
 
 
 const trackitem = JSON.parse(localStorage.getItem('trackItem'));
 const matchingItem = getProducts(trackitem.productId)
 console.log(trackitem)
-
-
-
 
 
 const trackPageHTML= `
@@ -33,7 +32,7 @@ const trackPageHTML= `
         <img class="product-image" src="${matchingItem.image}">
 
         <div class="progress-labels-container">
-          <div id='preparing' class="progress-label">
+          <div id='preparing' class="progress-label current-status">
             Preparing
           </div>
           <div id='shipped' class="progress-label ">
@@ -56,23 +55,35 @@ document.querySelector('.js-order-tracking').innerHTML = trackPageHTML;
 
 const deliveryOption = getDeliveryOption(trackitem.deliveryOptionId);
 
-const shipDayStatus = Math.floor(deliveryOption.deliveryDays / 2);
-const currentshippingDate = shipDate(trackitem.dateString, shipDayStatus);
+const currentshippingDate = trackitem.shippedDayString;
+const deliveryDay = trackitem.dateString;
 
 
-let today = new Date();
+let today = dayjs();
+const todayString = today.format('dddd, MMMM D');
+console.log(todayString)
+console.log(currentshippingDate)
+console.log(deliveryDay)
 
 
-if(trackitem.deliveryOptionId === '1'){
-    document.querySelector('.progress-bar').style.width = '10%';
-    document.getElementById('preparing').classList.add('current-status')
-}else if(trackitem.deliveryOptionId === '2'){
-    document.querySelector('.progress-bar').style.width = '50%';
-    document.getElementById('shipped').classList.add('current-status')
+const statusShipped = document.getElementById('shipped')
+const statusdelivered = document.getElementById('delivered')
+const preparingStatus = document.getElementById('preparing')
+const progressBar =  document.querySelector('.progress-bar')
+const progressLabel =  document.querySelector('.progress-label')
+
+if(todayString === currentshippingDate){
+    progressLabel.classList.toggle('current-status')
+    progressBar.style.width = '50%';
+    statusShipped.classList.toggle('current-status');
+}else if(trackitem.dateString === todayString){
+    progressLabel.classList.toggle('current-status')
+    statusdelivered.classList.toggle('current-status')
+    progressBar.style.width = '100%';
 }
 else {
-    document.querySelector('.progress-bar').style.width = '100%';
-    document.getElementById('delivered').classList.add('current-status')
+    progressBar.style.width = '10%';
+    // progressLabel.classList.toggle('current-status')
 }
 
 

@@ -8,11 +8,7 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 export function renderPaymentSummary() {
   
-  // cart.forEach(cartItem=>{
-  //   const deliveryOptionId = cartItem.deliveryOptionId;
-  //   const deliveryOption =  getDeliveryOption(deliveryOptionId)
-  //   console.log(deliveryOption)
-  // })
+
   let productPriceCents = 0;
   let shippingPriceCents = 0;
 

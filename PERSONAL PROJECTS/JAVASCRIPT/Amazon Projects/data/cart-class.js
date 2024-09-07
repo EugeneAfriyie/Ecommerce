@@ -11,8 +11,8 @@ class Cart{
         this.#localStorageKey = localStorageKey;
         this.#loadFromStorage();
 
-        console.log(this)
-        console.log(this instanceof Cart)
+        // console.log(this)
+        // console.log(this instanceof Cart)
             
       
     }

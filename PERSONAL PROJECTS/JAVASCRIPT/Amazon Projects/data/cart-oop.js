@@ -126,10 +126,10 @@ function Cart(localStorageKey){
 const cart = Cart('cart-opp');
 const businessCart = Cart('cart-business');
 cart.loadFromStorage();
-console.log(cart)
+// console.log(cart)
 
 
 businessCart.loadFromStorage();
-console.log(businessCart)
+// console.log(businessCart)
 
 

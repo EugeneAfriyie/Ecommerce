@@ -76,7 +76,6 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 
 
-    // console.log(order.products)
     
   });
 
@@ -101,7 +100,6 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
         
           if (order.OrderId === orderId){
             matchingOrder = order;
-            console.log(matchingOrder)
         }
 
        
@@ -163,7 +161,6 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
       
         if (order.OrderId === orderId){
           matchingOrder = order;
-          console.log(matchingOrder)
       }
 
      
@@ -190,7 +187,6 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
         window.location.href = 'tracking.html';
        
 
-        console.log(matchingOrderElement)
 
 
 

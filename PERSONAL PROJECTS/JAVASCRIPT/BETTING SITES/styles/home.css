@@ -1404,4 +1404,26 @@ footer .site-name{
     margin-top: 10px;
 }
 
+.footer-element-2{
+    border-top: 1px solid white;
+    margin-top: 20px;
+
+}
+
+.more-insight-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1000px;
+    margin: auto;
+}
+
+.more-insight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
 

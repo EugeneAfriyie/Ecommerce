@@ -1,6 +1,7 @@
 import { getProducts } from "../../data/products.js";
 import { getDeliveryOption } from "../../data/deliveryOptions.js";
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+import { updatecartQuantity } from "../../data/cart.js";
 
 
 
@@ -85,5 +86,6 @@ else {
     progressBar.style.width = '10%';
     // progressLabel.classList.toggle('current-status')
 }
+updatecartQuantity();
 
 

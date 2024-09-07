@@ -221,5 +221,5 @@ import {
 
       console.log(cart)
   
-      renderOrderSummary();
+      // renderOrderSummary();
       // console.log(cart)

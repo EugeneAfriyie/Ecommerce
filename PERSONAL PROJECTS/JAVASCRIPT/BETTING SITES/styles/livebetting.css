@@ -1,0 +1,49 @@
+.header-sec-3-div {
+    background-color: var(--white-color);
+    /* width: 400px; */
+    height: 40px;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    font-size: 15px;
+    padding-right: 100px;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.952);
+}
+
+.active-H-3 {
+    font-weight: 600;
+}
+
+main{
+    width: 1000px;
+    margin: auto;
+}
+
+.M-V-H{
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 30px;
+}
+
+.section-2{
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.live-matches {
+    margin-top: 0;
+}
+
+.live-odd-ele-4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 25px;
+}
+
+
+

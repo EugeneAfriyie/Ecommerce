@@ -1416,12 +1416,14 @@ footer .site-name{
 .footer-element-2{
     border-top: 1px solid rgba(255, 255, 255, 0.137);
     margin-top: 20px;
+    font-size: 15px;
 
 }
 
 .more-insight-div{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
     width: 1000px;
     margin: auto;
 }

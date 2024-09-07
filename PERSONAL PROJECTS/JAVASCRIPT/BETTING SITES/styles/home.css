@@ -275,10 +275,19 @@ background-color: var(--red-color);
     justify-content: center;
     transition: all 0.3s ease-in-out;
 
+
 }
 .header-sec-3-div a:hover{
-   border-bottom: 5px solid red;
+    border-bottom: 4px solid rgba(255, 0, 0, 0.527);
 }
+
+.H-S-3-active{
+    border-bottom: 5px solid red;
+}
+
+
+
+
 
 .more-sport{
     position: relative;
@@ -1405,7 +1414,7 @@ footer .site-name{
 }
 
 .footer-element-2{
-    border-top: 1px solid white;
+    border-top: 1px solid rgba(255, 255, 255, 0.137);
     margin-top: 20px;
 
 }

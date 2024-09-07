@@ -1,23 +1,30 @@
 .header-sec-3-div {
-    background-color: var(--white-color);
-    /* width: 400px; */
-    height: 40px;
     display: flex;
     gap: 10px;
     justify-content: start;
-    font-size: 15px;
-    padding-right: 100px;
+    font-size: 1.1rem;
+}
+.header-sec-3{
+    display: block;
 }
 
 body{
-    background-color: rgba(0, 0, 0, 0.952);
+    background-color: rgb(27, 30, 37);
 }
+
+
 
 .active-H-3 {
     font-weight: 600;
 }
 
 main{
+   
+    background-image:url(../images/live-background.png);
+    background-repeat: no-repeat;
+    
+}
+.M-V-H-div{
     width: 1000px;
     margin: auto;
 }
@@ -27,6 +34,7 @@ main{
     font-weight: 600;
     font-size: 2rem;
     margin-top: 30px;
+   
 }
 
 .section-2{
@@ -36,13 +44,72 @@ main{
 
 .live-matches {
     margin-top: 0;
+    background-color: rgb(42, 49, 65);
 }
+#betslip  {
+    margin-top: 0;
+    background-color: rgb(42, 49, 65);
+}
+
+.M-G-C-header{
+    display: grid;
+    height: 50px;
+    grid-template-rows: auto 1fr;
+    border: 1px solid rebeccapurple;
+}
+
+.winning-display{
+    background-color: green;
+    font-size: 0.7rem;
+    color: white;
+    gap: 3px;
+    font-weight: 600;
+
+}
+
+.winning-display span{
+    color: yellow;
+}
+
+.M-G-C-header h4{
+    background-color: rgba(128, 128, 128, 0.438);
+    text-align: center;
+    padding: 4px;
+    font-size: 0.9rem; font-size: 0.9rem;
+    color: white;
+    color: white;
+}
+
+.more-game-casino{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.games-cards img {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;   
+}
+.card-img{
+    height: 100px;
+    position: static;
+
+}
+
+.card-title{
+    font-size: 12px;
+}
+
 
 .live-odd-ele-4{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: 25px;
+}
+
+footer{
+    background-color: rgb(27, 30, 37);
 }
 
 

@@ -18,20 +18,6 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
             const productId = orderProduct.productId;
             const matchingProduct = getProducts(productId);
 
-            const deliveryOptionId = orderProduct.deliveryOptionId;
-  
-          const deliveryOption = getDeliveryOption(deliveryOptionId)
-          
-          const today = dayjs();
-          const deliveryDate = today.add(deliveryOption.deliveryDays,'days');
-          const shippedDay = today.add(deliveryOption.shippedDay,'days');
-          const dateString = deliveryDate.format('dddd, MMMM D');
-          const shippedDayString = shippedDay.format('dddd, MMMM D');
-          orderProduct.dateString = dateString;
-          orderProduct.shippedDayString = shippedDayString;
-        
-
-  
 
             orderProductHTml += `
              <div class="order-details-grid">
@@ -43,7 +29,7 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
                     ${matchingProduct.name}
                   </div>
                   <div class="product-delivery-date">
-                    Arriving on: ${dateString}
+                    Arriving on: ${orderProduct.dateString}
                   </div>
                   <div class="product-quantity">
                     Quantity: ${orderProduct.quantity}
@@ -224,7 +210,7 @@ const carEmptyDiv = document.querySelector('.js-order-empty')
 if (orderList.length > 0 ){
   carEmptyDiv.style.display= 'none';
   renderOrderList()
-  updatecartQuantity()
+  updatecartQuantity
 
   
 }else{

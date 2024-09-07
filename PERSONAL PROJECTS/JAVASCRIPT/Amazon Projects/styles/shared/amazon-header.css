@@ -1,3 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Rubik+Bubbles&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20+Charted&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
+
+
+
+
 .amazon-header {
   background-color: rgb(19, 25, 33);
   color: white;
@@ -32,6 +47,29 @@
   cursor: pointer;
   text-decoration: none;
   border: 1px solid rgba(0, 0, 0, 0);
+
+  
+   
+  
+  
+}
+
+#site-name span{
+  font-size: 1.5rem;
+  background-color:  black;
+
+}
+#site-name{
+font-size: 2rem;
+
+  font-family: "Nabla", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "EDPT" 100,
+    "EHLT" 12;
+
 }
 
 .header-link:hover {

@@ -7,6 +7,12 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 
 export function renderPaymentSummary() {
+  
+  // cart.forEach(cartItem=>{
+  //   const deliveryOptionId = cartItem.deliveryOptionId;
+  //   const deliveryOption =  getDeliveryOption(deliveryOptionId)
+  //   console.log(deliveryOption)
+  // })
   let productPriceCents = 0;
   let shippingPriceCents = 0;
 
@@ -57,9 +63,17 @@ export function renderPaymentSummary() {
 
   document.querySelector('.js-payment-summary').innerHTML = paymentSummaryHTML;
 
-  // Add event listener to the Place Order button
   const formattedDate = dayjs().format('MMMM D, YYYY h:mm A');
   document.querySelector('.js-place-order').addEventListener('click', () => {
+    cart.forEach(cartItem=>{
+      const deliveryOptionId = cartItem.deliveryOptionId;
+      const cartItemDeliveryOption =  getDeliveryOption(deliveryOptionId)
+    })
+
+
+
+
+
     const order ={
         OrderId: Date.now(),
         products: [...cart],

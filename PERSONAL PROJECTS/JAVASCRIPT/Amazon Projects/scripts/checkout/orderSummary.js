@@ -23,11 +23,16 @@ import {
   
           const deliveryOptionId = cartItem.deliveryOptionId;
   
-          const deliveryOption = getDeliveryOption(deliveryOptionId)
+          const deliveryOption = getDeliveryOption(deliveryOptionId);
           
           const today = dayjs();
           const deliveryDate = today.add(deliveryOption.deliveryDays,'days');
           const dateString = deliveryDate.format('dddd, MMMM D');
+        
+          const shippedDay = today.add(deliveryOption.shippedDay,'days');
+          const shippedDayString = shippedDay.format('dddd, MMMM D');
+          cartItem.dateString = dateString;
+          cartItem.shippedDayString = shippedDayString;
   
   
           cartSummaryHTML += `
@@ -212,6 +217,7 @@ import {
             matchingItem.deliveryOptionId = deliveryOptionId;
             saveToStorage();
             renderOrderSummary();
+            location.reload();
           });
         });
 

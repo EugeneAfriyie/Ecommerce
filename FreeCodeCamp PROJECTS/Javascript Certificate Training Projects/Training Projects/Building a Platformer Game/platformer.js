@@ -121,7 +121,9 @@ const checkpointPositions = [
   { x: 4800, y: proportionalSize(80), z: 3 },
 ];
 
-const checkpoints = checkpointPositions.map(checkpoint=>  new Checkpoint(checkpoint.x, checkpoint.y ,checkpoint.z)  )
+const checkpoints = checkpointPositions.map(
+  (checkpoint) => new CheckPoint(checkpoint.x, checkpoint.y, checkpoint.z)
+);
 
 const animate = () => {
   requestAnimationFrame(animate);
@@ -129,6 +131,10 @@ const animate = () => {
 
   platforms.forEach((platform) => {
     platform.draw();
+  });
+
+  checkpoints.forEach(checkpoint => {
+    checkpoint.draw();
   });
 
   player.update();
@@ -144,9 +150,18 @@ const animate = () => {
       platforms.forEach((platform) => {
         platform.position.x -= 5;
       });
+
+      checkpoints.forEach((checkpoint) => {
+        checkpoint.position.x -= 5;
+      });
+    
     } else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
       platforms.forEach((platform) => {
         platform.position.x += 5;
+      });
+
+      checkpoints.forEach((checkpoint) => {
+        checkpoint.position.x += 5;
       });
     }
   }
@@ -178,6 +193,15 @@ const animate = () => {
       player.velocity.y = gravity;
     };
   });
+
+
+  checkpoints.forEach((checkpoint, index, checkpoints) => {
+    const checkpointDetectionRules =[
+      player.position.x >= checkpoint.position.x,
+
+    ]
+  });
+
 }
 
 
@@ -197,5 +221,39 @@ const movePlayer = (key, xVelocity, isPressed) => {
     return;
   }
 
-  
-  
+  switch (key) {
+    case "ArrowLeft":
+      keys.leftKey.pressed = isPressed;
+      if (xVelocity === 0) {
+        player.velocity.x = xVelocity;
+      }
+      player.velocity.x -= xVelocity;
+      break;
+    case "ArrowUp":
+    case " ":
+    case "Spacebar":
+      player.velocity.y -= 8;
+      break;
+    case "ArrowRight":
+      keys.rightKey.pressed = isPressed;
+      if (xVelocity === 0) {
+        player.velocity.x = xVelocity;
+      }
+      player.velocity.x += xVelocity;
+  }
+}
+
+const startGame = () => {
+  canvas.style.display = "block";
+  startScreen.style.display = "none";
+  animate();
+}
+
+const showCheckpointScreen = (msg) => {
+  checkpointScreen.style.display = "block";
+  checkpointMessage.textContent = msg;
+  if (isCheckpointCollisionDetectionActive) {
+    setTimeout(() => (checkpointScreen.style.display = "none"), 2000);
+  }
+};
+

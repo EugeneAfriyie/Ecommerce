@@ -210,6 +210,10 @@ const animate = () => {
       checkpoint.claim();
 
 
+      if (index === checkpoints.length - 1) {
+        
+      };
+
 
     };
   });

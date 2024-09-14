@@ -160,7 +160,12 @@ const  checkForStraights= (diceArr) => {
     scoreSpans[3].textContent = `, score = 30`;
   } 
   // Check for small straight
- straight
+  else if (smallStraightPatterns.some(pattern => uniqueSortedDice.includes(pattern))) {
+    // Enable the fourth radio button, set value to 30, and update displayed text
+    updateRadioOption(3, 30); 
+    scoreSpans[3].textContent = `, score = 30`;
+  } 
+  // No straight
 
 
 

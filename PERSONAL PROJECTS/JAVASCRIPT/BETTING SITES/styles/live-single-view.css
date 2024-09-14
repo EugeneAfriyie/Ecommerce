@@ -4,16 +4,19 @@
 }
 
 .live-team-info{
-    background-color: rgb(42, 49, 65);
     color: white;
+}
+
+.live-team-info section{
+    background-color: rgba(42, 49, 65, 0.781);
+    margin-bottom: 20px;
+    padding: 10px 10px 20px;
 
 }
 
 .live-single-H{
     height: 50px;
     font-size: 1.5rem;
-    padding: 10px;
-
 }
 
 .vs{
@@ -33,3 +36,103 @@
 .single-header-menu p{
     padding: 10px 20px;
 }
+
+.half-time{
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.team-score-div{
+    display: grid;
+    gap: 5px;
+}
+
+.single-team-name-score{
+    display: flex;
+    margin: 0 15px;
+}
+.single-team-name-score p{
+    padding: 12px;
+
+
+}
+.single-team-name{
+    font-size:  1.2rem;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.single-team-score{
+    width: 180px;
+    background: #0D9737;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 13px;
+    position: relative;
+}
+
+.single-team-score:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-bottom: 52px solid #0D9737;
+    border-left: 10px solid transparent;
+}
+
+
+
+.show-tracker {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px;   
+    
+}
+.show-tracker p{
+    padding: 10px;
+    background: #33EA6A;
+    border-radius: 20px;
+    color: black;
+    font-size: 0.9rem;
+    
+}
+
+.tracker-sec{
+    height: auto;
+}
+
+
+.live-team-odd-details{
+
+
+}
+
+
+.header-2-items   {
+    display: flex;
+    text-transform: capitalize;
+    gap: 1em;
+    
+}
+
+.header-2-items li{
+    font-size: 1rem;
+    padding: 3px 15px;
+
+}
+.header-2-items li:hover{
+    border-bottom: 3px solid green;
+
+}
+
+.single-odds-selection-header{
+    
+}
+
+

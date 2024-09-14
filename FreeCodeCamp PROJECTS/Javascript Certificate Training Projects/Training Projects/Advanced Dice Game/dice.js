@@ -166,7 +166,12 @@ const  checkForStraights= (diceArr) => {
     scoreSpans[3].textContent = `, score = 30`;
   } 
   // No straight
-
+  else {
+    // Update last radio button with 0 points
+    updateRadioOption(5, 0); 
+    scoreSpans[5].textContent = `, score = 0`;
+  }
+};
 
 
 

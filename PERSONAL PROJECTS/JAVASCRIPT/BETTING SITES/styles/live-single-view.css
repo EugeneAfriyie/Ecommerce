@@ -4,5 +4,32 @@
 }
 
 .live-team-info{
-    background-color: #fff;
+    background-color: rgb(42, 49, 65);
+    color: white;
+
+}
+
+.live-single-H{
+    height: 50px;
+    font-size: 1.5rem;
+    padding: 10px;
+
+}
+
+.vs{
+    font-size: 1rem;
+}
+
+.single-header-menu{
+    display: flex;
+    padding: 0 10px;
+    
+}
+
+.single-active{
+    border-bottom: 3px solid green;
+
+}
+.single-header-menu p{
+    padding: 10px 20px;
 }

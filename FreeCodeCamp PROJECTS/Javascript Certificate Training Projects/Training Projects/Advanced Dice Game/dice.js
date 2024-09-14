@@ -150,7 +150,17 @@ const  checkForStraights= (diceArr) => {
   const uniqueSortedDice = Array.from(new Set(sortedDice)).join('');
 
   // Check for large straight
-  
+  if (largeStraightPatterns.includes(uniqueSortedDice)) {
+    // Enable fifth radio button, set value to 40, and update displayed text
+    updateRadioOption(4, 40); 
+    scoreSpans[4].textContent = `, score = 40`;
+    
+    // Also enable the fourth radio button, set value to 30, and update displayed text
+    updateRadioOption(3, 30);
+    scoreSpans[3].textContent = `, score = 30`;
+  } 
+  // Check for small straight
+ straight
 
 
 

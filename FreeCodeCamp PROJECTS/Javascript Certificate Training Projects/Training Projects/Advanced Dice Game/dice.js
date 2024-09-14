@@ -175,6 +175,20 @@ const  checkForStraights= (diceArr) => {
 
 
 
+rollDiceBtn.addEventListener("click", () => {
+  if (rolls === 3) {
+    alert("You have made three rolls this round. Please select a score.");
+  } else {
+    rolls++;
+    resetRadioOptions();
+    rollDice();
+    updateStats();
+    getHighestDuplicates(diceValuesArr);
+    detectFullHouse(diceValuesArr);
+     checkForStraights(diceValuesArr);
+
+  }
+});
 
 
 

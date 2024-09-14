@@ -146,7 +146,11 @@ const  checkForStraights= (diceArr) => {
     '23456'
   ];
 
- 
+  // Create a string of the unique sorted dice values
+  const uniqueSortedDice = Array.from(new Set(sortedDice)).join('');
+
+  // Check for large straight
+  
 
 
 

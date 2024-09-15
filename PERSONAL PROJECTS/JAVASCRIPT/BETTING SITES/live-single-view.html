@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./styles/livebetting.css">
     <link rel="stylesheet" href="./styles/live-single-view.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -94,49 +96,36 @@
                 <section id="cas-main-sec-1" class="cas-main-sec">
                     <div class="cas-sec-1-div">
                         <div class="cas-sec-1-items cas-active" >
-                            <img src="./images/casin0/all games.png" alt="">
+                            <i class="fa-solid fa-futbol"></i>
                             <li id="-cas-all-games">Football (12)</li>
                         </div>
                         <div class="cas-sec-1-items" >
-                            <img src="./images/casin0/popular.png" alt="">
+                            <i class="fa-solid fa-volleyball"></i>
                             <li id="popular">vFootball (39)</li>
                         </div>
                         <div class="cas-sec-1-items" >
-                            <img src="./images/casin0/popular.png" alt="">
+                            <i class="fa-solid fa-basketball"></i>
                             <li id="new"> Basketball (3)</li>
                         </div>
                         <div class="cas-sec-1-items" >
-                            <img src="./images/casin0/popular.png" alt="">
+                            <i class="fa-solid fa-table-tennis-paddle-ball"></i>
                             <li id="crash">Tennis (6)</li>
                         </div>
+                    
+                       
                         <div class="cas-sec-1-items" >
-                            <img src="./images/casin0/popular.png" alt="">
-                            <li id="quick">Table Tennis (9)</li>
+                            <i class="fa-solid fa-hockey-puck"></i>
+                            <li id="dice">Ice Hockey (4)</li>
+
                         </div>
+                       
                         <div class="cas-sec-1-items" >
-                            <img src="./images/casin0/popular.png" alt="">
-                            <li id="cards">eFootball (12)
-                            </li>
-                        </div>
-                        <div class="cas-sec-1-items" >
-                            <img src="./images/casin0/popular.png" alt="">
-                            <li id="wheel">eBasketball (2)</li>
-                        </div>
-                        <div class="cas-sec-1-items" >
-                            <img src="./images/casin0/popular.png" alt="">
-                            <li id="slots">Ice Hockey (2)</li>
-                        </div>
-                        <div class="cas-sec-1-items" >
-                            <img src="./images/casin0/popular.png" alt="">
-                            <li id="dice">Volleyball (4)</li>
-                        </div>
-                        <div class="cas-sec-1-items" >
-                            <img src="./images/casin0/popular.png" alt="">
+                            <i class="fa-solid fa-baseball"></i>
                             <li id="numbers">Handball (1)</li>
                         </div>
                         
                         <div class="cas-sec-1-items" >
-                            <img src="./images/casin0/popular.png" alt="">
+                            <i class="fa-solid fa-baseball"></i>
                             <li id="lottery">Baseball (6)</li>
                         </div>
                         
@@ -203,7 +192,7 @@
                     </section>
                     <section class="live-team-odd-details" >
                         <div class="header-2-items">
-                            <li>all</li>
+                            <li class="single-active">all</li>
                             <li>main</li>
                             <li>goals</li>
                             <li>half</li>
@@ -212,6 +201,48 @@
                             <li>specials</li>
                         </div>
 
+                      <div class="odds-details-section">
+                        <div class="odds-details">
+                            <div class="single-odds-selection-header">
+                                <div class="selection-name-header">
+                                    <i class="fa-solid fa-sort-up"></i>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                    1X2
+                                    <i class="fa-regular fa-circle-question"></i>
+                                </div>
+                                <div class="selection-header-up-icon">
+                                    <i class="fa-solid fa-arrow-up-long"></i>
+                                </div>
+                            </div>
+
+                            <div class="odds-boxes">
+                                <div class="home-team odds-boxes-div">
+                                    <span>Home</span>
+                                    <span>1.43</span>
+                                    <span><i class="fa-solid fa-lock"></i></span>
+                                    <i class="fa-solid fa-arrow-up"></i>
+                                    <i class="fa-solid fa-arrow-down"></i>
+                                </div>
+                                <div class="draw-op odds-boxes-div">
+                                    <span>Draw</span>
+                                    <span>5.43</span>
+                                    <span>
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <i class="fa-solid fa-arrow-up"></i>
+                                    <i class="fa-solid fa-arrow-down"></i>
+                                </div>
+                                <div class="away-team odds-boxes-div">
+                                    <span>Away</span>
+                                    <span>8.43</span>
+                                    <span>
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <i class="fa-solid fa-arrow-up"></i>
+                                    <i class="fa-solid fa-arrow-down"></i>
+                                </div>
+                            </div>
+                        </div>
                         <div class="odds-details">
                             <div class="single-odds-selection-header">
                                 <div class="selection-name-header">
@@ -221,7 +252,22 @@
                                     1X2
                                 </div>
                             </div>
+
+                            <div class="odds-boxes">
+                                <div class="home-team odds-boxes-div">
+                                    <span>Home</span>
+                                    <span>1.43</span>
+                                </div>
+                                <div class="draw-op odds-boxes-div">
+                                    <span>Draw</span>
+                                    <span>5.43</span></div>
+                                <div class="away-team odds-boxes-div">
+                                    <span>Away</span>
+                                    <span>8.43</span>
+                                </div>
+                            </div>
                         </div>
+                      </div>
                     </section>
                 
               

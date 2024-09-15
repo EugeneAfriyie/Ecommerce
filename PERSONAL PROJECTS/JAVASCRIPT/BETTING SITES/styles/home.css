@@ -234,7 +234,7 @@ background-color: var(--red-color);
 
 .bc-white{
     background-color: white;
-    color: black;
+    color: var(--red-color);
 }
 
 .header-sec-2-timezone{

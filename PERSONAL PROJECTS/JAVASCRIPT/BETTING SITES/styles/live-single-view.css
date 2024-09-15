@@ -1,3 +1,9 @@
+
+
+
+
+
+
 .section-2{
     display: grid;
     grid-template-columns: 150px 1fr 220px;
@@ -143,10 +149,28 @@
 }
 
 .single-odds-selection-header{
-    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    /* border: 1px solid red; */
 }
+.selection-header-up-icon{
+    font-size: 10px;
+    font-weight: 600;
+    color: #0D9737;
+    background-color: #ffffff2a;
+    padding: 3px 5px;
+    display: none;
+}
+.single-odds-selection-header:hover{
+    background-color: rgba(128, 128, 128, 0.207);
+}
+.single-odds-selection-header:hover .selection-header-up-icon{
+    display: block;
+}
+
+
 .odds-details-section{
     margin-top: 20px;
 
@@ -160,12 +184,78 @@
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    gap: 5px;
+   font-size: 13px;
 }
 .odds-boxes-div{
-    background-color: green;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: rgb(3, 120, 3);
 
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.odds-boxes-div:hover{
+    background-color: rgb(6, 176, 6);
+}
+.single-selected-market{
+    background-color: rgb(6, 176, 6);
+}
+.odds-up-down{
+    display: flex;
+    justify-content: end;
+    font-size: 8px;
+    margin-top: 2px;
+}
+.main-odd-details{
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 0 10px;
 }
 
 
+
+
+.selection-name-header{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+
+.selection-name-header i{
+    font-size: 10px;
+    margin: auto;
+
+    /* background-color: #fff;
+    color: black;
+    padding: 6px; */
+}
+
+.collapse-icon i{
+    font-size: 13px;
+}
+.collapse-icon {
+    background-color: rgba(128, 128, 128, 0.341);
+    color: #0D9737;
+    height: 15px;
+    width: 15px;
+    display: flex; 
+     justify-content: center;
+ 
+}
+
+.selection-name-header .fa-sort-up{
+    margin-top: 5px;
+}
+.selection-name-header .fa-sort-down{
+    margin-bottom: 5px;
+}
+
+
+
+
+/* .d-none{
+    display: none;
+ } */

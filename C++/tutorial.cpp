@@ -31,56 +31,53 @@
 // }
 
 
-// #include <iostream>
-// using namespace std; 
-// int main (){
+#include <iostream>
+using namespace std; 
+int main (){
     
+                                                                                                                                                                                                                                                                                                                                                        
+    char option;
+    string code;
 
-//     char option;
-//     string code;
+    cout << "Enter MOMO Ussd code  ";
+    cin >> code;
 
-//     cout << "Enter MOMO Ussd code  ";
-//     cin >> code;
+    if (code == "*170#"){
+    cout <<" Menu"<<endl;
+    cout<<"1. Send Money"<<endl;
+    cout <<"2. MoMO Pay"<<endl;
+    cout <<"3. Buy Airtime"<<endl;
+    cout <<"4. Allow Cash out"<<endl;
+    cout <<" 5.Finascial Service"<<endl;
+    cout<< " 6.Wallet"<<endl;
 
-//     if (code == "*170#"){
-//     cout <<" Menu"<<endl;
-//     cout<<"1. Send Money"<<endl;
-//     cout <<"2. MoMO Pay"<<endl;
-//     cout <<"3. Buy Airtime"<<endl;
-//     cout <<"4. Allow Cash out"<<endl;
-//     cout <<" 5.Finascial Service"<<endl;
-//     cout<< " 6.Wallet"<<endl;
-
-//     cout<< "Select your preferred option  ";
-//     cin >> option;
-//     }else{
-//         cout << "Input a valid Ussd Code for MOMO USSD CODE";
-//     };
+    cout<< "Select your preferred option  ";
+    cin >> option;
+    }else{
+        cout << "Input a valid Ussd Code for MOMO USSD CODE";
+    };
 
 
 
     
 
    
-//      switch(option){
-//         case '1':
-//             cout<< "1.Momo User";
-//             break;
-//         case '2':
-//             cout<< "1.Momo Pay";
-//             break;
-//         case '3':
-//             cout<< "1.Airtime";
-//             break;
-//         case '4':
-//             cout<< "1.Allow cash out";
-//             break;
-//     }
-
-
-
-//     return 0;
-// }
+     switch(option){
+        case '1':
+            cout<< "1.Momo User";
+            break;
+        case '2':
+            cout<< "1.Momo Pay";
+            break;
+        case '3':
+            cout<< "1.Airtime";
+            break;
+        case '4':
+            cout<< "1.Allow cash out";
+            break;
+    }
+    return 0;
+}
 
 
 // // Eugene Afriyie   UEB3502023
@@ -290,27 +287,27 @@
 // }
 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    int n = 3;
-    while (n >= 0) {
-        cout << n * n << endl;
-        --n;
-    }
+// int main() {
+//     int n = 3;
+//     while (n >= 0) {
+//         cout << n * n << endl;
+//         --n;
+//     }
 
-    // cout << n << endl;
-    // while (n < 4) {
-    //     cout << ++n << endl;
-    // }
+//     // cout << n << endl;
+//     // while (n < 4) {
+//     //     cout << ++n << endl;
+//     // }
 
-    // cout << n << endl;
-    // while (n >= 0) {
-    //     cout << (n /= 2) << endl;
-    // }
-    return 0;
-}
+//     // cout << n << endl;
+//     // while (n >= 0) {
+//     //     cout << (n /= 2) << endl;
+//     // }
+//     return 0;
+// }
 
 
 

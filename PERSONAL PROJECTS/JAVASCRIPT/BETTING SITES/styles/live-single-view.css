@@ -2,8 +2,6 @@
 
 
 
-
-
 .section-2{
     display: grid;
     grid-template-columns: 150px 1fr 220px;
@@ -259,3 +257,75 @@
 /* .d-none{
     display: none;
  } */
+
+
+
+
+
+
+
+
+
+ .sec-1{
+    height: 10vh;
+    background-color: red;
+
+    display: none;
+    transform: translateY(0) scale(1);
+ }
+ .sec-2{
+    height: 10vh;
+    background-color: rgb(255, 242, 0);
+
+    display: none;
+    transform: translateY(0) scale(1);
+ }
+ .sec-3{
+    height: 10vh;
+    background-color: rgb(0, 255, 55);
+
+    display: none;
+    transform: translateY(0) scale(1);
+ }
+ .sec-4{
+    height: 10vh;
+    background-color: rgb(0, 34, 255);
+
+    display: none;
+    transform: translateY(0) scale(1);
+
+ }
+ .sec-5{
+    height: 10vh;
+    background-color: rgb(0, 187, 255);
+
+    display: none;
+    transform: translateY(0) scale(1);
+ }
+ .sec-6{
+    height: 10vh;
+    background-color: rgb(255, 0, 200);
+
+    display: none;
+    transform: translateY(0) scale(1);
+ }
+ .sec-7{
+    height: 10vh;
+    background-color: rgb(0, 208, 255);
+
+    display: none;
+    transform: translateY(0) scale(1);
+ }
+
+ .odds-details-section{
+    transform: translateY(-100%) scale(0);
+    transition: all 1.4s ease-in-out;
+    background-color: var(--color-primary);
+ }
+
+ .sec-active{
+    display: block;
+    
+ }
+
+

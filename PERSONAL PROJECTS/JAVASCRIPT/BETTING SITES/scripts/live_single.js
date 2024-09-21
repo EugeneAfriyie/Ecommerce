@@ -1,13 +1,26 @@
 
 
+const headerLi = document.querySelectorAll('.header-2-items li')
+
 
 function trasition(){
 
-document.querySelector('.').addEventListener('click',()=>{
+    headerLi.forEach(link => {
+    link.addEventListener('click',()=>{
+        const secId = link.dataset.secId;
+        console.log(secId)
+        headerLi.forEach(link=>{
+
+            link.classList.remove('single-active');
+        })
+        link.classList.add('single-active');
+        console.log(link)
+
     
-})
-
-
+    })
+    
+});
+console.log(document.querySelectorAll('.header-2-items li'))
 
 
 

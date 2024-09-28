@@ -193,17 +193,17 @@ overflow-x: hidden;
    font-size: 13px;
 }
 .odds-boxes-div{
-    background-color: rgb(11, 119, 11);
+    background: #0d9736c5;
 
     padding: 0 10px;
     border-radius: 5px;
 }
 
 .odds-boxes-div:hover{
-    background-color: rgb(6, 176, 6);
+    background: #26c859;
 }
 .single-selected-market{
-    background-color: rgb(6, 176, 6);
+     background: #26c859;
 }
 .odds-up-down{
     display: flex;
@@ -331,10 +331,7 @@ overflow-x: hidden;
  }
  .sec-7{
     height: 10vh;
-
-
-   
-           display: none;
+     display: none;
     transform: translateX(0) scale(1);
 
  }
@@ -356,5 +353,51 @@ overflow-x: hidden;
  }
 
 
+ .specials-div{
+    font-size: .9rem;
+ }
 
+.special-selection-div{
+    padding-left: 1em;
+    display: grid;
+    gap: 10px;
+
+}
+
+.specials-div div{
+   /* border: 1px solid red; */
+   text-align: center;
+ 
+
+}
+ .special-header{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+    /* border: 1px solid red; */
+
+ }
+ .special-header span{
+    /* border: 1px solid red; */
+    text-align: center;
+ }
+
+
+ .grid-4{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+ }
+
+ .special-odds-selection{
+   padding-bottom: 0.3rem;
+   font-size: 0.9rem;
+
+ }
+
+ .flex-end{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 1rem;
+ }
 

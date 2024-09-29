@@ -1,3 +1,8 @@
+*{
+    border: none;
+    
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -5,10 +10,71 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color:blueviolet;
 }
-#output {
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: #333;
+
+
+    main{
+        color: white;
+    }
+
+
+
+.input-button-div{
+    border: 3px solid white;
+    text-align: center;
+    width: 90%;
+    padding: 2rem;
+    max-width: 400px;
+    background-color:rgb(0 0 0 / 28%)
 }
+
+
+
+#number{
+    width: 98%;
+    height:40px;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    background-color: rgb(58, 11, 102);
+    color: white;
+
+}
+::placeholder{
+    font-size: 1rem;
+    color: white;
+}
+
+#number:focus{
+    outline: 2px solid blue;
+}
+
+#convert-btn{
+    width: 100%;
+    height: 40px;
+    background-color:rgba(237, 159, 13, 0.781);
+    padding: 10px;
+    margin-top: 1em;
+}
+
+#convert-btn:hover{
+    opacity: 0.8;
+}
+
+.input-button-div h3{
+    font-size: 1.5rem;
+    margin:0 0 10px;
+}
+
+.output-div{
+    border: 3px solid white;
+    width: 90%;
+    max-width: 400px;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    margin-top: 20px;
+    background-color:rgb(0 0 0 / 28%)
+
+}
+

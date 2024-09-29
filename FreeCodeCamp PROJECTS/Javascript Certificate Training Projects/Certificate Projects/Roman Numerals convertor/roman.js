@@ -41,4 +41,5 @@ convertBtn.addEventListener('click', () => {
     } else {
         outputDiv.textContent = convertToRoman(num);
     }
+    outputDiv.classList.add('output-div')
 });

@@ -3,6 +3,8 @@
     border: none;
     margin: 0;
     padding: 0;
+    color: black;
+
 }
 
 body{
@@ -22,9 +24,8 @@ main{
 }
 
 .input-check-box-div{
-    border: 1px solid red;
-    color: white;
-    width: 40%;
+    background-color: #ffffff;
+    width: 35%;
     height: 29%;
     display: flex;
     flex-direction: column;
@@ -34,21 +35,17 @@ main{
     
 }
 
-.input-check-box-div h3{
-    border: 1px solid red;
 
-}
 .input-check-box{
-    border: 1px solid red;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
 .input-check-box input{
     background-color: transparent;
-    border-bottom: 3px solid violet;
+    border-bottom: 1px solid rgb(80, 12, 237);
+    font-size: 1rem;
     outline: none;
     width: 60%;
 
@@ -58,7 +55,37 @@ main{
 }
 
 .input-check-box button{
-  padding: 5px 10px;
+  padding: 10px 30px;
+    color: white;
+    background-color: rgb(80, 12, 237);
+    font-size: 12px;
+    margin-left: 1em;
+    border-radius: 10px;
+  
 
+}
+.input-check-box button:hover{
+ opacity: 0.8;
+}
+
+
+#result-div{
+    display: flex;
+    background-color: rgb(6, 69, 6);
+    color: white;
+    font-size: 1.5rem;
+    width: 35%;
+    margin-top: 2em;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+#result-description{
+    color: white;
+    margin-left: 5px;
+}
+
+#result{
+    font-size: 1.5rem;
 }
 

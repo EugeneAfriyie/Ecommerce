@@ -17,7 +17,11 @@ document.getElementById('check-btn').addEventListener('click', function() {
    
     if (isPalindrome(textInput)) {
         resultElement.textContent = `${textInput} is a palindrome`;
+  
+
     } else {
         resultElement.textContent = `${textInput} is not a palindrome`;
     }
+
+      textInput = ''
 });

@@ -3,15 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>US Phone Number Validator</title>
+    <title>Phone Number Validator</title>
+    <link rel="stylesheet" href="./phone.css">
 </head>
 <body>
-    <input type="text" id="user-input" placeholder="Enter phone number">
-    <button id="check-btn">Check Number</button>
-    <button id="clear-btn">Clear</button>
+
+    <h1>
+        Telephone Number Validator
+    </h1>
+   <section class="phone-sec">
+    <div class="dot-div">
+        <p class="dot"></p>
+    </div>
+
+    <div class="phone-input-div">
+        <p>Enter a Phone Number:</p>
+
+        <input type="text" id="user-input" >
     <div id="results-div"></div>
 
-    <script src="./script.js">
+    </div>
+
+
+
+
+   <div class=" check-clear">
+    <button id="check-btn" class="same-btn">Check Number</button>
+    <button id="clear-btn" class="same-btn">Clear</button>
+   </div>
+
+   </section>
+    <script src="./phone.js">
    
     </script>
 </body>

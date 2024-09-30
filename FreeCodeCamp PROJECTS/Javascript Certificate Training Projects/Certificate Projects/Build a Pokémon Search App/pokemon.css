@@ -1,6 +1,55 @@
 
-
+body{
+    background: violet;
+}
 
 .pokemon-sec{
-    
+    width: 450px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#search-input{
+    height: 30px;
+    outline: none;
+}
+
+#search-button{
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: purple;
+    color: white;
+}
+
+.space{
+    display: flex;
+    gap: 10px;
+    /* justify-content: center; */
+}
+
+.flex-2{
+    display: grid;
+    grid-template-columns: 200px 120px;
+    color: white;
+}
+
+.flex-2 p{
+    background-color: purple;
+    padding: 10px 0;
+    margin: 3px;
+}
+
+#types{
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+
+}
+
+#types p:first-child{
+    background-color: greenyellow;
+}
+#types p:last-child{
+    background-color: violet;
 }

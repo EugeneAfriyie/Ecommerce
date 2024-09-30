@@ -32,7 +32,7 @@ document.getElementById('search-button').addEventListener('click', function () {
         const speedElement = document.getElementById('speed');
   
         // Clear existing data before updating
-        typesElement.innerHTML = '';
+        // typesElement.innerHTML = '';
   
         // Set Pokémon information
         nameElement.textContent = pokemon.name.toUpperCase();
@@ -94,6 +94,7 @@ document.getElementById('search-button').addEventListener('click', function () {
       .catch(error => {
         // Alert for invalid Pokémon name or ID
         alert("Pokémon not found");
+        console.log(error)
       });
   });
   

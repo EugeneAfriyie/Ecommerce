@@ -1,12 +1,23 @@
 
 body{
-    background: violet;
+    background: rgb(54, 2, 54);
+}
+.heading{
+    font-size: 2rem;
+    text-align: center;
+    color: white;
 }
 
 .pokemon-sec{
-    width: 450px;
+    width: 400px;
+    margin: auto;
     text-align: center;
     background-color: #fff;
+    padding: 20px;
+}
+
+.pokemon-sec h4{
+    font-size: 1.2rem;
 }
 
 #search-input{
@@ -46,10 +57,28 @@ body{
     font-size: 12px;
 
 }
+#types p{
+    padding: 5px 10px;
+    color: black;
+}
 
 #types p:first-child{
     background-color: greenyellow;
 }
 #types p:last-child{
     background-color: violet;
+}
+
+.pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin: 10px auto;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
 }

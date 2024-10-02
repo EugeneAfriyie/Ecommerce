@@ -32,7 +32,7 @@ document.getElementById('search-button').addEventListener('click', function () {
         const speedElement = document.getElementById('speed');
   
         // Clear existing data before updating
-        // typesElement.innerHTML = '';
+        typesElement.innerHTML = '';
   
         // Set Pokémon information
         nameElement.textContent = pokemon.name.toUpperCase();
@@ -58,7 +58,7 @@ document.getElementById('search-button').addEventListener('click', function () {
         if (!spriteImg) {
           spriteImg = document.createElement('img');
           spriteImg.id = 'sprite';
-          document.body.appendChild(spriteImg);
+          document.querySelector('.pic').appendChild(spriteImg);
         }
         spriteImg.src = pokemon.sprites.front_default;
   
@@ -89,6 +89,8 @@ document.getElementById('search-button').addEventListener('click', function () {
           specialDefenseElement.textContent = 75;
           speedElement.textContent = 110;
           typesElement.innerHTML = '<p>GHOST</p><p>POISON</p>';
+         
+
         }
       })
       .catch(error => {
@@ -97,4 +99,6 @@ document.getElementById('search-button').addEventListener('click', function () {
         console.log(error)
       });
   });
+
+
   

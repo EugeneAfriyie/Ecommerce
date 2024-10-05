@@ -1,0 +1,6 @@
+.section-2 {
+    /* width: 1000px; */
+    display: grid;
+    grid-template-columns:150px 600px 220px;
+    gap: 10px;
+}

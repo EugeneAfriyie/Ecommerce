@@ -1,6 +1,140 @@
 .section-2 {
-    /* width: 1000px; */
-    display: grid;
     grid-template-columns:150px 600px 220px;
-    gap: 10px;
 }
+
+.align-left{
+    text-align: left;
+}
+
+
+.jackpot-match-sec{
+    background-color: rgb(42, 49, 65);
+    padding: 10px;
+}
+
+.jackpot-match-div-header{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.round-num-p{
+    font-size: 1.5rem;
+}
+
+.jackpot-print{
+    font-size: 0.8rem;
+}
+
+.jackpot-print span{
+    color: gray;
+}
+
+table{
+    width: 100%;
+    color: white;
+    margin-top: 20px;
+    /* font-size: 0.9rem; */
+ 
+}
+
+table thead tr{
+    background-color: #00000081;
+    font-size: 0.8rem;
+    padding: 5px 0;
+    
+}
+
+
+ table thead tr,table tbody tr {
+    display: grid;
+    grid-template-columns: 40px 100px 150px 50px 1fr 1fr 1fr ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
+    /* border: 1px solid red; */
+ }
+
+ table thead tr th{
+    /* border: 1px solid red; */
+ }
+
+ table tbody tr {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(170, 168, 168, 0.164);
+ }
+
+ .jackpot-match-info{
+    font-size: 0.8rem;
+    display: grid;
+    gap: 5px;
+ }
+
+ .jackpot-button-div{
+    display: flex;
+    gap: 10px;
+ }
+
+ .jackpot-odds-button{
+    background-color: green;
+    padding: 10px;
+    font-size: .9rem;
+ }
+
+ .jackpot-odds-button:hover{
+    background-color: rgb(12, 187, 12);
+ }
+
+ .h2h-icon,.jackpot-count{
+    font-size: .9rem;
+ }
+
+ .jackpot-func{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+ }
+
+ .jackpot-func-button{
+    padding: 10px 30px;
+    background: transparent;
+    color: rgb(20, 218, 20);
+    border: 1px solid green;
+ }
+
+ .jackpot-clear{
+    color: rgba(255, 255, 255, 0.452);
+    border-color: gray;
+ }
+
+ .to-end{
+    display: flex;
+    justify-content: flex-end;
+ }
+
+ .jackpot-calcul-place{
+    width: 50%;
+    color: white;
+    padding: 5px;
+    font-size: 0.9rem;
+  
+
+ }
+ .jackpot-calculus p{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: rgba(207, 201, 201, 0.144);
+ }
+
+ .jackpot-place-button{
+    width: 100%;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.699);
+    background-color: rgba(207, 201, 201, 0.144);
+    margin-top: 15px;
+ }
+
+
+ 

@@ -137,4 +137,16 @@ table thead tr{
  }
 
 
+ .cas-sec-1-items{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding-right: 5px;
+    text-transform:none;
+ }
+
+ .cas-sec-1-items:hover .cas-sec-1-items i{
+    color: white;
+ }
+
  

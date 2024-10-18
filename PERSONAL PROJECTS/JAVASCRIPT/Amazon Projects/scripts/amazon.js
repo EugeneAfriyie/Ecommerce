@@ -105,7 +105,7 @@ renderProducts()
 
 // document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
 //     button.addEventListener('click', () =>{
-//       console.log(button);
+//       console.log(button)
 //     const productId = button.dataset.productId;
       
 //       addtoCart(productId);

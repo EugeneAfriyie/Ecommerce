@@ -3,20 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Display and Store Files</title>
+  <style>
+    img, video {
+      max-width: 300px;
+      margin: 10px 10px 20px;
+      display: inline-block;
+    }
+    .file-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  </style>
 </head>
 <body>
+  <h1>Upload, Store, and Display Files</h1>
+  <input type="file" id="fileInput" multiple accept="image/*,video/*" />
+  <div id="fileDisplay" class="file-container"></div>
 
-  <div>
-    
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
+  <script>
+    // Array to store files
+    let storedFiles = [];
 
-  <div ></div>
-  
+    // Get references to DOM elements
+    const fileInput = document.getElementById('fileInput');
+    const fileDisplay = document.getElementById('fileDisplay');
+
+    // Event listener for file input
+    fileInput.addEventListener('change', (event) => {
+      const newFiles = Array.from(event.target.files); // Get selected files
+      storedFiles = [...storedFiles, ...newFiles]; // Add new files to the stored array
+
+      // Update the page with all files
+      updateFileDisplay();
+    });
+
+    // Function to update the file display
+    function updateFileDisplay() {
+      // Clear current file display
+      fileDisplay.innerHTML = '';
+
+      // Display all stored files
+      storedFiles.forEach((file) => {
+        const fileReader = new FileReader();
+
+        // Determine the file type
+        if (file.type.startsWith('image/')) {
+          // If it's an image, display it
+          fileReader.onload = () => {
+            const img = document.createElement('img');
+            img.src = fileReader.result;
+            img.alt = file.name;
+            fileDisplay.appendChild(img);
+          };
+        } else if (file.type.startsWith('video/')) {
+          // If it's a video, display it
+          fileReader.onload = () => {
+            const video = document.createElement('video');
+            video.src = fileReader.result;
+            video.controls = true;
+            fileDisplay.appendChild(video);
+          };
+        } else {
+          // Unsupported file type
+          const message = document.createElement('p');
+          message.textContent = `Unsupported file type: ${file.name}`;
+          fileDisplay.appendChild(message);
+        }
+
+        // Read the file data
+        fileReader.readAsDataURL(file);
+      });
+    }
+  </script>
 </body>
 </html>

@@ -111,6 +111,8 @@ const pauseSong = () => {
   audio.pause();
 };
 
+//  PLAY SONG SECTIONN
+
 const playNextSong = () => {
   if (userData?.currentSong === null) {
     playSong(userData?.songs[0].id);

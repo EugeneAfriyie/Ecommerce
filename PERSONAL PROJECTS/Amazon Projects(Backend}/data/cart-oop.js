@@ -130,6 +130,6 @@ console.log(cart)
 
 
 businessCart.loadFromStorage();
-console.log(businessCart)
+// console.log(businessCart)/
 
 
